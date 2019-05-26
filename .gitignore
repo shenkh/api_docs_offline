@@ -1,0 +1,7 @@
+# Ignore everything
+pytorch/_site/*
+
+# except these files
+
+!pytorch/_site/docs/
+pytorch/_site/docs/*.html
