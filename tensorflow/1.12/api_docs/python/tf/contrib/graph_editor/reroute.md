@@ -1,0 +1,13 @@
+<div itemscope itemtype="http://developers.google.com/ReferenceObject">
+<meta itemprop="name" content="tf.contrib.graph_editor.reroute" />
+<meta itemprop="path" content="Stable" />
+</div>
+
+# Module: tf.contrib.graph_editor.reroute
+
+
+
+Defined in [`tensorflow/contrib/graph_editor/reroute.py`](/code/stable/tensorflow/contrib/graph_editor/reroute.py).
+
+Various function for graph rerouting.
+

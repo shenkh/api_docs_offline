@@ -1,6 +1,6 @@
 # Ignore everything
 pytorch/_site/*
-
+*.tar.gz
 # except these files
 
 !pytorch/_site/docs/

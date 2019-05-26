@@ -1,0 +1,34 @@
+toc:
+- name: "Forums & user groups"
+  contents:
+  - title: "Forums"
+    path: /community/forums
+  - title: "User groups"
+    path: /community/groups
+
+  - heading: "Community resources"
+  - title: "SIG playbook"
+    path: /community/sig_playbook
+  - title: "Roadmap"
+    path: /community/roadmap
+
+- name: "Contribute"
+  contents:
+  - title: "Contribute to TensorFlow"
+    path: /community/contribute
+  - title: "Code"
+    path: /community/contribute/code
+  - title: "Documentation"
+    path: /community/contribute/documentation
+  - title: "Community"
+    path: /community/contribute/community
+
+  - heading: "Contributor resources"
+  - title: "Code style guide"
+    path: /community/contribute/code_style
+  - title: "Documentation style guide"
+    path: /community/contribute/docs_style
+
+  - heading: "Community resources"
+  - title: "RFC process"
+    path: /community/contribute/rfc_process

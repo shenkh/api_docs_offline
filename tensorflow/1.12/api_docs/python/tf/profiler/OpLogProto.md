@@ -1,0 +1,21 @@
+<div itemscope itemtype="http://developers.google.com/ReferenceObject">
+<meta itemprop="name" content="tf.profiler.OpLogProto" />
+<meta itemprop="path" content="Stable" />
+<meta itemprop="property" content="IdToStringEntry"/>
+</div>
+
+# tf.profiler.OpLogProto
+
+## Class `OpLogProto`
+
+
+
+
+
+Defined in [`tensorflow/core/profiler/tfprof_log.proto`](/code/stable/tensorflow/core/profiler/tfprof_log.proto).
+
+A ProtocolMessage
+
+## Child Classes
+[`class IdToStringEntry`](../../tf/profiler/OpLogProto/IdToStringEntry.md)
+

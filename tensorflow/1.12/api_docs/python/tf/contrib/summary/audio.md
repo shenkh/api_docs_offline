@@ -1,0 +1,23 @@
+<div itemscope itemtype="http://developers.google.com/ReferenceObject">
+<meta itemprop="name" content="tf.contrib.summary.audio" />
+<meta itemprop="path" content="Stable" />
+</div>
+
+# tf.contrib.summary.audio
+
+``` python
+tf.contrib.summary.audio(
+    name,
+    tensor,
+    sample_rate,
+    max_outputs,
+    family=None,
+    step=None
+)
+```
+
+
+
+Defined in [`tensorflow/python/ops/summary_ops_v2.py`](/code/stable/tensorflow/python/ops/summary_ops_v2.py).
+
+Writes an audio summary if possible.
