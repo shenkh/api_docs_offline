@@ -30,15 +30,35 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!-- <link rel="stylesheet" href="_static/pygments.css" type="text/css" /> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Type Info" href="type_info.html" />
+    <link rel="next" title="Automatic differentiation package - torch.autograd" href="autograd.html" />
     <link rel="prev" title="torch.Tensor" href="tensors.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
+
+  <!-- Preload the theme fonts -->
+
+<link rel="preload" href="_static/fonts/FreightSans/freight-sans-book.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/FreightSans/freight-sans-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/IBMPlexMono/IBMPlexMono-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/FreightSans/freight-sans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/FreightSans/freight-sans-medium-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/IBMPlexMono/IBMPlexMono-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<!-- Preload the katex fonts -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size1-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size4-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size2-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size3-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Caligraphic-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
@@ -110,7 +130,7 @@
               
               
                 <div class="version">
-                  <a href='http://pytorch.org/docs/versions.html'>1.2.0a0+81e70ff &#x25BC</a>
+                  <a href='http://pytorch.org/docs/versions.html'>1.3.0a0+9e1cf99 &#x25BC</a>
                 </div>
               
             
@@ -149,9 +169,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="notes/autograd.html">Autograd mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes/broadcasting.html">Broadcasting semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes/cpu_threading_torchscript_inference.html">CPU threading and TorchScript inference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes/cuda.html">CUDA semantics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes/extending.html">Extending PyTorch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes/faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes/large_scale_deployments.html">Features for large-scale deployments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes/multiprocessing.html">Multiprocessing best practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes/randomness.html">Reproducibility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes/serialization.html">Serialization semantics</a></li>
@@ -166,32 +188,31 @@
 <p class="caption"><span class="caption-text">Package Reference</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="torch.html">torch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nn.html">torch.nn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nn.functional.html">torch.nn.functional</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tensors.html">torch.Tensor</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tensor Attributes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="type_info.html">Type Info</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sparse.html">torch.sparse</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cuda.html">torch.cuda</a></li>
-<li class="toctree-l1"><a class="reference internal" href="storage.html">torch.Storage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nn.html">torch.nn</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nn.html#torch-nn-functional">torch.nn.functional</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nn.html#torch-nn-init">torch.nn.init</a></li>
-<li class="toctree-l1"><a class="reference internal" href="optim.html">torch.optim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="autograd.html">torch.autograd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cuda.html">torch.cuda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distributed.html">torch.distributed</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distributions.html">torch.distributions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hub.html">torch.hub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jit.html">torch.jit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multiprocessing.html">torch.multiprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nn.init.html">torch.nn.init</a></li>
+<li class="toctree-l1"><a class="reference internal" href="onnx.html">torch.onnx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optim.html">torch.optim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random.html">torch.random</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sparse.html">torch.sparse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="storage.html">torch.Storage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bottleneck.html">torch.utils.bottleneck</a></li>
 <li class="toctree-l1"><a class="reference internal" href="checkpoint.html">torch.utils.checkpoint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cpp_extension.html">torch.utils.cpp_extension</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data.html">torch.utils.data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dlpack.html">torch.utils.dlpack</a></li>
 <li class="toctree-l1"><a class="reference internal" href="model_zoo.html">torch.utils.model_zoo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tensorboard.html">torch.utils.tensorboard (experimental)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="onnx.html">torch.onnx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tensorboard.html">torch.utils.tensorboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="type_info.html">Type Info</a></li>
 <li class="toctree-l1"><a class="reference internal" href="__config__.html">torch.__config__</a></li>
-<li class="toctree-l1"><a class="reference internal" href="distributed_deprecated.html">torch.distributed.deprecated</a></li>
 </ul>
 <p class="caption"><span class="caption-text">torchvision Reference</span></p>
 <ul>
@@ -276,12 +297,12 @@
 <span id="dtype-doc"></span><h2>torch.dtype<a class="headerlink" href="#torch-dtype" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="torch.torch.dtype">
-<em class="property">class </em><code class="descclassname">torch.</code><code class="descname">dtype</code><a class="headerlink" href="#torch.torch.dtype" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">torch.</code><code class="sig-name descname">dtype</code><a class="headerlink" href="#torch.torch.dtype" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>A <a class="reference internal" href="#torch.torch.dtype" title="torch.torch.dtype"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.dtype</span></code></a> is an object that represents the data type of a
-<a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a>. PyTorch has eight different data types:</p>
-<table class="docutils align-center">
+<a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a>. PyTorch has nine different data types:</p>
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 26%" />
 <col style="width: 46%" />
@@ -326,24 +347,104 @@
 <td><p><code class="docutils literal notranslate"><span class="pre">torch.int64</span></code> or <code class="docutils literal notranslate"><span class="pre">torch.long</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">torch.*.LongTensor</span></code></p></td>
 </tr>
+<tr class="row-even"><td><p>Boolean</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">torch.bool</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">torch.*.BoolTensor</span></code></p></td>
+</tr>
 </tbody>
 </table>
 <p>To find out if a <a class="reference internal" href="#torch.torch.dtype" title="torch.torch.dtype"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.dtype</span></code></a> is a floating point data type, the property <a class="reference internal" href="torch.html#torch.is_floating_point" title="torch.is_floating_point"><code class="xref py py-attr docutils literal notranslate"><span class="pre">is_floating_point</span></code></a>
 can be used, which returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the data type is a floating point data type.</p>
+<p id="type-promotion-doc">When the dtypes of inputs to an arithmetic operation (<cite>add</cite>, <cite>sub</cite>, <cite>div</cite>, <cite>mul</cite>) differ, we promote
+by finding the minimum dtype that satisfies the following rules:</p>
+<ul class="simple">
+<li><p>If the type of a scalar operand is of a higher category than tensor operands
+(where floating &gt; integral &gt; boolean), we promote to a type with sufficient size to hold
+all scalar operands of that category.</p></li>
+<li><p>If a zero-dimension tensor operand has a higher category than dimensioned operands,
+we promote to a type with sufficient size and category to hold all zero-dim tensor operands of
+that category.</p></li>
+<li><p>If there are no higher-category zero-dim operands, we promote to a type with sufficient size
+and category to hold all dimensioned operands.</p></li>
+</ul>
+<p>A floating point scalar operand has dtype <cite>torch.get_default_dtype()</cite> and an integral
+non-boolean scalar operand has dtype <cite>torch.int64</cite>. Unlike numpy, we do not inspect
+values when determining the minimum <cite>dtypes</cite> of an operand.  Quantized and complex types
+are not yet supported.</p>
+<p>Promotion Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">float_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">double_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">double</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">int_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">long_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">long</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">uint_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">double_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">double</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bool_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">bool</span><span class="p">)</span>
+<span class="go"># zero-dim tensors</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">long_zerodim</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">long</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">int_zerodim</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">dtype</span>
+<span class="go">torch.int64</span>
+<span class="go"># 5 is an int64, but does not have higher category than int_tensor so is not considered.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="n">int_tensor</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">dtype</span>
+<span class="go">torch.int32</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="n">int_tensor</span> <span class="o">+</span> <span class="n">long_zerodim</span><span class="p">)</span><span class="o">.</span><span class="n">dtype</span>
+<span class="go">torch.int32</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="n">long_tensor</span> <span class="o">+</span> <span class="n">int_tensor</span><span class="p">)</span><span class="o">.</span><span class="n">dtype</span>
+<span class="go">torch.int64</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="n">bool_tensor</span> <span class="o">+</span> <span class="n">long_tensor</span><span class="p">)</span><span class="o">.</span><span class="n">dtype</span>
+<span class="go">torch.int64</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="n">bool_tensor</span> <span class="o">+</span> <span class="n">uint_tensor</span><span class="p">)</span><span class="o">.</span><span class="n">dtype</span>
+<span class="go">torch.uint8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="n">float_tensor</span> <span class="o">+</span> <span class="n">double_tensor</span><span class="p">)</span><span class="o">.</span><span class="n">dtype</span>
+<span class="go">torch.float64</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="n">bool_tensor</span> <span class="o">+</span> <span class="n">int_tensor</span><span class="p">)</span><span class="o">.</span><span class="n">dtype</span>
+<span class="go">torch.int32</span>
+<span class="go"># Since long is a different kind than float, result dtype only needs to be large enough</span>
+<span class="go"># to hold the float.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">torch</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">long_tensor</span><span class="p">,</span> <span class="n">float_tensor</span><span class="p">)</span><span class="o">.</span><span class="n">dtype</span>
+<span class="go">torch.float32</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>When the output tensor of an arithmetic operation is specified, we allow casting to its <cite>dtype</cite> except that:</dt><dd><ul class="simple">
+<li><p>An integral output tensor cannot accept a floating point tensor.</p></li>
+<li><p>A boolean output tensor cannot accept a non-boolean tensor.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Casting Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># allowed:</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">float_tensor</span> <span class="o">*=</span> <span class="n">double_tensor</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">float_tensor</span> <span class="o">*=</span> <span class="n">int_tensor</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">float_tensor</span> <span class="o">*=</span> <span class="n">uint_tensor</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">float_tensor</span> <span class="o">*=</span> <span class="n">bool_tensor</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">float_tensor</span> <span class="o">*=</span> <span class="n">double_tensor</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">int_tensor</span> <span class="o">*=</span> <span class="n">long_tensor</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">int_tensor</span> <span class="o">*=</span> <span class="n">uint_tensor</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">uint_tensor</span> <span class="o">*=</span> <span class="n">int_tensor</span>
+
+<span class="c1"># disallowed (RuntimeError: result type can&#39;t be cast to the desired output type):</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">int_tensor</span> <span class="o">*=</span> <span class="n">float_tensor</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">bool_tensor</span> <span class="o">*=</span> <span class="n">int_tensor</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">bool_tensor</span> <span class="o">*=</span> <span class="n">uint_tensor</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="torch-device">
 <span id="device-doc"></span><h2>torch.device<a class="headerlink" href="#torch-device" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="torch.torch.device">
-<em class="property">class </em><code class="descclassname">torch.</code><code class="descname">device</code><a class="headerlink" href="#torch.torch.device" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">torch.</code><code class="sig-name descname">device</code><a class="headerlink" href="#torch.torch.device" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>A <a class="reference internal" href="#torch.torch.device" title="torch.torch.device"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.device</span></code></a> is an object representing the device on which a <a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a> is
 or will be allocated.</p>
-<p>The <a class="reference internal" href="#torch.torch.device" title="torch.torch.device"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.device</span></code></a> contains a device type (<code class="docutils literal notranslate"><span class="pre">'cpu'</span></code> or <code class="docutils literal notranslate"><span class="pre">'cuda'</span></code>) and optional device ordinal for the
-device type.  If the device ordinal is not present, this represents the current device for the device type;
-e.g. a <a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a> constructed with device <code class="docutils literal notranslate"><span class="pre">'cuda'</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">'cuda:X'</span></code> where X is the result of
-<a class="reference internal" href="cuda.html#torch.cuda.current_device" title="torch.cuda.current_device"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.cuda.current_device()</span></code></a>.</p>
+<p>The <a class="reference internal" href="#torch.torch.device" title="torch.torch.device"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.device</span></code></a> contains a device type (<code class="docutils literal notranslate"><span class="pre">'cpu'</span></code> or <code class="docutils literal notranslate"><span class="pre">'cuda'</span></code>) and optional device
+ordinal for the device type. If the device ordinal is not present, this object will always represent
+the current device for the device type, even after <a class="reference internal" href="cuda.html#torch.cuda.set_device" title="torch.cuda.set_device"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.cuda.set_device()</span></code></a> is called; e.g.,
+a <a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a> constructed with device <code class="docutils literal notranslate"><span class="pre">'cuda'</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">'cuda:X'</span></code> where X is
+the result of <a class="reference internal" href="cuda.html#torch.cuda.current_device" title="torch.cuda.current_device"><code class="xref py py-func docutils literal notranslate"><span class="pre">torch.cuda.current_device()</span></code></a>.</p>
 <p>A <a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a>’s device can be accessed via the <a class="reference internal" href="tensors.html#torch.Tensor.device" title="torch.Tensor.device"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Tensor.device</span></code></a> property.</p>
 <p>A <a class="reference internal" href="#torch.torch.device" title="torch.torch.device"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.device</span></code></a> can be constructed via a string or via a string and device ordinal</p>
 <p>Via a string:</p>
@@ -404,7 +505,7 @@ or (legacy) integer device ordinal, i.e. the following are all equivalent:</p>
 <span id="layout-doc"></span><h2>torch.layout<a class="headerlink" href="#torch-layout" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="torch.torch.layout">
-<em class="property">class </em><code class="descclassname">torch.</code><code class="descname">layout</code><a class="headerlink" href="#torch.torch.layout" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">torch.</code><code class="sig-name descname">layout</code><a class="headerlink" href="#torch.torch.layout" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <p>A <a class="reference internal" href="#torch.torch.layout" title="torch.torch.layout"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.layout</span></code></a> is an object that represents the memory layout of a
@@ -439,7 +540,7 @@ to perform many tensor operations efficiently.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="type_info.html" class="btn btn-neutral float-right" title="Type Info" accesskey="n" rel="next">Next <img src="_static/images/chevron-right-orange.svg" class="next-page"></a>
+        <a href="autograd.html" class="btn btn-neutral float-right" title="Automatic differentiation package - torch.autograd" accesskey="n" rel="next">Next <img src="_static/images/chevron-right-orange.svg" class="next-page"></a>
       
       
         <a href="tensors.html" class="btn btn-neutral" title="torch.Tensor" accesskey="p" rel="prev"><img src="_static/images/chevron-right-orange.svg" class="previous-page"> Previous</a>
@@ -455,7 +556,7 @@ to perform many tensor operations efficiently.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Torch Contributors.
+        &copy; Copyright 2019, Torch Contributors.
 
     </p>
   </div>
@@ -499,9 +600,6 @@ to perform many tensor operations efficiently.</p>
          <script type="text/javascript" src="_static/underscore.js"></script>
          <script type="text/javascript" src="_static/doctools.js"></script>
          <script type="text/javascript" src="_static/language_data.js"></script>
-         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"></script>
-         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js"></script>
-         <script type="text/javascript" src="_static/katex_autorenderer.js"></script>
      
 
   

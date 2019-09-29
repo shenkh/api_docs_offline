@@ -30,13 +30,33 @@
   <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <!-- <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" /> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/katex-math.css" type="text/css" />
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" /> 
 
   
   <script src="../../../../_static/js/modernizr.min.js"></script>
+
+  <!-- Preload the theme fonts -->
+
+<link rel="preload" href="../../../../_static/fonts/FreightSans/freight-sans-book.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../../_static/fonts/FreightSans/freight-sans-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../../_static/fonts/IBMPlexMono/IBMPlexMono-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../../_static/fonts/FreightSans/freight-sans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../../_static/fonts/FreightSans/freight-sans-medium-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../../_static/fonts/IBMPlexMono/IBMPlexMono-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<!-- Preload the katex fonts -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size1-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size4-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size2-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size3-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Caligraphic-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
@@ -108,7 +128,7 @@
               
               
                 <div class="version">
-                  <a href='http://pytorch.org/docs/versions.html'>1.2.0a0+81e70ff &#x25BC</a>
+                  <a href='http://pytorch.org/docs/versions.html'>1.3.0a0+9e1cf99 &#x25BC</a>
                 </div>
               
             
@@ -147,9 +167,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../notes/autograd.html">Autograd mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../notes/broadcasting.html">Broadcasting semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../notes/cpu_threading_torchscript_inference.html">CPU threading and TorchScript inference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../notes/cuda.html">CUDA semantics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../notes/extending.html">Extending PyTorch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../notes/faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../notes/large_scale_deployments.html">Features for large-scale deployments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../notes/multiprocessing.html">Multiprocessing best practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../notes/randomness.html">Reproducibility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../notes/serialization.html">Serialization semantics</a></li>
@@ -164,32 +186,31 @@
 <p class="caption"><span class="caption-text">Package Reference</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../torch.html">torch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nn.html">torch.nn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nn.functional.html">torch.nn.functional</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../tensors.html">torch.Tensor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../tensor_attributes.html">Tensor Attributes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../type_info.html">Type Info</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../sparse.html">torch.sparse</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../cuda.html">torch.cuda</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../storage.html">torch.Storage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../nn.html">torch.nn</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../nn.html#torch-nn-functional">torch.nn.functional</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../nn.html#torch-nn-init">torch.nn.init</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../optim.html">torch.optim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../autograd.html">torch.autograd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cuda.html">torch.cuda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../distributed.html">torch.distributed</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../distributions.html">torch.distributions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../hub.html">torch.hub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../jit.html">torch.jit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../multiprocessing.html">torch.multiprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nn.init.html">torch.nn.init</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../onnx.html">torch.onnx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../optim.html">torch.optim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../random.html">torch.random</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sparse.html">torch.sparse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../storage.html">torch.Storage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../bottleneck.html">torch.utils.bottleneck</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../checkpoint.html">torch.utils.checkpoint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../cpp_extension.html">torch.utils.cpp_extension</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../data.html">torch.utils.data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../dlpack.html">torch.utils.dlpack</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../model_zoo.html">torch.utils.model_zoo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../tensorboard.html">torch.utils.tensorboard (experimental)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../onnx.html">torch.onnx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tensorboard.html">torch.utils.tensorboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../type_info.html">Type Info</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../__config__.html">torch.__config__</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../distributed_deprecated.html">torch.distributed.deprecated</a></li>
 </ul>
 <p class="caption"><span class="caption-text">torchvision Reference</span></p>
 <ul>
@@ -277,11 +298,9 @@
 <span class="kn">from</span> <span class="nn">torch.nn.parameter</span> <span class="k">import</span> <span class="n">Parameter</span>
 <span class="kn">from</span> <span class="nn">.module</span> <span class="k">import</span> <span class="n">Module</span>
 <span class="kn">from</span> <span class="nn">..</span> <span class="k">import</span> <span class="n">functional</span> <span class="k">as</span> <span class="n">F</span>
-<span class="kn">from</span> <span class="nn">..._jit_internal</span> <span class="k">import</span> <span class="n">weak_module</span><span class="p">,</span> <span class="n">weak_script_method</span>
 
 
-<div class="viewcode-block" id="Threshold"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Threshold">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">Threshold</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="Threshold"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Threshold">[docs]</a><span class="k">class</span> <span class="nc">Threshold</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Thresholds each element of the input Tensor.</span>
 
 <span class="sd">    Threshold is defined as:</span>
@@ -318,7 +337,6 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">inplace</span> <span class="o">=</span> <span class="n">inplace</span>
         <span class="c1"># TODO: check in THNN (if inplace == True, then assert value &lt;= threshold)</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">threshold</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">inplace</span><span class="p">)</span>
 
@@ -329,8 +347,7 @@
         <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="ReLU"><a class="viewcode-back" href="../../../../nn.html#torch.nn.ReLU">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">ReLU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="ReLU"><a class="viewcode-back" href="../../../../nn.html#torch.nn.ReLU">[docs]</a><span class="k">class</span> <span class="nc">ReLU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the rectified linear unit function element-wise:</span>
 
 <span class="sd">    :math:`\text{ReLU}(x)= \max(0, x)`</span>
@@ -364,7 +381,6 @@
         <span class="nb">super</span><span class="p">(</span><span class="n">ReLU</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">inplace</span> <span class="o">=</span> <span class="n">inplace</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">inplace</span><span class="p">)</span>
 
@@ -373,8 +389,7 @@
         <span class="k">return</span> <span class="n">inplace_str</span></div>
 
 
-<div class="viewcode-block" id="RReLU"><a class="viewcode-back" href="../../../../nn.html#torch.nn.RReLU">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">RReLU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="RReLU"><a class="viewcode-back" href="../../../../nn.html#torch.nn.RReLU">[docs]</a><span class="k">class</span> <span class="nc">RReLU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the randomized leaky rectified liner unit function, element-wise,</span>
 <span class="sd">    as described in the paper:</span>
 
@@ -421,7 +436,6 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">upper</span> <span class="o">=</span> <span class="n">upper</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">inplace</span> <span class="o">=</span> <span class="n">inplace</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">rrelu</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">upper</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">training</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">inplace</span><span class="p">)</span>
 
@@ -430,8 +444,7 @@
         <span class="k">return</span> <span class="s1">&#39;lower=</span><span class="si">{}</span><span class="s1">, upper=</span><span class="si">{}{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">upper</span><span class="p">,</span> <span class="n">inplace_str</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="Hardtanh"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Hardtanh">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">Hardtanh</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="Hardtanh"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Hardtanh">[docs]</a><span class="k">class</span> <span class="nc">Hardtanh</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the HardTanh function element-wise</span>
 
 <span class="sd">    HardTanh is defined as:</span>
@@ -472,10 +485,10 @@
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_val</span><span class="o">=-</span><span class="mf">1.</span><span class="p">,</span> <span class="n">max_val</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">min_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Hardtanh</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">min_value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;keyword argument min_value is deprecated and renamed to min_val&quot;</span><span class="p">)</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;keyword argument min_value is deprecated and rename to min_val&quot;</span><span class="p">)</span>
             <span class="n">min_val</span> <span class="o">=</span> <span class="n">min_value</span>
         <span class="k">if</span> <span class="n">max_value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;keyword argument max_value is deprecated and renamed to max_val&quot;</span><span class="p">)</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;keyword argument max_value is deprecated and rename to max_val&quot;</span><span class="p">)</span>
             <span class="n">max_val</span> <span class="o">=</span> <span class="n">max_value</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">min_val</span> <span class="o">=</span> <span class="n">min_val</span>
@@ -483,7 +496,6 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">inplace</span> <span class="o">=</span> <span class="n">inplace</span>
         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_val</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">min_val</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">hardtanh</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">min_val</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_val</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">inplace</span><span class="p">)</span>
 
@@ -494,8 +506,7 @@
         <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="ReLU6"><a class="viewcode-back" href="../../../../nn.html#torch.nn.ReLU6">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">ReLU6</span><span class="p">(</span><span class="n">Hardtanh</span><span class="p">):</span>
+<div class="viewcode-block" id="ReLU6"><a class="viewcode-back" href="../../../../nn.html#torch.nn.ReLU6">[docs]</a><span class="k">class</span> <span class="nc">ReLU6</span><span class="p">(</span><span class="n">Hardtanh</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the element-wise function:</span>
 
 <span class="sd">    .. math::</span>
@@ -526,8 +537,7 @@
         <span class="k">return</span> <span class="n">inplace_str</span></div>
 
 
-<div class="viewcode-block" id="Sigmoid"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Sigmoid">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">Sigmoid</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="Sigmoid"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Sigmoid">[docs]</a><span class="k">class</span> <span class="nc">Sigmoid</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the element-wise function:</span>
 
 <span class="sd">    .. math::</span>
@@ -548,13 +558,11 @@
 <span class="sd">        &gt;&gt;&gt; output = m(input)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="Tanh"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Tanh">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">Tanh</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="Tanh"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Tanh">[docs]</a><span class="k">class</span> <span class="nc">Tanh</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the element-wise function:</span>
 
 <span class="sd">    .. math::</span>
@@ -574,13 +582,11 @@
 <span class="sd">        &gt;&gt;&gt; output = m(input)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="ELU"><a class="viewcode-back" href="../../../../nn.html#torch.nn.ELU">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">ELU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="ELU"><a class="viewcode-back" href="../../../../nn.html#torch.nn.ELU">[docs]</a><span class="k">class</span> <span class="nc">ELU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the element-wise function:</span>
 
 <span class="sd">    .. math::</span>
@@ -610,7 +616,6 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">inplace</span> <span class="o">=</span> <span class="n">inplace</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">elu</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">inplace</span><span class="p">)</span>
 
@@ -619,8 +624,7 @@
         <span class="k">return</span> <span class="s1">&#39;alpha=</span><span class="si">{}{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="p">,</span> <span class="n">inplace_str</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="CELU"><a class="viewcode-back" href="../../../../nn.html#torch.nn.CELU">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">CELU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="CELU"><a class="viewcode-back" href="../../../../nn.html#torch.nn.CELU">[docs]</a><span class="k">class</span> <span class="nc">CELU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the element-wise function:</span>
 
 <span class="sd">    .. math::</span>
@@ -655,7 +659,6 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">inplace</span> <span class="o">=</span> <span class="n">inplace</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">celu</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">inplace</span><span class="p">)</span>
 
@@ -664,8 +667,7 @@
         <span class="k">return</span> <span class="s1">&#39;alpha=</span><span class="si">{}{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="p">,</span> <span class="n">inplace_str</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="SELU"><a class="viewcode-back" href="../../../../nn.html#torch.nn.SELU">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">SELU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="SELU"><a class="viewcode-back" href="../../../../nn.html#torch.nn.SELU">[docs]</a><span class="k">class</span> <span class="nc">SELU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applied element-wise, as:</span>
 
 <span class="sd">    .. math::</span>
@@ -700,7 +702,6 @@
         <span class="nb">super</span><span class="p">(</span><span class="n">SELU</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">inplace</span> <span class="o">=</span> <span class="n">inplace</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">selu</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">inplace</span><span class="p">)</span>
 
@@ -709,7 +710,6 @@
         <span class="k">return</span> <span class="n">inplace_str</span></div>
 
 
-<span class="nd">@weak_module</span>
 <span class="k">class</span> <span class="nc">GLU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the gated linear unit function</span>
 <span class="sd">    :math:`{GLU}(a, b)= a \otimes \sigma(b)` where :math:`a` is the first half</span>
@@ -735,7 +735,6 @@
         <span class="nb">super</span><span class="p">(</span><span class="n">GLU</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dim</span> <span class="o">=</span> <span class="n">dim</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">glu</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span><span class="p">)</span>
 
@@ -743,8 +742,7 @@
         <span class="k">return</span> <span class="s1">&#39;dim=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dim</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="Hardshrink"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Hardshrink">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">Hardshrink</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="Hardshrink"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Hardshrink">[docs]</a><span class="k">class</span> <span class="nc">Hardshrink</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the hard shrinkage function element-wise:</span>
 
 <span class="sd">    .. math::</span>
@@ -777,7 +775,6 @@
         <span class="nb">super</span><span class="p">(</span><span class="n">Hardshrink</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lambd</span> <span class="o">=</span> <span class="n">lambd</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">hardshrink</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lambd</span><span class="p">)</span>
 
@@ -785,8 +782,7 @@
         <span class="k">return</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lambd</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="LeakyReLU"><a class="viewcode-back" href="../../../../nn.html#torch.nn.LeakyReLU">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">LeakyReLU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="LeakyReLU"><a class="viewcode-back" href="../../../../nn.html#torch.nn.LeakyReLU">[docs]</a><span class="k">class</span> <span class="nc">LeakyReLU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the element-wise function:</span>
 
 <span class="sd">    .. math::</span>
@@ -826,7 +822,6 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">negative_slope</span> <span class="o">=</span> <span class="n">negative_slope</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">inplace</span> <span class="o">=</span> <span class="n">inplace</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">leaky_relu</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">negative_slope</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">inplace</span><span class="p">)</span>
 
@@ -835,8 +830,7 @@
         <span class="k">return</span> <span class="s1">&#39;negative_slope=</span><span class="si">{}{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">negative_slope</span><span class="p">,</span> <span class="n">inplace_str</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="LogSigmoid"><a class="viewcode-back" href="../../../../nn.html#torch.nn.LogSigmoid">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">LogSigmoid</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="LogSigmoid"><a class="viewcode-back" href="../../../../nn.html#torch.nn.LogSigmoid">[docs]</a><span class="k">class</span> <span class="nc">LogSigmoid</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the element-wise function:</span>
 
 <span class="sd">    .. math::</span>
@@ -856,13 +850,11 @@
 <span class="sd">        &gt;&gt;&gt; output = m(input)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">logsigmoid</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="Softplus"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Softplus">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">Softplus</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="Softplus"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Softplus">[docs]</a><span class="k">class</span> <span class="nc">Softplus</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the element-wise function:</span>
 
 <span class="sd">    .. math::</span>
@@ -898,7 +890,6 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">beta</span> <span class="o">=</span> <span class="n">beta</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">threshold</span> <span class="o">=</span> <span class="n">threshold</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">softplus</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">beta</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">threshold</span><span class="p">)</span>
 
@@ -906,8 +897,7 @@
         <span class="k">return</span> <span class="s1">&#39;beta=</span><span class="si">{}</span><span class="s1">, threshold=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">beta</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">threshold</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="Softshrink"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Softshrink">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">Softshrink</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="Softshrink"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Softshrink">[docs]</a><span class="k">class</span> <span class="nc">Softshrink</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the soft shrinkage function elementwise:</span>
 
 <span class="sd">    .. math::</span>
@@ -940,7 +930,6 @@
         <span class="nb">super</span><span class="p">(</span><span class="n">Softshrink</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lambd</span> <span class="o">=</span> <span class="n">lambd</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">softshrink</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lambd</span><span class="p">)</span>
 
@@ -948,8 +937,7 @@
         <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lambd</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="MultiheadAttention"><a class="viewcode-back" href="../../../../nn.html#torch.nn.MultiheadAttention">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">MultiheadAttention</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="MultiheadAttention"><a class="viewcode-back" href="../../../../nn.html#torch.nn.MultiheadAttention">[docs]</a><span class="k">class</span> <span class="nc">MultiheadAttention</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Allows the model to jointly attend to information</span>
 <span class="sd">    from different representation subspaces.</span>
 <span class="sd">    See reference: Attention Is All You Need</span>
@@ -966,6 +954,11 @@
 <span class="sd">        add_bias_kv: add bias to the key and value sequences at dim=0.</span>
 <span class="sd">        add_zero_attn: add a new batch of zeros to the key and</span>
 <span class="sd">                       value sequences at dim=1.</span>
+<span class="sd">        kdim: total number of features in key. Default: None.</span>
+<span class="sd">        vdim: total number of features in key. Default: None.</span>
+
+<span class="sd">        Note: if kdim and vdim are None, they will be set to embed_dim such that</span>
+<span class="sd">        query, key, and value have the same number of features.</span>
 
 <span class="sd">    Examples::</span>
 
@@ -973,15 +966,25 @@
 <span class="sd">        &gt;&gt;&gt; attn_output, attn_output_weights = multihead_attn(query, key, value)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">,</span> <span class="n">dropout</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">add_bias_kv</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">add_zero_attn</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">,</span> <span class="n">dropout</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">add_bias_kv</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">add_zero_attn</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">kdim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vdim</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">MultiheadAttention</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span> <span class="o">=</span> <span class="n">embed_dim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kdim</span> <span class="o">=</span> <span class="n">kdim</span> <span class="k">if</span> <span class="n">kdim</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">embed_dim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vdim</span> <span class="o">=</span> <span class="n">vdim</span> <span class="k">if</span> <span class="n">vdim</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">embed_dim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qkv_same_embed_dim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kdim</span> <span class="o">==</span> <span class="n">embed_dim</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">vdim</span> <span class="o">==</span> <span class="n">embed_dim</span>
+
         <span class="bp">self</span><span class="o">.</span><span class="n">num_heads</span> <span class="o">=</span> <span class="n">num_heads</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span> <span class="o">=</span> <span class="n">dropout</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">head_dim</span> <span class="o">=</span> <span class="n">embed_dim</span> <span class="o">//</span> <span class="n">num_heads</span>
         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">head_dim</span> <span class="o">*</span> <span class="n">num_heads</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">,</span> <span class="s2">&quot;embed_dim must be divisible by num_heads&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">in_proj_weight</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">embed_dim</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qkv_same_embed_dim</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">q_proj_weight</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="n">embed_dim</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">k_proj_weight</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="n">embed_dim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">kdim</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">v_proj_weight</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="n">embed_dim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vdim</span><span class="p">))</span>
+
         <span class="k">if</span> <span class="n">bias</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">in_proj_bias</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">embed_dim</span><span class="p">))</span>
         <span class="k">else</span><span class="p">:</span>
@@ -999,11 +1002,13 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_reset_parameters</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">_reset_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">xavier_uniform_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">in_proj_weight</span><span class="p">[:</span><span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">,</span> <span class="p">:])</span>
-        <span class="n">xavier_uniform_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">in_proj_weight</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">:(</span><span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span> <span class="o">*</span> <span class="mi">2</span><span class="p">),</span> <span class="p">:])</span>
-        <span class="n">xavier_uniform_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">in_proj_weight</span><span class="p">[(</span><span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span> <span class="o">*</span> <span class="mi">2</span><span class="p">):,</span> <span class="p">:])</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qkv_same_embed_dim</span><span class="p">:</span>
+            <span class="n">xavier_uniform_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">in_proj_weight</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">xavier_uniform_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">q_proj_weight</span><span class="p">)</span>
+            <span class="n">xavier_uniform_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">k_proj_weight</span><span class="p">)</span>
+            <span class="n">xavier_uniform_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">v_proj_weight</span><span class="p">)</span>
 
-        <span class="n">xavier_uniform_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">out_proj</span><span class="o">.</span><span class="n">weight</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_proj_bias</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">constant_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">in_proj_bias</span><span class="p">,</span> <span class="mf">0.</span><span class="p">)</span>
             <span class="n">constant_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">out_proj</span><span class="o">.</span><span class="n">bias</span><span class="p">,</span> <span class="mf">0.</span><span class="p">)</span>
@@ -1012,18 +1017,18 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias_v</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">xavier_normal_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bias_v</span><span class="p">)</span>
 
-<div class="viewcode-block" id="MultiheadAttention.forward"><a class="viewcode-back" href="../../../../nn.html#torch.nn.MultiheadAttention.forward">[docs]</a>    <span class="nd">@weak_script_method</span>
-    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">key_padding_mask</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<div class="viewcode-block" id="MultiheadAttention.forward"><a class="viewcode-back" href="../../../../nn.html#torch.nn.MultiheadAttention.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">key_padding_mask</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                 <span class="n">need_weights</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">attn_mask</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Args:</span>
 <span class="sd">        query, key, value: map a query and a set of key-value pairs to an output.</span>
 <span class="sd">            See &quot;Attention Is All You Need&quot; for more details.</span>
 <span class="sd">        key_padding_mask: if provided, specified padding elements in the key will</span>
-<span class="sd">            be ignored by the attention.</span>
+<span class="sd">            be ignored by the attention. This is an binary mask. When the value is True,</span>
+<span class="sd">            the corresponding value on the attention layer will be filled with -inf.</span>
 <span class="sd">        need_weights: output attn_output_weights.</span>
-<span class="sd">        attn_mask: mask that prevents attention to certain positions.</span>
-
+<span class="sd">        attn_mask: mask that prevents attention to certain positions. This is an additive mask</span>
+<span class="sd">            (i.e. the values will be added to the attention layer).  </span>
 
 <span class="sd">    Shape:</span>
 <span class="sd">        - Inputs:</span>
@@ -1042,15 +1047,34 @@
 <span class="sd">        - attn_output_weights: :math:`(N, L, S)` where N is the batch size,</span>
 <span class="sd">          L is the target sequence length, S is the source sequence length.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">multi_head_attention_forward</span><span class="p">(</span>
-            <span class="n">query</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_heads</span><span class="p">,</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">in_proj_weight</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_proj_bias</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias_k</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias_v</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_zero_attn</span><span class="p">,</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_proj</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">training</span><span class="p">,</span>
-            <span class="n">key_padding_mask</span><span class="o">=</span><span class="n">key_padding_mask</span><span class="p">,</span> <span class="n">need_weights</span><span class="o">=</span><span class="n">need_weights</span><span class="p">,</span> <span class="n">attn_mask</span><span class="o">=</span><span class="n">attn_mask</span><span class="p">)</span></div></div>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;_qkv_same_embed_dim&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qkv_same_embed_dim</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">multi_head_attention_forward</span><span class="p">(</span>
+                <span class="n">query</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_heads</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">in_proj_weight</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_proj_bias</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">bias_k</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias_v</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_zero_attn</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_proj</span><span class="o">.</span><span class="n">weight</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_proj</span><span class="o">.</span><span class="n">bias</span><span class="p">,</span> 
+                <span class="n">training</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">training</span><span class="p">,</span>
+                <span class="n">key_padding_mask</span><span class="o">=</span><span class="n">key_padding_mask</span><span class="p">,</span> <span class="n">need_weights</span><span class="o">=</span><span class="n">need_weights</span><span class="p">,</span> 
+                <span class="n">attn_mask</span><span class="o">=</span><span class="n">attn_mask</span><span class="p">,</span> <span class="n">use_separate_proj_weight</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">q_proj_weight</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">q_proj_weight</span><span class="p">,</span> <span class="n">k_proj_weight</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">k_proj_weight</span><span class="p">,</span>
+                <span class="n">v_proj_weight</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">v_proj_weight</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;_qkv_same_embed_dim&#39;</span><span class="p">):</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;A new version of MultiheadAttention module has been implemented. </span><span class="se">\</span>
+<span class="s1">                    Please re-train your model with the new module&#39;</span><span class="p">,</span>
+                              <span class="ne">UserWarning</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">multi_head_attention_forward</span><span class="p">(</span>
+                <span class="n">query</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_heads</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">in_proj_weight</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_proj_bias</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">bias_k</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias_v</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_zero_attn</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_proj</span><span class="o">.</span><span class="n">weight</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_proj</span><span class="o">.</span><span class="n">bias</span><span class="p">,</span> 
+                <span class="n">training</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">training</span><span class="p">,</span>
+                <span class="n">key_padding_mask</span><span class="o">=</span><span class="n">key_padding_mask</span><span class="p">,</span> <span class="n">need_weights</span><span class="o">=</span><span class="n">need_weights</span><span class="p">,</span> 
+                <span class="n">attn_mask</span><span class="o">=</span><span class="n">attn_mask</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="PReLU"><a class="viewcode-back" href="../../../../nn.html#torch.nn.PReLU">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">PReLU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="PReLU"><a class="viewcode-back" href="../../../../nn.html#torch.nn.PReLU">[docs]</a><span class="k">class</span> <span class="nc">PReLU</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the element-wise function:</span>
 
 <span class="sd">    .. math::</span>
@@ -1099,13 +1123,13 @@
 <span class="sd">        &gt;&gt;&gt; input = torch.randn(2)</span>
 <span class="sd">        &gt;&gt;&gt; output = m(input)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__constants__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;num_parameters&#39;</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_parameters</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="mf">0.25</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">num_parameters</span> <span class="o">=</span> <span class="n">num_parameters</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">PReLU</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="n">num_parameters</span><span class="p">)</span><span class="o">.</span><span class="n">fill_</span><span class="p">(</span><span class="n">init</span><span class="p">))</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">prelu</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">)</span>
 
@@ -1113,8 +1137,7 @@
         <span class="k">return</span> <span class="s1">&#39;num_parameters=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_parameters</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="Softsign"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Softsign">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">Softsign</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="Softsign"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Softsign">[docs]</a><span class="k">class</span> <span class="nc">Softsign</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the element-wise function:</span>
 
 <span class="sd">    .. math::</span>
@@ -1134,13 +1157,11 @@
 <span class="sd">        &gt;&gt;&gt; output = m(input)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">softsign</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="Tanhshrink"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Tanhshrink">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">Tanhshrink</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="Tanhshrink"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Tanhshrink">[docs]</a><span class="k">class</span> <span class="nc">Tanhshrink</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the element-wise function:</span>
 
 <span class="sd">    .. math::</span>
@@ -1160,13 +1181,11 @@
 <span class="sd">        &gt;&gt;&gt; output = m(input)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">tanhshrink</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="Softmin"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Softmin">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">Softmin</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="Softmin"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Softmin">[docs]</a><span class="k">class</span> <span class="nc">Softmin</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the Softmin function to an n-dimensional input Tensor</span>
 <span class="sd">    rescaling them so that the elements of the n-dimensional output Tensor</span>
 <span class="sd">    lie in the range `[0, 1]` and sum to 1.</span>
@@ -1201,13 +1220,11 @@
         <span class="nb">super</span><span class="p">(</span><span class="n">Softmin</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dim</span> <span class="o">=</span> <span class="n">dim</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">softmin</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span><span class="p">,</span> <span class="n">_stacklevel</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="Softmax"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Softmax">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">Softmax</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="Softmax"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Softmax">[docs]</a><span class="k">class</span> <span class="nc">Softmax</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the Softmax function to an n-dimensional input Tensor</span>
 <span class="sd">    rescaling them so that the elements of the n-dimensional output Tensor</span>
 <span class="sd">    lie in the range [0,1] and sum to 1.</span>
@@ -1252,7 +1269,6 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;dim&#39;</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">dim</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span><span class="p">,</span> <span class="n">_stacklevel</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 
@@ -1260,8 +1276,7 @@
         <span class="k">return</span> <span class="s1">&#39;dim=</span><span class="si">{dim}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dim</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="Softmax2d"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Softmax2d">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">Softmax2d</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="Softmax2d"><a class="viewcode-back" href="../../../../nn.html#torch.nn.Softmax2d">[docs]</a><span class="k">class</span> <span class="nc">Softmax2d</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies SoftMax over features to each spatial location.</span>
 
 <span class="sd">    When given an image of ``Channels x Height x Width``, it will</span>
@@ -1283,14 +1298,12 @@
 <span class="sd">        &gt;&gt;&gt; output = m(input)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">assert</span> <span class="nb">input</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;Softmax2d requires a 4D tensor as input&#39;</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">_stacklevel</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="LogSoftmax"><a class="viewcode-back" href="../../../../nn.html#torch.nn.LogSoftmax">[docs]</a><span class="nd">@weak_module</span>
-<span class="k">class</span> <span class="nc">LogSoftmax</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
+<div class="viewcode-block" id="LogSoftmax"><a class="viewcode-back" href="../../../../nn.html#torch.nn.LogSoftmax">[docs]</a><span class="k">class</span> <span class="nc">LogSoftmax</span><span class="p">(</span><span class="n">Module</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies the :math:`\log(\text{Softmax}(x))` function to an n-dimensional</span>
 <span class="sd">    input Tensor. The LogSoftmax formulation can be simplified as:</span>
 
@@ -1326,7 +1339,6 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;dim&#39;</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">dim</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="nd">@weak_script_method</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">log_softmax</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span><span class="p">,</span> <span class="n">_stacklevel</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span></div>
 </pre></div>
@@ -1345,7 +1357,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Torch Contributors.
+        &copy; Copyright 2019, Torch Contributors.
 
     </p>
   </div>
@@ -1381,9 +1393,6 @@
          <script type="text/javascript" src="../../../../_static/underscore.js"></script>
          <script type="text/javascript" src="../../../../_static/doctools.js"></script>
          <script type="text/javascript" src="../../../../_static/language_data.js"></script>
-         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"></script>
-         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js"></script>
-         <script type="text/javascript" src="../../../../_static/katex_autorenderer.js"></script>
      
 
   

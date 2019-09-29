@@ -30,13 +30,33 @@
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!-- <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" /> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/katex-math.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
+
+  <!-- Preload the theme fonts -->
+
+<link rel="preload" href="../../../_static/fonts/FreightSans/freight-sans-book.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../_static/fonts/FreightSans/freight-sans-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../_static/fonts/IBMPlexMono/IBMPlexMono-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../_static/fonts/FreightSans/freight-sans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../_static/fonts/FreightSans/freight-sans-medium-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../../_static/fonts/IBMPlexMono/IBMPlexMono-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<!-- Preload the katex fonts -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size1-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size4-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size2-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size3-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Caligraphic-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
@@ -108,7 +128,7 @@
               
               
                 <div class="version">
-                  <a href='http://pytorch.org/docs/versions.html'>1.2.0a0+81e70ff &#x25BC</a>
+                  <a href='http://pytorch.org/docs/versions.html'>1.3.0a0+9e1cf99 &#x25BC</a>
                 </div>
               
             
@@ -147,9 +167,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../notes/autograd.html">Autograd mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../notes/broadcasting.html">Broadcasting semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notes/cpu_threading_torchscript_inference.html">CPU threading and TorchScript inference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../notes/cuda.html">CUDA semantics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../notes/extending.html">Extending PyTorch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../notes/faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../notes/large_scale_deployments.html">Features for large-scale deployments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../notes/multiprocessing.html">Multiprocessing best practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../notes/randomness.html">Reproducibility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../notes/serialization.html">Serialization semantics</a></li>
@@ -164,32 +186,31 @@
 <p class="caption"><span class="caption-text">Package Reference</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../torch.html">torch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nn.html">torch.nn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nn.functional.html">torch.nn.functional</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../tensors.html">torch.Tensor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../tensor_attributes.html">Tensor Attributes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../type_info.html">Type Info</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../sparse.html">torch.sparse</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../cuda.html">torch.cuda</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../storage.html">torch.Storage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../nn.html">torch.nn</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../nn.html#torch-nn-functional">torch.nn.functional</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../nn.html#torch-nn-init">torch.nn.init</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../optim.html">torch.optim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../autograd.html">torch.autograd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cuda.html">torch.cuda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../distributed.html">torch.distributed</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../distributions.html">torch.distributions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../hub.html">torch.hub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../jit.html">torch.jit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../multiprocessing.html">torch.multiprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nn.init.html">torch.nn.init</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../onnx.html">torch.onnx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../optim.html">torch.optim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../random.html">torch.random</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sparse.html">torch.sparse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../storage.html">torch.Storage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../bottleneck.html">torch.utils.bottleneck</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../checkpoint.html">torch.utils.checkpoint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../cpp_extension.html">torch.utils.cpp_extension</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../data.html">torch.utils.data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../dlpack.html">torch.utils.dlpack</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../model_zoo.html">torch.utils.model_zoo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../tensorboard.html">torch.utils.tensorboard (experimental)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../onnx.html">torch.onnx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tensorboard.html">torch.utils.tensorboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../type_info.html">Type Info</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../__config__.html">torch.__config__</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../distributed_deprecated.html">torch.distributed.deprecated</a></li>
 </ul>
 <p class="caption"><span class="caption-text">torchvision Reference</span></p>
 <ul>
@@ -274,7 +295,6 @@
 <span class="kn">import</span> <span class="nn">warnings</span>
 
 <span class="kn">import</span> <span class="nn">torch</span>
-<span class="kn">from</span> <span class="nn">.._jit_internal</span> <span class="k">import</span> <span class="n">weak_script</span>
 
 <span class="c1"># These no_grad_* functions are necessary as wrappers around the parts of these</span>
 <span class="c1"># functions that use `with torch.no_grad()`. The JIT doesn&#39;t support context</span>
@@ -300,7 +320,7 @@
         <span class="k">return</span> <span class="n">tensor</span><span class="o">.</span><span class="n">zero_</span><span class="p">()</span>
 
 
-<div class="viewcode-block" id="calculate_gain"><a class="viewcode-back" href="../../../nn.html#torch.nn.init.calculate_gain">[docs]</a><span class="k">def</span> <span class="nf">calculate_gain</span><span class="p">(</span><span class="n">nonlinearity</span><span class="p">,</span> <span class="n">param</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="calculate_gain"><a class="viewcode-back" href="../../../nn.init.html#torch.nn.init.calculate_gain">[docs]</a><span class="k">def</span> <span class="nf">calculate_gain</span><span class="p">(</span><span class="n">nonlinearity</span><span class="p">,</span> <span class="n">param</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Return the recommended gain value for the given nonlinearity function.</span>
 <span class="sd">    The values are as follows:</span>
 
@@ -342,8 +362,7 @@
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unsupported nonlinearity </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nonlinearity</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="uniform_"><a class="viewcode-back" href="../../../nn.html#torch.nn.init.uniform_">[docs]</a><span class="nd">@weak_script</span>
-<span class="k">def</span> <span class="nf">uniform_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mf">1.</span><span class="p">):</span>
+<div class="viewcode-block" id="uniform_"><a class="viewcode-back" href="../../../nn.init.html#torch.nn.init.uniform_">[docs]</a><span class="k">def</span> <span class="nf">uniform_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mf">1.</span><span class="p">):</span>
     <span class="c1"># type: (Tensor, float, float) -&gt; Tensor</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fills the input Tensor with values drawn from the uniform</span>
 <span class="sd">    distribution :math:`\mathcal{U}(a, b)`.</span>
@@ -360,11 +379,10 @@
     <span class="k">return</span> <span class="n">_no_grad_uniform_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="normal_"><a class="viewcode-back" href="../../../nn.html#torch.nn.init.normal_">[docs]</a><span class="nd">@weak_script</span>
-<span class="k">def</span> <span class="nf">normal_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="mf">1.</span><span class="p">):</span>
+<div class="viewcode-block" id="normal_"><a class="viewcode-back" href="../../../nn.init.html#torch.nn.init.normal_">[docs]</a><span class="k">def</span> <span class="nf">normal_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="mf">1.</span><span class="p">):</span>
     <span class="c1"># type: (Tensor, float, float) -&gt; Tensor</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fills the input Tensor with values drawn from the normal</span>
-<span class="sd">    distribution :math:`\mathcal{N}(\text{mean}, \text{std})`.</span>
+<span class="sd">    distribution :math:`\mathcal{N}(\text{mean}, \text{std}^2)`.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        tensor: an n-dimensional `torch.Tensor`</span>
@@ -378,8 +396,7 @@
     <span class="k">return</span> <span class="n">_no_grad_normal_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="n">std</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="constant_"><a class="viewcode-back" href="../../../nn.html#torch.nn.init.constant_">[docs]</a><span class="nd">@weak_script</span>
-<span class="k">def</span> <span class="nf">constant_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+<div class="viewcode-block" id="constant_"><a class="viewcode-back" href="../../../nn.init.html#torch.nn.init.constant_">[docs]</a><span class="k">def</span> <span class="nf">constant_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
     <span class="c1"># type: (Tensor, float) -&gt; Tensor</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fills the input Tensor with the value :math:`\text{val}`.</span>
 
@@ -394,10 +411,9 @@
     <span class="k">return</span> <span class="n">_no_grad_fill_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span></div>
 
 
-<span class="nd">@weak_script</span>
-<span class="k">def</span> <span class="nf">ones_</span><span class="p">(</span><span class="n">tensor</span><span class="p">):</span>
+<div class="viewcode-block" id="ones_"><a class="viewcode-back" href="../../../nn.init.html#torch.nn.init.ones_">[docs]</a><span class="k">def</span> <span class="nf">ones_</span><span class="p">(</span><span class="n">tensor</span><span class="p">):</span>
     <span class="c1"># type: (Tensor) -&gt; Tensor</span>
-    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fills the input Tensor with ones`.</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fills the input Tensor with the scalar value `1`.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        tensor: an n-dimensional `torch.Tensor`</span>
@@ -406,13 +422,12 @@
 <span class="sd">        &gt;&gt;&gt; w = torch.empty(3, 5)</span>
 <span class="sd">        &gt;&gt;&gt; nn.init.ones_(w)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">_no_grad_fill_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">_no_grad_fill_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="mf">1.</span><span class="p">)</span></div>
 
 
-<span class="nd">@weak_script</span>
-<span class="k">def</span> <span class="nf">zeros_</span><span class="p">(</span><span class="n">tensor</span><span class="p">):</span>
+<div class="viewcode-block" id="zeros_"><a class="viewcode-back" href="../../../nn.init.html#torch.nn.init.zeros_">[docs]</a><span class="k">def</span> <span class="nf">zeros_</span><span class="p">(</span><span class="n">tensor</span><span class="p">):</span>
     <span class="c1"># type: (Tensor) -&gt; Tensor</span>
-    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fills the input Tensor with zeros`.</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fills the input Tensor with the scalar value `0`.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        tensor: an n-dimensional `torch.Tensor`</span>
@@ -421,10 +436,10 @@
 <span class="sd">        &gt;&gt;&gt; w = torch.empty(3, 5)</span>
 <span class="sd">        &gt;&gt;&gt; nn.init.zeros_(w)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">_no_grad_zero_</span><span class="p">(</span><span class="n">tensor</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">_no_grad_zero_</span><span class="p">(</span><span class="n">tensor</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="eye_"><a class="viewcode-back" href="../../../nn.html#torch.nn.init.eye_">[docs]</a><span class="k">def</span> <span class="nf">eye_</span><span class="p">(</span><span class="n">tensor</span><span class="p">):</span>
+<div class="viewcode-block" id="eye_"><a class="viewcode-back" href="../../../nn.init.html#torch.nn.init.eye_">[docs]</a><span class="k">def</span> <span class="nf">eye_</span><span class="p">(</span><span class="n">tensor</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fills the 2-dimensional input `Tensor` with the identity</span>
 <span class="sd">    matrix. Preserves the identity of the inputs in `Linear` layers, where as</span>
 <span class="sd">    many inputs are preserved as possible.</span>
@@ -444,7 +459,7 @@
     <span class="k">return</span> <span class="n">tensor</span></div>
 
 
-<div class="viewcode-block" id="dirac_"><a class="viewcode-back" href="../../../nn.html#torch.nn.init.dirac_">[docs]</a><span class="k">def</span> <span class="nf">dirac_</span><span class="p">(</span><span class="n">tensor</span><span class="p">):</span>
+<div class="viewcode-block" id="dirac_"><a class="viewcode-back" href="../../../nn.init.html#torch.nn.init.dirac_">[docs]</a><span class="k">def</span> <span class="nf">dirac_</span><span class="p">(</span><span class="n">tensor</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fills the {3, 4, 5}-dimensional input `Tensor` with the Dirac</span>
 <span class="sd">    delta function. Preserves the identity of the inputs in `Convolutional`</span>
 <span class="sd">    layers, where as many input channels are preserved as possible.</span>
@@ -475,7 +490,6 @@
     <span class="k">return</span> <span class="n">tensor</span></div>
 
 
-<span class="nd">@weak_script</span>
 <span class="k">def</span> <span class="nf">_calculate_fan_in_and_fan_out</span><span class="p">(</span><span class="n">tensor</span><span class="p">):</span>
     <span class="n">dimensions</span> <span class="o">=</span> <span class="n">tensor</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">dimensions</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
@@ -496,8 +510,7 @@
     <span class="k">return</span> <span class="n">fan_in</span><span class="p">,</span> <span class="n">fan_out</span>
 
 
-<div class="viewcode-block" id="xavier_uniform_"><a class="viewcode-back" href="../../../nn.html#torch.nn.init.xavier_uniform_">[docs]</a><span class="nd">@weak_script</span>
-<span class="k">def</span> <span class="nf">xavier_uniform_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">gain</span><span class="o">=</span><span class="mf">1.</span><span class="p">):</span>
+<div class="viewcode-block" id="xavier_uniform_"><a class="viewcode-back" href="../../../nn.init.html#torch.nn.init.xavier_uniform_">[docs]</a><span class="k">def</span> <span class="nf">xavier_uniform_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">gain</span><span class="o">=</span><span class="mf">1.</span><span class="p">):</span>
     <span class="c1"># type: (Tensor, float) -&gt; Tensor</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fills the input `Tensor` with values according to the method</span>
 <span class="sd">    described in `Understanding the difficulty of training deep feedforward</span>
@@ -525,14 +538,13 @@
     <span class="k">return</span> <span class="n">_no_grad_uniform_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="xavier_normal_"><a class="viewcode-back" href="../../../nn.html#torch.nn.init.xavier_normal_">[docs]</a><span class="nd">@weak_script</span>
-<span class="k">def</span> <span class="nf">xavier_normal_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">gain</span><span class="o">=</span><span class="mf">1.</span><span class="p">):</span>
+<div class="viewcode-block" id="xavier_normal_"><a class="viewcode-back" href="../../../nn.init.html#torch.nn.init.xavier_normal_">[docs]</a><span class="k">def</span> <span class="nf">xavier_normal_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">gain</span><span class="o">=</span><span class="mf">1.</span><span class="p">):</span>
     <span class="c1"># type: (Tensor, float) -&gt; Tensor</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fills the input `Tensor` with values according to the method</span>
 <span class="sd">    described in `Understanding the difficulty of training deep feedforward</span>
 <span class="sd">    neural networks` - Glorot, X. &amp; Bengio, Y. (2010), using a normal</span>
 <span class="sd">    distribution. The resulting tensor will have values sampled from</span>
-<span class="sd">    :math:`\mathcal{N}(0, \text{std})` where</span>
+<span class="sd">    :math:`\mathcal{N}(0, \text{std}^2)` where</span>
 
 <span class="sd">    .. math::</span>
 <span class="sd">        \text{std} = \text{gain} \times \sqrt{\frac{2}{\text{fan\_in} + \text{fan\_out}}}</span>
@@ -563,7 +575,7 @@
     <span class="k">return</span> <span class="n">fan_in</span> <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;fan_in&#39;</span> <span class="k">else</span> <span class="n">fan_out</span>
 
 
-<div class="viewcode-block" id="kaiming_uniform_"><a class="viewcode-back" href="../../../nn.html#torch.nn.init.kaiming_uniform_">[docs]</a><span class="k">def</span> <span class="nf">kaiming_uniform_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;fan_in&#39;</span><span class="p">,</span> <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;leaky_relu&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="kaiming_uniform_"><a class="viewcode-back" href="../../../nn.init.html#torch.nn.init.kaiming_uniform_">[docs]</a><span class="k">def</span> <span class="nf">kaiming_uniform_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;fan_in&#39;</span><span class="p">,</span> <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;leaky_relu&#39;</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fills the input `Tensor` with values according to the method</span>
 <span class="sd">    described in `Delving deep into rectifiers: Surpassing human-level</span>
 <span class="sd">    performance on ImageNet classification` - He, K. et al. (2015), using a</span>
@@ -598,12 +610,12 @@
         <span class="k">return</span> <span class="n">tensor</span><span class="o">.</span><span class="n">uniform_</span><span class="p">(</span><span class="o">-</span><span class="n">bound</span><span class="p">,</span> <span class="n">bound</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="kaiming_normal_"><a class="viewcode-back" href="../../../nn.html#torch.nn.init.kaiming_normal_">[docs]</a><span class="k">def</span> <span class="nf">kaiming_normal_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;fan_in&#39;</span><span class="p">,</span> <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;leaky_relu&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="kaiming_normal_"><a class="viewcode-back" href="../../../nn.init.html#torch.nn.init.kaiming_normal_">[docs]</a><span class="k">def</span> <span class="nf">kaiming_normal_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;fan_in&#39;</span><span class="p">,</span> <span class="n">nonlinearity</span><span class="o">=</span><span class="s1">&#39;leaky_relu&#39;</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fills the input `Tensor` with values according to the method</span>
 <span class="sd">    described in `Delving deep into rectifiers: Surpassing human-level</span>
 <span class="sd">    performance on ImageNet classification` - He, K. et al. (2015), using a</span>
 <span class="sd">    normal distribution. The resulting tensor will have values sampled from</span>
-<span class="sd">    :math:`\mathcal{N}(0, \text{std})` where</span>
+<span class="sd">    :math:`\mathcal{N}(0, \text{std}^2)` where</span>
 
 <span class="sd">    .. math::</span>
 <span class="sd">        \text{std} = \sqrt{\frac{2}{(1 + a^2) \times \text{fan\_in}}}</span>
@@ -632,7 +644,7 @@
         <span class="k">return</span> <span class="n">tensor</span><span class="o">.</span><span class="n">normal_</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">std</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="orthogonal_"><a class="viewcode-back" href="../../../nn.html#torch.nn.init.orthogonal_">[docs]</a><span class="k">def</span> <span class="nf">orthogonal_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">gain</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="orthogonal_"><a class="viewcode-back" href="../../../nn.init.html#torch.nn.init.orthogonal_">[docs]</a><span class="k">def</span> <span class="nf">orthogonal_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">gain</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fills the input `Tensor` with a (semi) orthogonal matrix, as</span>
 <span class="sd">    described in `Exact solutions to the nonlinear dynamics of learning in deep</span>
 <span class="sd">    linear neural networks` - Saxe, A. et al. (2013). The input tensor must have</span>
@@ -673,7 +685,7 @@
     <span class="k">return</span> <span class="n">tensor</span></div>
 
 
-<div class="viewcode-block" id="sparse_"><a class="viewcode-back" href="../../../nn.html#torch.nn.init.sparse_">[docs]</a><span class="k">def</span> <span class="nf">sparse_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">sparsity</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
+<div class="viewcode-block" id="sparse_"><a class="viewcode-back" href="../../../nn.init.html#torch.nn.init.sparse_">[docs]</a><span class="k">def</span> <span class="nf">sparse_</span><span class="p">(</span><span class="n">tensor</span><span class="p">,</span> <span class="n">sparsity</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fills the 2D input `Tensor` as a sparse matrix, where the</span>
 <span class="sd">    non-zero elements will be drawn from the normal distribution</span>
 <span class="sd">    :math:`\mathcal{N}(0, 0.01)`, as described in `Deep learning via</span>
@@ -753,7 +765,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Torch Contributors.
+        &copy; Copyright 2019, Torch Contributors.
 
     </p>
   </div>
@@ -789,9 +801,6 @@
          <script type="text/javascript" src="../../../_static/underscore.js"></script>
          <script type="text/javascript" src="../../../_static/doctools.js"></script>
          <script type="text/javascript" src="../../../_static/language_data.js"></script>
-         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"></script>
-         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js"></script>
-         <script type="text/javascript" src="../../../_static/katex_autorenderer.js"></script>
      
 
   

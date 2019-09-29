@@ -30,13 +30,33 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!-- <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/katex-math.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
+
+  <!-- Preload the theme fonts -->
+
+<link rel="preload" href="../../_static/fonts/FreightSans/freight-sans-book.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../_static/fonts/FreightSans/freight-sans-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../_static/fonts/IBMPlexMono/IBMPlexMono-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../_static/fonts/FreightSans/freight-sans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../_static/fonts/FreightSans/freight-sans-medium-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../../_static/fonts/IBMPlexMono/IBMPlexMono-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<!-- Preload the katex fonts -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size1-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size4-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size2-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size3-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Caligraphic-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
@@ -108,7 +128,7 @@
               
               
                 <div class="version">
-                  <a href='http://pytorch.org/docs/versions.html'>1.2.0a0+81e70ff &#x25BC</a>
+                  <a href='http://pytorch.org/docs/versions.html'>1.3.0a0+9e1cf99 &#x25BC</a>
                 </div>
               
             
@@ -147,9 +167,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../notes/autograd.html">Autograd mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notes/broadcasting.html">Broadcasting semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/cpu_threading_torchscript_inference.html">CPU threading and TorchScript inference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notes/cuda.html">CUDA semantics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notes/extending.html">Extending PyTorch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notes/faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes/large_scale_deployments.html">Features for large-scale deployments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notes/multiprocessing.html">Multiprocessing best practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notes/randomness.html">Reproducibility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notes/serialization.html">Serialization semantics</a></li>
@@ -164,32 +186,31 @@
 <p class="caption"><span class="caption-text">Package Reference</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../torch.html">torch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nn.html">torch.nn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nn.functional.html">torch.nn.functional</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tensors.html">torch.Tensor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tensor_attributes.html">Tensor Attributes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../type_info.html">Type Info</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../sparse.html">torch.sparse</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../cuda.html">torch.cuda</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../storage.html">torch.Storage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../nn.html">torch.nn</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../nn.html#torch-nn-functional">torch.nn.functional</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../nn.html#torch-nn-init">torch.nn.init</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../optim.html">torch.optim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../autograd.html">torch.autograd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cuda.html">torch.cuda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../distributed.html">torch.distributed</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../distributions.html">torch.distributions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../hub.html">torch.hub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../jit.html">torch.jit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../multiprocessing.html">torch.multiprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nn.init.html">torch.nn.init</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../onnx.html">torch.onnx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../optim.html">torch.optim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../random.html">torch.random</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sparse.html">torch.sparse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../storage.html">torch.Storage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../bottleneck.html">torch.utils.bottleneck</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../checkpoint.html">torch.utils.checkpoint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp_extension.html">torch.utils.cpp_extension</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../data.html">torch.utils.data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dlpack.html">torch.utils.dlpack</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../model_zoo.html">torch.utils.model_zoo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tensorboard.html">torch.utils.tensorboard (experimental)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../onnx.html">torch.onnx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tensorboard.html">torch.utils.tensorboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../type_info.html">Type Info</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../__config__.html">torch.__config__</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../distributed_deprecated.html">torch.distributed.deprecated</a></li>
 </ul>
 <p class="caption"><span class="caption-text">torchvision Reference</span></p>
 <ul>
@@ -269,7 +290,6 @@
               
   <h1>Source code for torch.serialization</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">difflib</span>
-<span class="kn">import</span> <span class="nn">inspect</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">io</span>
 <span class="kn">import</span> <span class="nn">shutil</span>
@@ -277,12 +297,12 @@
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">import</span> <span class="nn">tarfile</span>
-<span class="kn">import</span> <span class="nn">zipfile</span>
 <span class="kn">import</span> <span class="nn">tempfile</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="kn">from</span> <span class="nn">contextlib</span> <span class="k">import</span> <span class="n">closing</span><span class="p">,</span> <span class="n">contextmanager</span>
 <span class="kn">from</span> <span class="nn">._utils</span> <span class="k">import</span> <span class="n">_import_dotted_name</span>
 <span class="kn">from</span> <span class="nn">._six</span> <span class="k">import</span> <span class="n">string_classes</span> <span class="k">as</span> <span class="n">_string_classes</span>
+<span class="kn">from</span> <span class="nn">torch._utils_internal</span> <span class="k">import</span> <span class="n">get_source_lines_and_file</span>
 <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">cPickle</span> <span class="k">as</span> <span class="nn">pickle</span>
 <span class="k">else</span><span class="p">:</span>
@@ -312,6 +332,43 @@
 
 
 <span class="n">_package_registry</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+<span class="k">def</span> <span class="nf">_is_zipfile</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="c1"># This is a stricter implementation than zipfile.is_zipfile().</span>
+    <span class="c1"># zipfile.is_zipfile() is True if the magic number appears anywhere in the</span>
+    <span class="c1"># binary. Since we expect the files here to be generated by torch.save or</span>
+    <span class="c1"># torch.jit.save, it&#39;s safe to only check the start bytes and avoid</span>
+    <span class="c1"># collisions. See bugs.python.org/issue28494.</span>
+
+    <span class="c1"># Read the first 4 bytes of the file</span>
+    <span class="n">read_bytes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
+
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">byte</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">byte</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+        <span class="n">read_bytes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">byte</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">read_bytes</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">byte</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+
+    <span class="c1"># zip magic numbers</span>
+    <span class="n">magic_numbers</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\x03</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\x04</span><span class="s1">&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\x05</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\x06</span><span class="s1">&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\x07</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\x08</span><span class="s1">&#39;</span><span class="p">],</span>
+    <span class="p">]</span>
+    <span class="k">for</span> <span class="n">magic_number</span> <span class="ow">in</span> <span class="n">magic_numbers</span><span class="p">:</span>
+        <span class="n">match</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">magic_byte</span><span class="p">,</span> <span class="n">read_byte</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">magic_number</span><span class="p">,</span> <span class="n">read_bytes</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">ord</span><span class="p">(</span><span class="n">magic_byte</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">read_byte</span><span class="p">):</span>
+                <span class="n">match</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">break</span>
+        <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
 
 
 <span class="k">def</span> <span class="nf">register_package</span><span class="p">(</span><span class="n">priority</span><span class="p">,</span> <span class="n">tagger</span><span class="p">,</span> <span class="n">deserializer</span><span class="p">):</span>
@@ -349,7 +406,7 @@
         <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;Attempting to deserialize object on a CUDA &#39;</span>
                            <span class="s1">&#39;device but torch.cuda.is_available() is False. &#39;</span>
                            <span class="s1">&#39;If you are running on a CPU-only machine, &#39;</span>
-                           <span class="s1">&#39;please use torch.load with map_location=</span><span class="se">\&#39;</span><span class="s1">cpu</span><span class="se">\&#39;</span><span class="s1"> &#39;</span>
+                           <span class="s1">&#39;please use torch.load with map_location=torch.device(</span><span class="se">\&#39;</span><span class="s1">cpu</span><span class="se">\&#39;</span><span class="s1">) &#39;</span>
                            <span class="s1">&#39;to map your storages to the CPU.&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">device</span> <span class="o">&gt;=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">device_count</span><span class="p">():</span>
         <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;Attempting to deserialize object on CUDA device &#39;</span>
@@ -477,11 +534,11 @@
 <span class="sd">        pickle_protocol: can be specified to override the default protocol</span>
 
 <span class="sd">    .. warning::</span>
-<span class="sd">        If you are using Python 2, torch.save does NOT support StringIO.StringIO</span>
+<span class="sd">        If you are using Python 2, :func:`torch.save` does NOT support :class:`StringIO.StringIO`</span>
 <span class="sd">        as a valid file-like object. This is because the write method should return</span>
-<span class="sd">        the number of bytes written; StringIO.write() does not do this.</span>
+<span class="sd">        the number of bytes written; :meth:`StringIO.write()` does not do this.</span>
 
-<span class="sd">        Please use something like io.BytesIO instead.</span>
+<span class="sd">        Please use something like :class:`io.BytesIO` instead.</span>
 
 <span class="sd">    Example:</span>
 <span class="sd">        &gt;&gt;&gt; # Save to file</span>
@@ -519,8 +576,8 @@
             <span class="n">serialized_container_types</span><span class="p">[</span><span class="n">obj</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
             <span class="n">source_file</span> <span class="o">=</span> <span class="n">source</span> <span class="o">=</span> <span class="kc">None</span>
             <span class="k">try</span><span class="p">:</span>
-                <span class="n">source_file</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getsourcefile</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
-                <span class="n">source</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getsource</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+                <span class="n">source_lines</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">source_file</span> <span class="o">=</span> <span class="n">get_source_lines_and_file</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+                <span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
             <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># saving the source is optional, so we can ignore any errors</span>
                 <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Couldn&#39;t retrieve source code for container of &quot;</span>
                               <span class="s2">&quot;type &quot;</span> <span class="o">+</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;. It won&#39;t be checked &quot;</span>
@@ -546,7 +603,6 @@
                     <span class="n">location</span><span class="p">,</span>
                     <span class="n">obj</span><span class="o">.</span><span class="n">size</span><span class="p">(),</span>
                     <span class="n">view_metadata</span><span class="p">)</span>
-
         <span class="k">return</span> <span class="kc">None</span>
 
     <span class="n">sys_info</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
@@ -576,58 +632,58 @@
 <div class="viewcode-block" id="load"><a class="viewcode-back" href="../../torch.html#torch.load">[docs]</a><span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">map_location</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pickle_module</span><span class="o">=</span><span class="n">pickle</span><span class="p">,</span> <span class="o">**</span><span class="n">pickle_load_args</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Loads an object saved with :func:`torch.save` from a file.</span>
 
-<span class="sd">    :meth:`torch.load` uses Python&#39;s unpickling facilities but treats storages,</span>
+<span class="sd">    :func:`torch.load` uses Python&#39;s unpickling facilities but treats storages,</span>
 <span class="sd">    which underlie tensors, specially. They are first deserialized on the</span>
 <span class="sd">    CPU and are then moved to the device they were saved from. If this fails</span>
 <span class="sd">    (e.g. because the run time system doesn&#39;t have certain devices), an exception</span>
 <span class="sd">    is raised. However, storages can be dynamically remapped to an alternative</span>
-<span class="sd">    set of devices using the `map_location` argument.</span>
+<span class="sd">    set of devices using the :attr:`map_location` argument.</span>
 
-<span class="sd">    If `map_location` is a callable, it will be called once for each serialized</span>
+<span class="sd">    If :attr:`map_location` is a callable, it will be called once for each serialized</span>
 <span class="sd">    storage with two arguments: storage and location. The storage argument</span>
 <span class="sd">    will be the initial deserialization of the storage, residing on the CPU.</span>
 <span class="sd">    Each serialized storage has a location tag associated with it which</span>
 <span class="sd">    identifies the device it was saved from, and this tag is the second</span>
-<span class="sd">    argument passed to map_location. The builtin location tags are `&#39;cpu&#39;` for</span>
-<span class="sd">    CPU tensors and `&#39;cuda:device_id&#39;` (e.g. `&#39;cuda:2&#39;`) for CUDA tensors.</span>
-<span class="sd">    `map_location` should return either None or a storage. If `map_location` returns</span>
-<span class="sd">    a storage, it will be used as the final deserialized object, already moved to</span>
-<span class="sd">    the right device. Otherwise, :math:`torch.load` will fall back to the default</span>
-<span class="sd">    behavior, as if `map_location` wasn&#39;t specified.</span>
+<span class="sd">    argument passed to :attr:`map_location`. The builtin location tags are ``&#39;cpu&#39;``</span>
+<span class="sd">    for CPU tensors and ``&#39;cuda:device_id&#39;`` (e.g. ``&#39;cuda:2&#39;``) for CUDA tensors.</span>
+<span class="sd">    :attr:`map_location` should return either ``None`` or a storage. If</span>
+<span class="sd">    :attr:`map_location` returns a storage, it will be used as the final deserialized</span>
+<span class="sd">    object, already moved to the right device. Otherwise, :func:`torch.load` will</span>
+<span class="sd">    fall back to the default behavior, as if :attr:`map_location` wasn&#39;t specified.</span>
 
-<span class="sd">    If `map_location` is a string, it should be a device tag, where all tensors</span>
-<span class="sd">    should be loaded.</span>
+<span class="sd">    If :attr:`map_location` is a :class:`torch.device` object or a string contraining</span>
+<span class="sd">    a device tag, it indicates the location where all tensors should be loaded.</span>
 
-<span class="sd">    Otherwise, if `map_location` is a dict, it will be used to remap location tags</span>
+<span class="sd">    Otherwise, if :attr:`map_location` is a dict, it will be used to remap location tags</span>
 <span class="sd">    appearing in the file (keys), to ones that specify where to put the</span>
 <span class="sd">    storages (values).</span>
 
 <span class="sd">    User extensions can register their own location tags and tagging and</span>
-<span class="sd">    deserialization methods using `register_package`.</span>
+<span class="sd">    deserialization methods using :func:`torch.serialization.register_package`.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        f: a file-like object (has to implement read, readline, tell, and seek),</span>
+<span class="sd">        f: a file-like object (has to implement :meth:`read`, :meth`readline`, :meth`tell`, and :meth`seek`),</span>
 <span class="sd">            or a string containing a file name</span>
-<span class="sd">        map_location: a function, torch.device, string or a dict specifying how to remap storage</span>
+<span class="sd">        map_location: a function, :class:`torch.device`, string or a dict specifying how to remap storage</span>
 <span class="sd">            locations</span>
 <span class="sd">        pickle_module: module used for unpickling metadata and objects (has to</span>
-<span class="sd">            match the pickle_module used to serialize file)</span>
-<span class="sd">        pickle_load_args: optional keyword arguments passed over to</span>
-<span class="sd">            ``pickle_module.load`` and ``pickle_module.Unpickler``, e.g.,</span>
-<span class="sd">            ``encoding=...``.</span>
+<span class="sd">            match the :attr:`pickle_module` used to serialize file)</span>
+<span class="sd">        pickle_load_args: (Python 3 only) optional keyword arguments passed over to</span>
+<span class="sd">            :func:`pickle_module.load` and :func:`pickle_module.Unpickler`, e.g.,</span>
+<span class="sd">            :attr:`errors=...`.</span>
 
 <span class="sd">    .. note::</span>
-<span class="sd">        When you call :meth:`torch.load()` on a file which contains GPU tensors, those tensors</span>
-<span class="sd">        will be loaded to GPU by default. You can call `torch.load(.., map_location=&#39;cpu&#39;)`</span>
+<span class="sd">        When you call :func:`torch.load()` on a file which contains GPU tensors, those tensors</span>
+<span class="sd">        will be loaded to GPU by default. You can call ``torch.load(.., map_location=&#39;cpu&#39;)``</span>
 <span class="sd">        and then :meth:`load_state_dict` to avoid GPU RAM surge when loading a model checkpoint.</span>
 
 <span class="sd">    .. note::</span>
-<span class="sd">        In Python 3, when loading files saved by Python 2, you may encounter</span>
-<span class="sd">        ``UnicodeDecodeError: &#39;ascii&#39; codec can&#39;t decode byte 0x...``. This is</span>
-<span class="sd">        caused by the difference of handling in byte strings in Python2 and</span>
-<span class="sd">        Python 3. You may use extra ``encoding`` keyword argument to specify how</span>
-<span class="sd">        these objects should be loaded, e.g., ``encoding=&#39;latin1&#39;`` decodes them</span>
-<span class="sd">        to strings using ``latin1`` encoding, and ``encoding=&#39;bytes&#39;`` keeps them</span>
+<span class="sd">        By default, we decode byte strings as ``utf-8``.  This is to avoid a common error</span>
+<span class="sd">        case ``UnicodeDecodeError: &#39;ascii&#39; codec can&#39;t decode byte 0x...``</span>
+<span class="sd">        when loading files saved by Python 2 in Python 3.  If this default</span>
+<span class="sd">        is incorrect, you may use an extra :attr:`encoding` keyword argument to specify how</span>
+<span class="sd">        these objects should be loaded, e.g., :attr:`encoding=&#39;latin1&#39;` decodes them</span>
+<span class="sd">        to strings using ``latin1`` encoding, and :attr:`encoding=&#39;bytes&#39;` keeps them</span>
 <span class="sd">        as byte arrays which can be decoded later with ``byte_array.decode(...)``.</span>
 
 <span class="sd">    Example:</span>
@@ -644,6 +700,8 @@
 <span class="sd">        &gt;&gt;&gt; with open(&#39;tensor.pt&#39;, &#39;rb&#39;) as f:</span>
 <span class="sd">                buffer = io.BytesIO(f.read())</span>
 <span class="sd">        &gt;&gt;&gt; torch.load(buffer)</span>
+<span class="sd">        # Load a module with &#39;ascii&#39; encoding for unpickling</span>
+<span class="sd">        &gt;&gt;&gt; torch.load(&#39;module.pt&#39;, encoding=&#39;ascii&#39;)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">new_fd</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">or</span> \
@@ -654,6 +712,8 @@
         <span class="n">new_fd</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="s1">&#39;encoding&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">pickle_load_args</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">pickle_load_args</span><span class="p">[</span><span class="s1">&#39;encoding&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span>
         <span class="k">return</span> <span class="n">_load</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">map_location</span><span class="p">,</span> <span class="n">pickle_module</span><span class="p">,</span> <span class="o">**</span><span class="n">pickle_load_args</span><span class="p">)</span>
     <span class="k">finally</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">new_fd</span><span class="p">:</span>
@@ -684,7 +744,7 @@
 
     <span class="k">def</span> <span class="nf">_check_container_source</span><span class="p">(</span><span class="n">container_type</span><span class="p">,</span> <span class="n">source_file</span><span class="p">,</span> <span class="n">original_source</span><span class="p">):</span>
         <span class="k">try</span><span class="p">:</span>
-            <span class="n">current_source</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getsource</span><span class="p">(</span><span class="n">container_type</span><span class="p">)</span>
+            <span class="n">current_source</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">get_source_lines_and_file</span><span class="p">(</span><span class="n">container_type</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
         <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># saving the source is optional, so we can ignore any errors</span>
             <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Couldn&#39;t retrieve source code for container of &quot;</span>
                           <span class="s2">&quot;type &quot;</span> <span class="o">+</span> <span class="n">container_type</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s2">&quot;. It won&#39;t be checked &quot;</span>
@@ -825,7 +885,7 @@
         <span class="k">try</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">legacy_load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
         <span class="k">except</span> <span class="n">tarfile</span><span class="o">.</span><span class="n">TarError</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">is_zipfile</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">_is_zipfile</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
                 <span class="c1"># .zip is used for torch.jit.save and will throw an un-pickling error here</span>
                 <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> is a zip archive (did you mean to use torch.jit.load()?)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
             <span class="c1"># if not a tarfile, reset file offset and proceed</span>
@@ -869,7 +929,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Torch Contributors.
+        &copy; Copyright 2019, Torch Contributors.
 
     </p>
   </div>
@@ -905,9 +965,6 @@
          <script type="text/javascript" src="../../_static/underscore.js"></script>
          <script type="text/javascript" src="../../_static/doctools.js"></script>
          <script type="text/javascript" src="../../_static/language_data.js"></script>
-         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"></script>
-         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js"></script>
-         <script type="text/javascript" src="../../_static/katex_autorenderer.js"></script>
      
 
   

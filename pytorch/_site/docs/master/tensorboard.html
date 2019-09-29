@@ -30,15 +30,35 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!-- <link rel="stylesheet" href="_static/pygments.css" type="text/css" /> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="torch.onnx" href="onnx.html" />
+    <link rel="next" title="Type Info" href="type_info.html" />
     <link rel="prev" title="torch.utils.model_zoo" href="model_zoo.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
+
+  <!-- Preload the theme fonts -->
+
+<link rel="preload" href="_static/fonts/FreightSans/freight-sans-book.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/FreightSans/freight-sans-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/IBMPlexMono/IBMPlexMono-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/FreightSans/freight-sans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/FreightSans/freight-sans-medium-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/IBMPlexMono/IBMPlexMono-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<!-- Preload the katex fonts -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size1-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size4-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size2-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size3-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Caligraphic-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
@@ -110,7 +130,7 @@
               
               
                 <div class="version">
-                  <a href='http://pytorch.org/docs/versions.html'>1.2.0a0+81e70ff &#x25BC</a>
+                  <a href='http://pytorch.org/docs/versions.html'>1.3.0a0+9e1cf99 &#x25BC</a>
                 </div>
               
             
@@ -149,9 +169,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="notes/autograd.html">Autograd mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes/broadcasting.html">Broadcasting semantics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes/cpu_threading_torchscript_inference.html">CPU threading and TorchScript inference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes/cuda.html">CUDA semantics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes/extending.html">Extending PyTorch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes/faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes/large_scale_deployments.html">Features for large-scale deployments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes/multiprocessing.html">Multiprocessing best practices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes/randomness.html">Reproducibility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes/serialization.html">Serialization semantics</a></li>
@@ -166,32 +188,31 @@
 <p class="caption"><span class="caption-text">Package Reference</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="torch.html">torch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nn.html">torch.nn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nn.functional.html">torch.nn.functional</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tensors.html">torch.Tensor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tensor_attributes.html">Tensor Attributes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="type_info.html">Type Info</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sparse.html">torch.sparse</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cuda.html">torch.cuda</a></li>
-<li class="toctree-l1"><a class="reference internal" href="storage.html">torch.Storage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nn.html">torch.nn</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nn.html#torch-nn-functional">torch.nn.functional</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nn.html#torch-nn-init">torch.nn.init</a></li>
-<li class="toctree-l1"><a class="reference internal" href="optim.html">torch.optim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="autograd.html">torch.autograd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cuda.html">torch.cuda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distributed.html">torch.distributed</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distributions.html">torch.distributions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hub.html">torch.hub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jit.html">torch.jit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multiprocessing.html">torch.multiprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nn.init.html">torch.nn.init</a></li>
+<li class="toctree-l1"><a class="reference internal" href="onnx.html">torch.onnx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optim.html">torch.optim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="random.html">torch.random</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sparse.html">torch.sparse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="storage.html">torch.Storage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bottleneck.html">torch.utils.bottleneck</a></li>
 <li class="toctree-l1"><a class="reference internal" href="checkpoint.html">torch.utils.checkpoint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cpp_extension.html">torch.utils.cpp_extension</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data.html">torch.utils.data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dlpack.html">torch.utils.dlpack</a></li>
 <li class="toctree-l1"><a class="reference internal" href="model_zoo.html">torch.utils.model_zoo</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">torch.utils.tensorboard (experimental)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="onnx.html">torch.onnx</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">torch.utils.tensorboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="type_info.html">Type Info</a></li>
 <li class="toctree-l1"><a class="reference internal" href="__config__.html">torch.__config__</a></li>
-<li class="toctree-l1"><a class="reference internal" href="distributed_deprecated.html">torch.distributed.deprecated</a></li>
 </ul>
 <p class="caption"><span class="caption-text">torchvision Reference</span></p>
 <ul>
@@ -271,12 +292,6 @@
               
   <div class="section" id="torch-utils-tensorboard">
 <h1>torch.utils.tensorboard<a class="headerlink" href="#torch-utils-tensorboard" title="Permalink to this headline">¶</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This code is EXPERIMENTAL and might change in the future. It also
-currently does not support all model types for <code class="docutils literal notranslate"><span class="pre">add_graph</span></code>, which
-we are actively working on.</p>
-</div>
 <p>Before going further, more details on TensorBoard can be found at
 <a class="reference external" href="https://www.tensorflow.org/tensorboard/">https://www.tensorflow.org/tensorboard/</a></p>
 <p>Once you’ve installed TensorBoard, these utilities let you log PyTorch models
@@ -309,7 +324,7 @@ and visualization by TensorBoard. For example:</p>
 </div>
 <p>This can then be visualized with TensorBoard, which should be installable
 and runnable with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">tb</span><span class="o">-</span><span class="n">nightly</span>  <span class="c1"># Until 1.14 moves to the release channel</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">tensorboard</span>
 <span class="n">tensorboard</span> <span class="o">--</span><span class="n">logdir</span><span class="o">=</span><span class="n">runs</span>
 </pre></div>
 </div>
@@ -338,7 +353,7 @@ in the TensorBoard interface.</p>
 </div>
 <dl class="class">
 <dt id="torch.utils.tensorboard.writer.SummaryWriter">
-<em class="property">class </em><code class="descclassname">torch.utils.tensorboard.writer.</code><code class="descname">SummaryWriter</code><span class="sig-paren">(</span><em>log_dir=None</em>, <em>comment=''</em>, <em>purge_step=None</em>, <em>max_queue=10</em>, <em>flush_secs=120</em>, <em>filename_suffix=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">torch.utils.tensorboard.writer.</code><code class="sig-name descname">SummaryWriter</code><span class="sig-paren">(</span><em class="sig-param">log_dir=None</em>, <em class="sig-param">comment=''</em>, <em class="sig-param">purge_step=None</em>, <em class="sig-param">max_queue=10</em>, <em class="sig-param">flush_secs=120</em>, <em class="sig-param">filename_suffix=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes entries directly to event files in the log_dir to be
 consumed by TensorBoard.</p>
 <p>The <cite>SummaryWriter</cite> class provides a high-level API to create an event file
@@ -348,7 +363,7 @@ to add data to the file directly from the training loop, without slowing down
 training.</p>
 <dl class="method">
 <dt id="torch.utils.tensorboard.writer.SummaryWriter.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>log_dir=None</em>, <em>comment=''</em>, <em>purge_step=None</em>, <em>max_queue=10</em>, <em>flush_secs=120</em>, <em>filename_suffix=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">log_dir=None</em>, <em class="sig-param">comment=''</em>, <em class="sig-param">purge_step=None</em>, <em class="sig-param">max_queue=10</em>, <em class="sig-param">flush_secs=120</em>, <em class="sig-param">filename_suffix=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a <cite>SummaryWriter</cite> that will write out events and summaries
 to the event file.</p>
 <dl class="field-list simple">
@@ -361,8 +376,14 @@ between runs easily. e.g. pass in ‘runs/exp1’, ‘runs/exp2’, etc.
 for each new experiment to compare across them.</p></li>
 <li><p><strong>comment</strong> (<em>string</em>) – Comment log_dir suffix appended to the default
 <code class="docutils literal notranslate"><span class="pre">log_dir</span></code>. If <code class="docutils literal notranslate"><span class="pre">log_dir</span></code> is assigned, this argument has no effect.</p></li>
-<li><p><strong>purge_step</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – When logging crashes at step <span class="math">\(T+X\)</span> and restarts at step <span class="math">\(T\)</span>,
-any events whose global_step larger or equal to <span class="math">\(T\)</span> will be
+<li><p><strong>purge_step</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – When logging crashes at step <span class="math"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>+</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">T+X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span></span></span></span>
+
+</span> and restarts at step <span class="math"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span></span></span></span>
+
+</span>,
+any events whose global_step larger or equal to <span class="math"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span></span></span></span>
+
+</span> will be
 purged and hidden from TensorBoard.
 Note that crashed and resumed experiments should have the same <code class="docutils literal notranslate"><span class="pre">log_dir</span></code>.</p></li>
 <li><p><strong>max_queue</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – Size of the queue for pending events and
@@ -396,7 +417,7 @@ tensorboard.summary.writer.event_file_writer.EventFileWriter.</p></li>
 
 <dl class="method">
 <dt id="torch.utils.tensorboard.writer.SummaryWriter.add_scalar">
-<code class="descname">add_scalar</code><span class="sig-paren">(</span><em>tag</em>, <em>scalar_value</em>, <em>global_step=None</em>, <em>walltime=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_scalar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_scalar" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_scalar</code><span class="sig-paren">(</span><em class="sig-param">tag</em>, <em class="sig-param">scalar_value</em>, <em class="sig-param">global_step=None</em>, <em class="sig-param">walltime=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_scalar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add scalar data to summary.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -424,7 +445,7 @@ with seconds after epoch of event</p></li>
 
 <dl class="method">
 <dt id="torch.utils.tensorboard.writer.SummaryWriter.add_scalars">
-<code class="descname">add_scalars</code><span class="sig-paren">(</span><em>main_tag</em>, <em>tag_scalar_dict</em>, <em>global_step=None</em>, <em>walltime=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_scalars"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_scalars" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_scalars</code><span class="sig-paren">(</span><em class="sig-param">main_tag</em>, <em class="sig-param">tag_scalar_dict</em>, <em class="sig-param">global_step=None</em>, <em class="sig-param">walltime=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_scalars"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_scalars" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds many scalar data to summary.</p>
 <p>Note that this function also keeps logged scalars in memory. In extreme case it explodes your RAM.</p>
 <dl class="field-list simple">
@@ -457,7 +478,7 @@ seconds after epoch of event</p></li>
 
 <dl class="method">
 <dt id="torch.utils.tensorboard.writer.SummaryWriter.add_histogram">
-<code class="descname">add_histogram</code><span class="sig-paren">(</span><em>tag</em>, <em>values</em>, <em>global_step=None</em>, <em>bins='tensorflow'</em>, <em>walltime=None</em>, <em>max_bins=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_histogram"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_histogram" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_histogram</code><span class="sig-paren">(</span><em class="sig-param">tag</em>, <em class="sig-param">values</em>, <em class="sig-param">global_step=None</em>, <em class="sig-param">bins='tensorflow'</em>, <em class="sig-param">walltime=None</em>, <em class="sig-param">max_bins=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_histogram"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_histogram" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add histogram to summary.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -487,61 +508,8 @@ seconds after epoch of event</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="torch.utils.tensorboard.writer.SummaryWriter.add_histogram_raw">
-<code class="descname">add_histogram_raw</code><span class="sig-paren">(</span><em>tag</em>, <em>min</em>, <em>max</em>, <em>num</em>, <em>sum</em>, <em>sum_squares</em>, <em>bucket_limits</em>, <em>bucket_counts</em>, <em>global_step=None</em>, <em>walltime=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_histogram_raw"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_histogram_raw" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds histogram with raw data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>tag</strong> (<em>string</em>) – Data identifier</p></li>
-<li><p><strong>min</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – Min value</p></li>
-<li><p><strong>max</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – Max value</p></li>
-<li><p><strong>num</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – Number of values</p></li>
-<li><p><strong>sum</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – Sum of all values</p></li>
-<li><p><strong>sum_squares</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – Sum of squares for all values</p></li>
-<li><p><strong>bucket_limits</strong> (<a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><em>torch.Tensor</em></a><em>, </em><em>numpy.array</em>) – Upper value per bucket.
-The number of elements of it should be the same as <cite>bucket_counts</cite>.</p></li>
-<li><p><strong>bucket_counts</strong> (<a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><em>torch.Tensor</em></a><em>, </em><em>numpy.array</em>) – Number of values per bucket</p></li>
-<li><p><strong>global_step</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – Global step value to record</p></li>
-<li><p><strong>walltime</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a>) – Optional override default walltime (time.time())
-seconds after epoch of event</p></li>
-<li><p><strong>see</strong> – <a class="reference external" href="https://github.com/tensorflow/tensorboard/blob/master/tensorboard/plugins/histogram/README.md">https://github.com/tensorflow/tensorboard/blob/master/tensorboard/plugins/histogram/README.md</a></p></li>
-</ul>
-</dd>
-</dl>
-<p>Examples:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">torch.utils.tensorboard</span> <span class="k">import</span> <span class="n">SummaryWriter</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">writer</span> <span class="o">=</span> <span class="n">SummaryWriter</span><span class="p">()</span>
-<span class="n">dummy_data</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">)):</span>
-    <span class="n">dummy_data</span> <span class="o">+=</span> <span class="p">[</span><span class="n">idx</span> <span class="o">+</span> <span class="mf">0.001</span><span class="p">]</span> <span class="o">*</span> <span class="n">value</span>
-
-<span class="n">bins</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="o">+</span><span class="mi">2</span><span class="p">))</span>
-<span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">bins</span><span class="p">)</span>
-<span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">dummy_data</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">counts</span><span class="p">,</span> <span class="n">limits</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">)</span>
-<span class="n">sum_sq</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
-<span class="n">writer</span><span class="o">.</span><span class="n">add_histogram_raw</span><span class="p">(</span>
-    <span class="n">tag</span><span class="o">=</span><span class="s1">&#39;histogram_with_raw_data&#39;</span><span class="p">,</span>
-    <span class="nb">min</span><span class="o">=</span><span class="n">values</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
-    <span class="nb">max</span><span class="o">=</span><span class="n">values</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
-    <span class="n">num</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">),</span>
-    <span class="nb">sum</span><span class="o">=</span><span class="n">values</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
-    <span class="n">sum_squares</span><span class="o">=</span><span class="n">sum_sq</span><span class="p">,</span>
-    <span class="n">bucket_limits</span><span class="o">=</span><span class="n">limits</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
-    <span class="n">bucket_counts</span><span class="o">=</span><span class="n">counts</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
-    <span class="n">global_step</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">writer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Expected result:</p>
-<a class="reference internal image-reference" href="_images/add_histogram_raw.png"><img alt="_images/add_histogram_raw.png" src="_images/add_histogram_raw.png" style="width: 286.0px; height: 213.0px;" /></a>
-</dd></dl>
-
-<dl class="method">
 <dt id="torch.utils.tensorboard.writer.SummaryWriter.add_image">
-<code class="descname">add_image</code><span class="sig-paren">(</span><em>tag</em>, <em>img_tensor</em>, <em>global_step=None</em>, <em>walltime=None</em>, <em>dataformats='CHW'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_image" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_image</code><span class="sig-paren">(</span><em class="sig-param">tag</em>, <em class="sig-param">img_tensor</em>, <em class="sig-param">global_step=None</em>, <em class="sig-param">walltime=None</em>, <em class="sig-param">dataformats='CHW'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add image data to summary.</p>
 <p>Note that this requires the <code class="docutils literal notranslate"><span class="pre">pillow</span></code> package.</p>
 <dl class="field-list simple">
@@ -556,9 +524,17 @@ seconds after epoch of event</p></li>
 </dd>
 </dl>
 <dl class="simple">
-<dt>Shape:</dt><dd><p>img_tensor: Default is <span class="math">\((3, H, W)\)</span>. You can use <code class="docutils literal notranslate"><span class="pre">torchvision.utils.make_grid()</span></code> to
+<dt>Shape:</dt><dd><p>img_tensor: Default is <span class="math"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>3</mn><mo separator="true">,</mo><mi>H</mi><mo separator="true">,</mo><mi>W</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(3, H, W)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mclose">)</span></span></span></span>
+
+</span>. You can use <code class="docutils literal notranslate"><span class="pre">torchvision.utils.make_grid()</span></code> to
 convert a batch of tensor into 3xHxW format or call <code class="docutils literal notranslate"><span class="pre">add_images</span></code> and let us do the job.
-Tensor with <span class="math">\((1, H, W)\)</span>, <span class="math">\((H, W)\)</span>, <span class="math">\((H, W, 3)\)</span> is also suitible as long as
+Tensor with <span class="math"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mo separator="true">,</mo><mi>H</mi><mo separator="true">,</mo><mi>W</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(1, H, W)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mclose">)</span></span></span></span>
+
+</span>, <span class="math"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>H</mi><mo separator="true">,</mo><mi>W</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(H, W)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mclose">)</span></span></span></span>
+
+</span>, <span class="math"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>H</mi><mo separator="true">,</mo><mi>W</mi><mo separator="true">,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(H, W, 3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mclose">)</span></span></span></span>
+
+</span> is also suitible as long as
 corresponding <code class="docutils literal notranslate"><span class="pre">dataformats</span></code> argument is passed. e.g. CHW, HWC, HW.</p>
 </dd>
 </dl>
@@ -587,7 +563,7 @@ corresponding <code class="docutils literal notranslate"><span class="pre">dataf
 
 <dl class="method">
 <dt id="torch.utils.tensorboard.writer.SummaryWriter.add_images">
-<code class="descname">add_images</code><span class="sig-paren">(</span><em>tag</em>, <em>img_tensor</em>, <em>global_step=None</em>, <em>walltime=None</em>, <em>dataformats='NCHW'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_images"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_images" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_images</code><span class="sig-paren">(</span><em class="sig-param">tag</em>, <em class="sig-param">img_tensor</em>, <em class="sig-param">global_step=None</em>, <em class="sig-param">walltime=None</em>, <em class="sig-param">dataformats='NCHW'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_images"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_images" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add batched image data to summary.</p>
 <p>Note that this requires the <code class="docutils literal notranslate"><span class="pre">pillow</span></code> package.</p>
 <dl class="field-list simple">
@@ -598,11 +574,15 @@ corresponding <code class="docutils literal notranslate"><span class="pre">dataf
 <li><p><strong>global_step</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – Global step value to record</p></li>
 <li><p><strong>walltime</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a>) – Optional override default walltime (time.time())
 seconds after epoch of event</p></li>
+<li><p><strong>dataformats</strong> (<em>string</em>) – Image data format specification of the form
+NCHW, NHWC, CHW, HWC, HW, WH, etc.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="simple">
-<dt>Shape:</dt><dd><p>img_tensor: Default is <span class="math">\((N, 3, H, W)\)</span>. If <code class="docutils literal notranslate"><span class="pre">dataformats</span></code> is specified, other shape will be
+<dt>Shape:</dt><dd><p>img_tensor: Default is <span class="math"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>N</mi><mo separator="true">,</mo><mn>3</mn><mo separator="true">,</mo><mi>H</mi><mo separator="true">,</mo><mi>W</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(N, 3, H, W)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mclose">)</span></span></span></span>
+
+</span>. If <code class="docutils literal notranslate"><span class="pre">dataformats</span></code> is specified, other shape will be
 accepted. e.g. NCHW or NHWC.</p>
 </dd>
 </dl>
@@ -626,7 +606,7 @@ accepted. e.g. NCHW or NHWC.</p>
 
 <dl class="method">
 <dt id="torch.utils.tensorboard.writer.SummaryWriter.add_figure">
-<code class="descname">add_figure</code><span class="sig-paren">(</span><em>tag</em>, <em>figure</em>, <em>global_step=None</em>, <em>close=True</em>, <em>walltime=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_figure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_figure" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_figure</code><span class="sig-paren">(</span><em class="sig-param">tag</em>, <em class="sig-param">figure</em>, <em class="sig-param">global_step=None</em>, <em class="sig-param">close=True</em>, <em class="sig-param">walltime=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_figure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_figure" title="Permalink to this definition">¶</a></dt>
 <dd><p>Render matplotlib figure into an image and add it to summary.</p>
 <p>Note that this requires the <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> package.</p>
 <dl class="field-list simple">
@@ -645,7 +625,7 @@ seconds after epoch of event</p></li>
 
 <dl class="method">
 <dt id="torch.utils.tensorboard.writer.SummaryWriter.add_video">
-<code class="descname">add_video</code><span class="sig-paren">(</span><em>tag</em>, <em>vid_tensor</em>, <em>global_step=None</em>, <em>fps=4</em>, <em>walltime=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_video"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_video" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_video</code><span class="sig-paren">(</span><em class="sig-param">tag</em>, <em class="sig-param">vid_tensor</em>, <em class="sig-param">global_step=None</em>, <em class="sig-param">fps=4</em>, <em class="sig-param">walltime=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_video"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_video" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add video data to summary.</p>
 <p>Note that this requires the <code class="docutils literal notranslate"><span class="pre">moviepy</span></code> package.</p>
 <dl class="field-list simple">
@@ -661,14 +641,16 @@ seconds after epoch of event</p></li>
 </dd>
 </dl>
 <dl class="simple">
-<dt>Shape:</dt><dd><p>vid_tensor: <span class="math">\((N, T, C, H, W)\)</span>. The values should lie in [0, 255] for type <cite>uint8</cite> or [0, 1] for type <cite>float</cite>.</p>
+<dt>Shape:</dt><dd><p>vid_tensor: <span class="math"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>N</mi><mo separator="true">,</mo><mi>T</mi><mo separator="true">,</mo><mi>C</mi><mo separator="true">,</mo><mi>H</mi><mo separator="true">,</mo><mi>W</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(N, T, C, H, W)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mclose">)</span></span></span></span>
+
+</span>. The values should lie in [0, 255] for type <cite>uint8</cite> or [0, 1] for type <cite>float</cite>.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="torch.utils.tensorboard.writer.SummaryWriter.add_audio">
-<code class="descname">add_audio</code><span class="sig-paren">(</span><em>tag</em>, <em>snd_tensor</em>, <em>global_step=None</em>, <em>sample_rate=44100</em>, <em>walltime=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_audio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_audio" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_audio</code><span class="sig-paren">(</span><em class="sig-param">tag</em>, <em class="sig-param">snd_tensor</em>, <em class="sig-param">global_step=None</em>, <em class="sig-param">sample_rate=44100</em>, <em class="sig-param">walltime=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_audio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_audio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add audio data to summary.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -683,14 +665,16 @@ seconds after epoch of event</p></li>
 </dd>
 </dl>
 <dl class="simple">
-<dt>Shape:</dt><dd><p>snd_tensor: <span class="math">\((1, L)\)</span>. The values should lie between [-1, 1].</p>
+<dt>Shape:</dt><dd><p>snd_tensor: <span class="math"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mo separator="true">,</mo><mi>L</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(1, L)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">L</span><span class="mclose">)</span></span></span></span>
+
+</span>. The values should lie between [-1, 1].</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="torch.utils.tensorboard.writer.SummaryWriter.add_text">
-<code class="descname">add_text</code><span class="sig-paren">(</span><em>tag</em>, <em>text_string</em>, <em>global_step=None</em>, <em>walltime=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_text"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_text" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_text</code><span class="sig-paren">(</span><em class="sig-param">tag</em>, <em class="sig-param">text_string</em>, <em class="sig-param">global_step=None</em>, <em class="sig-param">walltime=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_text"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add text data to summary.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -712,7 +696,7 @@ seconds after epoch of event</p></li>
 
 <dl class="method">
 <dt id="torch.utils.tensorboard.writer.SummaryWriter.add_graph">
-<code class="descname">add_graph</code><span class="sig-paren">(</span><em>model</em>, <em>input_to_model=None</em>, <em>verbose=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_graph" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_graph</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">input_to_model=None</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_graph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add graph data to summary.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -721,10 +705,6 @@ seconds after epoch of event</p></li>
 <li><p><strong>input_to_model</strong> (<a class="reference internal" href="tensors.html#torch.Tensor" title="torch.Tensor"><em>torch.Tensor</em></a><em> or </em><em>list of torch.Tensor</em>) – A variable or a tuple of
 variables to be fed.</p></li>
 <li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – Whether to print graph structure in console.</p></li>
-<li><p><strong>omit_useless_nodes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – Default to <code class="docutils literal notranslate"><span class="pre">true</span></code>, which eliminates unused nodes.</p></li>
-<li><p><strong>operator_export_type</strong> (<em>string</em>) – One of: <code class="docutils literal notranslate"><span class="pre">&quot;ONNX&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;RAW&quot;</span></code>. This determines
-the optimization level of the graph. If error happens during exporting
-the graph, using <code class="docutils literal notranslate"><span class="pre">&quot;RAW&quot;</span></code> might help.</p></li>
 </ul>
 </dd>
 </dl>
@@ -732,7 +712,7 @@ the graph, using <code class="docutils literal notranslate"><span class="pre">&q
 
 <dl class="method">
 <dt id="torch.utils.tensorboard.writer.SummaryWriter.add_embedding">
-<code class="descname">add_embedding</code><span class="sig-paren">(</span><em>mat</em>, <em>metadata=None</em>, <em>label_img=None</em>, <em>global_step=None</em>, <em>tag='default'</em>, <em>metadata_header=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_embedding"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_embedding" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_embedding</code><span class="sig-paren">(</span><em class="sig-param">mat</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">label_img=None</em>, <em class="sig-param">global_step=None</em>, <em class="sig-param">tag='default'</em>, <em class="sig-param">metadata_header=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_embedding"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_embedding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add embedding projector data to summary.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -746,8 +726,12 @@ the graph, using <code class="docutils literal notranslate"><span class="pre">&q
 </dd>
 </dl>
 <dl>
-<dt>Shape:</dt><dd><p>mat: <span class="math">\((N, D)\)</span>, where N is number of data and D is feature dimension</p>
-<p>label_img: <span class="math">\((N, C, H, W)\)</span></p>
+<dt>Shape:</dt><dd><p>mat: <span class="math"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>N</mi><mo separator="true">,</mo><mi>D</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(N, D)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mclose">)</span></span></span></span>
+
+</span>, where N is number of data and D is feature dimension</p>
+<p>label_img: <span class="math"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>N</mi><mo separator="true">,</mo><mi>C</mi><mo separator="true">,</mo><mi>H</mi><mo separator="true">,</mo><mi>W</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(N, C, H, W)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="mclose">)</span></span></span></span>
+
+</span></p>
 </dd>
 </dl>
 <p>Examples:</p>
@@ -774,7 +758,7 @@ the graph, using <code class="docutils literal notranslate"><span class="pre">&q
 
 <dl class="method">
 <dt id="torch.utils.tensorboard.writer.SummaryWriter.add_pr_curve">
-<code class="descname">add_pr_curve</code><span class="sig-paren">(</span><em>tag</em>, <em>labels</em>, <em>predictions</em>, <em>global_step=None</em>, <em>num_thresholds=127</em>, <em>weights=None</em>, <em>walltime=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_pr_curve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_pr_curve" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_pr_curve</code><span class="sig-paren">(</span><em class="sig-param">tag</em>, <em class="sig-param">labels</em>, <em class="sig-param">predictions</em>, <em class="sig-param">global_step=None</em>, <em class="sig-param">num_thresholds=127</em>, <em class="sig-param">weights=None</em>, <em class="sig-param">walltime=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_pr_curve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_pr_curve" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds precision recall curve.
 Plotting a precision-recall curve lets you understand your model’s
 performance under different threshold settings. With this function,
@@ -809,7 +793,7 @@ seconds after epoch of event</p></li>
 
 <dl class="method">
 <dt id="torch.utils.tensorboard.writer.SummaryWriter.add_custom_scalars">
-<code class="descname">add_custom_scalars</code><span class="sig-paren">(</span><em>layout</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_custom_scalars"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_custom_scalars" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_custom_scalars</code><span class="sig-paren">(</span><em class="sig-param">layout</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_custom_scalars"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_custom_scalars" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create special chart by collecting charts tags in ‘scalars’. Note that this function can only be called once
 for each SummaryWriter() object. Because it only provides metadata to tensorboard, the function can be called
 before or after the training loop.</p>
@@ -833,7 +817,7 @@ you have used in add_scalar function, which will be collected into the new chart
 
 <dl class="method">
 <dt id="torch.utils.tensorboard.writer.SummaryWriter.add_mesh">
-<code class="descname">add_mesh</code><span class="sig-paren">(</span><em>tag</em>, <em>vertices</em>, <em>colors=None</em>, <em>faces=None</em>, <em>config_dict=None</em>, <em>global_step=None</em>, <em>walltime=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_mesh"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_mesh" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_mesh</code><span class="sig-paren">(</span><em class="sig-param">tag</em>, <em class="sig-param">vertices</em>, <em class="sig-param">colors=None</em>, <em class="sig-param">faces=None</em>, <em class="sig-param">config_dict=None</em>, <em class="sig-param">global_step=None</em>, <em class="sig-param">walltime=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.add_mesh"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.add_mesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add meshes or 3D point clouds to TensorBoard. The visualization is based on Three.js,
 so it allows users to interact with the rendered object. Besides the basic definitions
 such as vertices, faces, users can further provide camera parameter, lighting condition, etc.
@@ -854,9 +838,15 @@ seconds after epoch of event</p></li>
 </dd>
 </dl>
 <dl>
-<dt>Shape:</dt><dd><p>vertices: <span class="math">\((B, N, 3)\)</span>. (batch, number_of_vertices, channels)</p>
-<p>colors: <span class="math">\((B, N, 3)\)</span>. The values should lie in [0, 255] for type <cite>uint8</cite> or [0, 1] for type <cite>float</cite>.</p>
-<p>faces: <span class="math">\((B, N, 3)\)</span>. The values should lie in [0, number_of_vertices] for type <cite>uint8</cite>.</p>
+<dt>Shape:</dt><dd><p>vertices: <span class="math"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>B</mi><mo separator="true">,</mo><mi>N</mi><mo separator="true">,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(B, N, 3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mclose">)</span></span></span></span>
+
+</span>. (batch, number_of_vertices, channels)</p>
+<p>colors: <span class="math"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>B</mi><mo separator="true">,</mo><mi>N</mi><mo separator="true">,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(B, N, 3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mclose">)</span></span></span></span>
+
+</span>. The values should lie in [0, 255] for type <cite>uint8</cite> or [0, 1] for type <cite>float</cite>.</p>
+<p>faces: <span class="math"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>B</mi><mo separator="true">,</mo><mi>N</mi><mo separator="true">,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(B, N, 3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mclose">)</span></span></span></span>
+
+</span>. The values should lie in [0, number_of_vertices] for type <cite>uint8</cite>.</p>
 </dd>
 </dl>
 <p>Examples:</p>
@@ -888,6 +878,19 @@ seconds after epoch of event</p></li>
 </div>
 </dd></dl>
 
+<dl class="method">
+<dt id="torch.utils.tensorboard.writer.SummaryWriter.flush">
+<code class="sig-name descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.flush"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.flush" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flushes the event file to disk.
+Call this method to make sure that all pending events have been written to
+disk.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="torch.utils.tensorboard.writer.SummaryWriter.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/torch/utils/tensorboard/writer.html#SummaryWriter.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#torch.utils.tensorboard.writer.SummaryWriter.close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </div>
@@ -900,7 +903,7 @@ seconds after epoch of event</p></li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="onnx.html" class="btn btn-neutral float-right" title="torch.onnx" accesskey="n" rel="next">Next <img src="_static/images/chevron-right-orange.svg" class="next-page"></a>
+        <a href="type_info.html" class="btn btn-neutral float-right" title="Type Info" accesskey="n" rel="next">Next <img src="_static/images/chevron-right-orange.svg" class="next-page"></a>
       
       
         <a href="model_zoo.html" class="btn btn-neutral" title="torch.utils.model_zoo" accesskey="p" rel="prev"><img src="_static/images/chevron-right-orange.svg" class="previous-page"> Previous</a>
@@ -916,7 +919,7 @@ seconds after epoch of event</p></li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Torch Contributors.
+        &copy; Copyright 2019, Torch Contributors.
 
     </p>
   </div>
@@ -955,9 +958,6 @@ seconds after epoch of event</p></li>
          <script type="text/javascript" src="_static/underscore.js"></script>
          <script type="text/javascript" src="_static/doctools.js"></script>
          <script type="text/javascript" src="_static/language_data.js"></script>
-         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"></script>
-         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js"></script>
-         <script type="text/javascript" src="_static/katex_autorenderer.js"></script>
      
 
   

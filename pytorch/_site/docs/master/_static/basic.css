@@ -288,11 +288,21 @@ img.align-center, .figure.align-center, object.align-center {
   margin-right: auto;
 }
 
+img.align-default, .figure.align-default {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .align-left {
     text-align: left;
 }
 
 .align-center {
+    text-align: center;
+}
+
+.align-default {
     text-align: center;
 }
 
@@ -363,6 +373,11 @@ table.docutils {
 }
 
 table.align-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.align-default {
     margin-left: auto;
     margin-right: auto;
 }
@@ -503,18 +518,17 @@ dl.citation > dd:after {
 }
 
 dl.field-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: fit-content(30%) auto;
+        grid-template-columns: fit-content(30%) auto;
 }
 
 dl.field-list > dt {
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
     font-weight: bold;
     word-break: break-word;
+    padding-left: 0.5em;
+    padding-right: 5px;
 }
 
 dl.field-list > dt:after {
@@ -522,9 +536,8 @@ dl.field-list > dt:after {
 }
 
 dl.field-list > dd {
-    -ms-flex-preferred-size: 70%;
-        flex-basis: 70%;
-    padding-left: 1em;
+    padding-left: 0.5em;
+    margin-top: 0em;
     margin-left: 0em;
     margin-bottom: 0em;
 }
