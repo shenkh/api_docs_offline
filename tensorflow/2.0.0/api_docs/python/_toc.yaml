@@ -1,0 +1,3240 @@
+# Automatically generated file; please do not edit
+toc:
+  - title: tf
+    section:
+    - title: Overview
+      path: /api_docs/python/tf
+    - title: AggregationMethod
+      path: /api_docs/python/tf/AggregationMethod
+    - title: argsort
+      path: /api_docs/python/tf/argsort
+    - title: batch_to_space
+      path: /api_docs/python/tf/batch_to_space
+    - title: bitcast
+      path: /api_docs/python/tf/bitcast
+    - title: boolean_mask
+      path: /api_docs/python/tf/boolean_mask
+    - title: broadcast_dynamic_shape
+      path: /api_docs/python/tf/broadcast_dynamic_shape
+    - title: broadcast_static_shape
+      path: /api_docs/python/tf/broadcast_static_shape
+    - title: broadcast_to
+      path: /api_docs/python/tf/broadcast_to
+    - title: case
+      path: /api_docs/python/tf/case
+    - title: clip_by_global_norm
+      path: /api_docs/python/tf/clip_by_global_norm
+    - title: clip_by_norm
+      path: /api_docs/python/tf/clip_by_norm
+    - title: clip_by_value
+      path: /api_docs/python/tf/clip_by_value
+    - title: concat
+      path: /api_docs/python/tf/concat
+    - title: cond
+      path: /api_docs/python/tf/cond
+    - title: constant
+      path: /api_docs/python/tf/constant
+    - title: constant_initializer
+      path: /api_docs/python/tf/constant_initializer
+    - title: control_dependencies
+      path: /api_docs/python/tf/control_dependencies
+    - title: convert_to_tensor
+      path: /api_docs/python/tf/convert_to_tensor
+    - title: CriticalSection
+      path: /api_docs/python/tf/CriticalSection
+    - title: custom_gradient
+      path: /api_docs/python/tf/custom_gradient
+    - title: device
+      path: /api_docs/python/tf/device
+    - title: DeviceSpec
+      path: /api_docs/python/tf/DeviceSpec
+    - title: dynamic_partition
+      path: /api_docs/python/tf/dynamic_partition
+    - title: dynamic_stitch
+      path: /api_docs/python/tf/dynamic_stitch
+    - title: edit_distance
+      path: /api_docs/python/tf/edit_distance
+    - title: einsum
+      path: /api_docs/python/tf/einsum
+    - title: ensure_shape
+      path: /api_docs/python/tf/ensure_shape
+    - title: executing_eagerly
+      path: /api_docs/python/tf/executing_eagerly
+    - title: expand_dims
+      path: /api_docs/python/tf/expand_dims
+    - title: extract_volume_patches
+      path: /api_docs/python/tf/extract_volume_patches
+    - title: eye
+      path: /api_docs/python/tf/eye
+    - title: fill
+      path: /api_docs/python/tf/fill
+    - title: fingerprint
+      path: /api_docs/python/tf/fingerprint
+    - title: foldl
+      path: /api_docs/python/tf/foldl
+    - title: foldr
+      path: /api_docs/python/tf/foldr
+    - title: function
+      path: /api_docs/python/tf/function
+    - title: gather
+      path: /api_docs/python/tf/gather
+    - title: gather_nd
+      path: /api_docs/python/tf/gather_nd
+    - title: get_logger
+      path: /api_docs/python/tf/get_logger
+    - title: get_static_value
+      path: /api_docs/python/tf/get_static_value
+    - title: gradients
+      path: /api_docs/python/tf/gradients
+    - title: GradientTape
+      path: /api_docs/python/tf/GradientTape
+    - title: grad_pass_through
+      path: /api_docs/python/tf/grad_pass_through
+    - title: Graph
+      path: /api_docs/python/tf/Graph
+    - title: group
+      path: /api_docs/python/tf/group
+    - title: guarantee_const
+      path: /api_docs/python/tf/guarantee_const
+    - title: hessians
+      path: /api_docs/python/tf/hessians
+    - title: histogram_fixed_width
+      path: /api_docs/python/tf/histogram_fixed_width
+    - title: histogram_fixed_width_bins
+      path: /api_docs/python/tf/histogram_fixed_width_bins
+    - title: identity
+      path: /api_docs/python/tf/identity
+    - title: identity_n
+      path: /api_docs/python/tf/identity_n
+    - title: IndexedSlices
+      path: /api_docs/python/tf/IndexedSlices
+    - title: IndexedSlicesSpec
+      path: /api_docs/python/tf/IndexedSlicesSpec
+    - title: init_scope
+      path: /api_docs/python/tf/init_scope
+    - title: is_tensor
+      path: /api_docs/python/tf/is_tensor
+    - title: linspace
+      path: /api_docs/python/tf/linspace
+    - title: load_library
+      path: /api_docs/python/tf/load_library
+    - title: load_op_library
+      path: /api_docs/python/tf/load_op_library
+    - title: make_ndarray
+      path: /api_docs/python/tf/make_ndarray
+    - title: make_tensor_proto
+      path: /api_docs/python/tf/make_tensor_proto
+    - title: map_fn
+      path: /api_docs/python/tf/map_fn
+    - title: meshgrid
+      path: /api_docs/python/tf/meshgrid
+    - title: Module
+      path: /api_docs/python/tf/Module
+    - title: name_scope
+      path: /api_docs/python/tf/name_scope
+    - title: nondifferentiable_batch_function
+      path: /api_docs/python/tf/nondifferentiable_batch_function
+    - title: norm
+      path: /api_docs/python/tf/norm
+    - title: no_gradient
+      path: /api_docs/python/tf/no_gradient
+    - title: no_op
+      path: /api_docs/python/tf/no_op
+    - title: numpy_function
+      path: /api_docs/python/tf/numpy_function
+    - title: ones
+      path: /api_docs/python/tf/ones
+    - title: ones_initializer
+      path: /api_docs/python/tf/ones_initializer
+    - title: ones_like
+      path: /api_docs/python/tf/ones_like
+    - title: one_hot
+      path: /api_docs/python/tf/one_hot
+    - title: Operation
+      path: /api_docs/python/tf/Operation
+    - title: OptionalSpec
+      path: /api_docs/python/tf/OptionalSpec
+    - title: pad
+      path: /api_docs/python/tf/pad
+    - title: parallel_stack
+      path: /api_docs/python/tf/parallel_stack
+    - title: print
+      path: /api_docs/python/tf/print
+    - title: py_function
+      path: /api_docs/python/tf/py_function
+    - title: RaggedTensor
+      path: /api_docs/python/tf/RaggedTensor
+    - title: RaggedTensorSpec
+      path: /api_docs/python/tf/RaggedTensorSpec
+    - title: random_normal_initializer
+      path: /api_docs/python/tf/random_normal_initializer
+    - title: random_uniform_initializer
+      path: /api_docs/python/tf/random_uniform_initializer
+    - title: range
+      path: /api_docs/python/tf/range
+    - title: rank
+      path: /api_docs/python/tf/rank
+    - title: realdiv
+      path: /api_docs/python/tf/realdiv
+    - title: recompute_grad
+      path: /api_docs/python/tf/recompute_grad
+    - title: reduce_all
+      path: /api_docs/python/tf/reduce_all
+    - title: RegisterGradient
+      path: /api_docs/python/tf/RegisterGradient
+    - title: register_tensor_conversion_function
+      path: /api_docs/python/tf/register_tensor_conversion_function
+    - title: required_space_to_batch_paddings
+      path: /api_docs/python/tf/required_space_to_batch_paddings
+    - title: reshape
+      path: /api_docs/python/tf/reshape
+    - title: reverse
+      path: /api_docs/python/tf/reverse
+    - title: reverse_sequence
+      path: /api_docs/python/tf/reverse_sequence
+    - title: roll
+      path: /api_docs/python/tf/roll
+    - title: scan
+      path: /api_docs/python/tf/scan
+    - title: scatter_nd
+      path: /api_docs/python/tf/scatter_nd
+    - title: searchsorted
+      path: /api_docs/python/tf/searchsorted
+    - title: sequence_mask
+      path: /api_docs/python/tf/sequence_mask
+    - title: shape
+      path: /api_docs/python/tf/shape
+    - title: shape_n
+      path: /api_docs/python/tf/shape_n
+    - title: size
+      path: /api_docs/python/tf/size
+    - title: slice
+      path: /api_docs/python/tf/slice
+    - title: sort
+      path: /api_docs/python/tf/sort
+    - title: space_to_batch
+      path: /api_docs/python/tf/space_to_batch
+    - title: space_to_batch_nd
+      path: /api_docs/python/tf/space_to_batch_nd
+    - title: SparseTensorSpec
+      path: /api_docs/python/tf/SparseTensorSpec
+    - title: split
+      path: /api_docs/python/tf/split
+    - title: squeeze
+      path: /api_docs/python/tf/squeeze
+    - title: stack
+      path: /api_docs/python/tf/stack
+    - title: stop_gradient
+      path: /api_docs/python/tf/stop_gradient
+    - title: strided_slice
+      path: /api_docs/python/tf/strided_slice
+    - title: switch_case
+      path: /api_docs/python/tf/switch_case
+    - title: Tensor
+      path: /api_docs/python/tf/Tensor
+    - title: TensorArray
+      path: /api_docs/python/tf/TensorArray
+    - title: TensorArraySpec
+      path: /api_docs/python/tf/TensorArraySpec
+    - title: tensordot
+      path: /api_docs/python/tf/tensordot
+    - title: TensorShape
+      path: /api_docs/python/tf/TensorShape
+    - title: TensorSpec
+      path: /api_docs/python/tf/TensorSpec
+    - title: tensor_scatter_nd_add
+      path: /api_docs/python/tf/tensor_scatter_nd_add
+    - title: tensor_scatter_nd_sub
+      path: /api_docs/python/tf/tensor_scatter_nd_sub
+    - title: tensor_scatter_nd_update
+      path: /api_docs/python/tf/tensor_scatter_nd_update
+    - title: tile
+      path: /api_docs/python/tf/tile
+    - title: timestamp
+      path: /api_docs/python/tf/timestamp
+    - title: transpose
+      path: /api_docs/python/tf/transpose
+    - title: truncatediv
+      path: /api_docs/python/tf/truncatediv
+    - title: truncatemod
+      path: /api_docs/python/tf/truncatemod
+    - title: tuple
+      path: /api_docs/python/tf/tuple
+    - title: TypeSpec
+      path: /api_docs/python/tf/TypeSpec
+    - title: UnconnectedGradients
+      path: /api_docs/python/tf/UnconnectedGradients
+    - title: unique
+      path: /api_docs/python/tf/unique
+    - title: unique_with_counts
+      path: /api_docs/python/tf/unique_with_counts
+    - title: unravel_index
+      path: /api_docs/python/tf/unravel_index
+    - title: unstack
+      path: /api_docs/python/tf/unstack
+    - title: Variable
+      path: /api_docs/python/tf/Variable
+    - title: Variable.SaveSliceInfo
+      path: /api_docs/python/tf/Variable/SaveSliceInfo
+    - title: VariableAggregation
+      path: /api_docs/python/tf/VariableAggregation
+    - title: VariableSynchronization
+      path: /api_docs/python/tf/VariableSynchronization
+    - title: variable_creator_scope
+      path: /api_docs/python/tf/variable_creator_scope
+    - title: vectorized_map
+      path: /api_docs/python/tf/vectorized_map
+    - title: where
+      path: /api_docs/python/tf/where
+    - title: while_loop
+      path: /api_docs/python/tf/while_loop
+    - title: zeros
+      path: /api_docs/python/tf/zeros
+    - title: zeros_initializer
+      path: /api_docs/python/tf/zeros_initializer
+    - title: zeros_like
+      path: /api_docs/python/tf/zeros_like
+  - title: tf.audio
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/audio
+    - title: decode_wav
+      path: /api_docs/python/tf/audio/decode_wav
+    - title: encode_wav
+      path: /api_docs/python/tf/audio/encode_wav
+  - title: tf.autograph
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/autograph
+    - title: set_verbosity
+      path: /api_docs/python/tf/autograph/set_verbosity
+    - title: to_code
+      path: /api_docs/python/tf/autograph/to_code
+    - title: to_graph
+      path: /api_docs/python/tf/autograph/to_graph
+    - title: trace
+      path: /api_docs/python/tf/autograph/trace
+    - title: experimental
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/autograph/experimental
+      - title: do_not_convert
+        path: /api_docs/python/tf/autograph/experimental/do_not_convert
+      - title: Feature
+        path: /api_docs/python/tf/autograph/experimental/Feature
+  - title: tf.bitwise
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/bitwise
+    - title: bitwise_and
+      path: /api_docs/python/tf/bitwise/bitwise_and
+    - title: bitwise_or
+      path: /api_docs/python/tf/bitwise/bitwise_or
+    - title: bitwise_xor
+      path: /api_docs/python/tf/bitwise/bitwise_xor
+    - title: invert
+      path: /api_docs/python/tf/bitwise/invert
+    - title: left_shift
+      path: /api_docs/python/tf/bitwise/left_shift
+    - title: right_shift
+      path: /api_docs/python/tf/bitwise/right_shift
+  - title: tf.compat
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/compat
+    - title: as_bytes
+      path: /api_docs/python/tf/compat/as_bytes
+    - title: as_str_any
+      path: /api_docs/python/tf/compat/as_str_any
+    - title: as_text
+      path: /api_docs/python/tf/compat/as_text
+    - title: dimension_at_index
+      path: /api_docs/python/tf/compat/dimension_at_index
+    - title: dimension_value
+      path: /api_docs/python/tf/compat/dimension_value
+    - title: forward_compatibility_horizon
+      path: /api_docs/python/tf/compat/forward_compatibility_horizon
+    - title: forward_compatible
+      path: /api_docs/python/tf/compat/forward_compatible
+    - title: path_to_str
+      path: /api_docs/python/tf/compat/path_to_str
+  - title: tf.config
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/config
+    - title: experimental_connect_to_cluster
+      path: /api_docs/python/tf/config/experimental_connect_to_cluster
+    - title: experimental_connect_to_host
+      path: /api_docs/python/tf/config/experimental_connect_to_host
+    - title: experimental_list_devices
+      path: /api_docs/python/tf/config/experimental_list_devices
+    - title: experimental_run_functions_eagerly
+      path: /api_docs/python/tf/config/experimental_run_functions_eagerly
+    - title: get_soft_device_placement
+      path: /api_docs/python/tf/config/get_soft_device_placement
+    - title: set_soft_device_placement
+      path: /api_docs/python/tf/config/set_soft_device_placement
+    - title: experimental
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/config/experimental
+      - title: get_device_policy
+        path: /api_docs/python/tf/config/experimental/get_device_policy
+      - title: get_memory_growth
+        path: /api_docs/python/tf/config/experimental/get_memory_growth
+      - title: get_synchronous_execution
+        path: /api_docs/python/tf/config/experimental/get_synchronous_execution
+      - title: get_virtual_device_configuration
+        path: /api_docs/python/tf/config/experimental/get_virtual_device_configuration
+      - title: get_visible_devices
+        path: /api_docs/python/tf/config/experimental/get_visible_devices
+      - title: list_logical_devices
+        path: /api_docs/python/tf/config/experimental/list_logical_devices
+      - title: list_physical_devices
+        path: /api_docs/python/tf/config/experimental/list_physical_devices
+      - title: set_device_policy
+        path: /api_docs/python/tf/config/experimental/set_device_policy
+      - title: set_memory_growth
+        path: /api_docs/python/tf/config/experimental/set_memory_growth
+      - title: set_synchronous_execution
+        path: /api_docs/python/tf/config/experimental/set_synchronous_execution
+      - title: set_virtual_device_configuration
+        path: /api_docs/python/tf/config/experimental/set_virtual_device_configuration
+      - title: set_visible_devices
+        path: /api_docs/python/tf/config/experimental/set_visible_devices
+      - title: VirtualDeviceConfiguration
+        path: /api_docs/python/tf/config/experimental/VirtualDeviceConfiguration
+    - title: optimizer
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/config/optimizer
+      - title: get_experimental_options
+        path: /api_docs/python/tf/config/optimizer/get_experimental_options
+      - title: get_jit
+        path: /api_docs/python/tf/config/optimizer/get_jit
+      - title: set_experimental_options
+        path: /api_docs/python/tf/config/optimizer/set_experimental_options
+      - title: set_jit
+        path: /api_docs/python/tf/config/optimizer/set_jit
+    - title: threading
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/config/threading
+      - title: get_inter_op_parallelism_threads
+        path: /api_docs/python/tf/config/threading/get_inter_op_parallelism_threads
+      - title: get_intra_op_parallelism_threads
+        path: /api_docs/python/tf/config/threading/get_intra_op_parallelism_threads
+      - title: set_inter_op_parallelism_threads
+        path: /api_docs/python/tf/config/threading/set_inter_op_parallelism_threads
+      - title: set_intra_op_parallelism_threads
+        path: /api_docs/python/tf/config/threading/set_intra_op_parallelism_threads
+  - title: tf.data
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/data
+    - title: Dataset
+      path: /api_docs/python/tf/data/Dataset
+    - title: DatasetSpec
+      path: /api_docs/python/tf/data/DatasetSpec
+    - title: FixedLengthRecordDataset
+      path: /api_docs/python/tf/data/FixedLengthRecordDataset
+    - title: Options
+      path: /api_docs/python/tf/data/Options
+    - title: TextLineDataset
+      path: /api_docs/python/tf/data/TextLineDataset
+    - title: TFRecordDataset
+      path: /api_docs/python/tf/data/TFRecordDataset
+    - title: experimental
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/data/experimental
+      - title: bucket_by_sequence_length
+        path: /api_docs/python/tf/data/experimental/bucket_by_sequence_length
+      - title: bytes_produced_stats
+        path: /api_docs/python/tf/data/experimental/bytes_produced_stats
+      - title: cardinality
+        path: /api_docs/python/tf/data/experimental/cardinality
+      - title: CheckpointInputPipelineHook
+        path: /api_docs/python/tf/data/experimental/CheckpointInputPipelineHook
+      - title: choose_from_datasets
+        path: /api_docs/python/tf/data/experimental/choose_from_datasets
+      - title: copy_to_device
+        path: /api_docs/python/tf/data/experimental/copy_to_device
+      - title: Counter
+        path: /api_docs/python/tf/data/experimental/Counter
+      - title: CsvDataset
+        path: /api_docs/python/tf/data/experimental/CsvDataset
+      - title: dense_to_sparse_batch
+        path: /api_docs/python/tf/data/experimental/dense_to_sparse_batch
+      - title: DistributeOptions
+        path: /api_docs/python/tf/data/experimental/DistributeOptions
+      - title: enumerate_dataset
+        path: /api_docs/python/tf/data/experimental/enumerate_dataset
+      - title: from_variant
+        path: /api_docs/python/tf/data/experimental/from_variant
+      - title: get_next_as_optional
+        path: /api_docs/python/tf/data/experimental/get_next_as_optional
+      - title: get_single_element
+        path: /api_docs/python/tf/data/experimental/get_single_element
+      - title: get_structure
+        path: /api_docs/python/tf/data/experimental/get_structure
+      - title: group_by_reducer
+        path: /api_docs/python/tf/data/experimental/group_by_reducer
+      - title: group_by_window
+        path: /api_docs/python/tf/data/experimental/group_by_window
+      - title: ignore_errors
+        path: /api_docs/python/tf/data/experimental/ignore_errors
+      - title: latency_stats
+        path: /api_docs/python/tf/data/experimental/latency_stats
+      - title: make_batched_features_dataset
+        path: /api_docs/python/tf/data/experimental/make_batched_features_dataset
+      - title: make_csv_dataset
+        path: /api_docs/python/tf/data/experimental/make_csv_dataset
+      - title: make_saveable_from_iterator
+        path: /api_docs/python/tf/data/experimental/make_saveable_from_iterator
+      - title: MapVectorizationOptions
+        path: /api_docs/python/tf/data/experimental/MapVectorizationOptions
+      - title: map_and_batch
+        path: /api_docs/python/tf/data/experimental/map_and_batch
+      - title: OptimizationOptions
+        path: /api_docs/python/tf/data/experimental/OptimizationOptions
+      - title: Optional
+        path: /api_docs/python/tf/data/experimental/Optional
+      - title: parallel_interleave
+        path: /api_docs/python/tf/data/experimental/parallel_interleave
+      - title: parse_example_dataset
+        path: /api_docs/python/tf/data/experimental/parse_example_dataset
+      - title: prefetch_to_device
+        path: /api_docs/python/tf/data/experimental/prefetch_to_device
+      - title: RandomDataset
+        path: /api_docs/python/tf/data/experimental/RandomDataset
+      - title: Reducer
+        path: /api_docs/python/tf/data/experimental/Reducer
+      - title: rejection_resample
+        path: /api_docs/python/tf/data/experimental/rejection_resample
+      - title: sample_from_datasets
+        path: /api_docs/python/tf/data/experimental/sample_from_datasets
+      - title: scan
+        path: /api_docs/python/tf/data/experimental/scan
+      - title: shuffle_and_repeat
+        path: /api_docs/python/tf/data/experimental/shuffle_and_repeat
+      - title: SqlDataset
+        path: /api_docs/python/tf/data/experimental/SqlDataset
+      - title: StatsAggregator
+        path: /api_docs/python/tf/data/experimental/StatsAggregator
+      - title: StatsOptions
+        path: /api_docs/python/tf/data/experimental/StatsOptions
+      - title: take_while
+        path: /api_docs/python/tf/data/experimental/take_while
+      - title: TFRecordWriter
+        path: /api_docs/python/tf/data/experimental/TFRecordWriter
+      - title: ThreadingOptions
+        path: /api_docs/python/tf/data/experimental/ThreadingOptions
+      - title: to_variant
+        path: /api_docs/python/tf/data/experimental/to_variant
+      - title: unbatch
+        path: /api_docs/python/tf/data/experimental/unbatch
+      - title: unique
+        path: /api_docs/python/tf/data/experimental/unique
+  - title: tf.debugging
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/debugging
+    - title: Assert
+      path: /api_docs/python/tf/debugging/Assert
+    - title: assert_all_finite
+      path: /api_docs/python/tf/debugging/assert_all_finite
+    - title: assert_equal
+      path: /api_docs/python/tf/debugging/assert_equal
+    - title: assert_greater
+      path: /api_docs/python/tf/debugging/assert_greater
+    - title: assert_greater_equal
+      path: /api_docs/python/tf/debugging/assert_greater_equal
+    - title: assert_integer
+      path: /api_docs/python/tf/debugging/assert_integer
+    - title: assert_less
+      path: /api_docs/python/tf/debugging/assert_less
+    - title: assert_less_equal
+      path: /api_docs/python/tf/debugging/assert_less_equal
+    - title: assert_near
+      path: /api_docs/python/tf/debugging/assert_near
+    - title: assert_negative
+      path: /api_docs/python/tf/debugging/assert_negative
+    - title: assert_none_equal
+      path: /api_docs/python/tf/debugging/assert_none_equal
+    - title: assert_non_negative
+      path: /api_docs/python/tf/debugging/assert_non_negative
+    - title: assert_non_positive
+      path: /api_docs/python/tf/debugging/assert_non_positive
+    - title: assert_positive
+      path: /api_docs/python/tf/debugging/assert_positive
+    - title: assert_proper_iterable
+      path: /api_docs/python/tf/debugging/assert_proper_iterable
+    - title: assert_rank
+      path: /api_docs/python/tf/debugging/assert_rank
+    - title: assert_rank_at_least
+      path: /api_docs/python/tf/debugging/assert_rank_at_least
+    - title: assert_rank_in
+      path: /api_docs/python/tf/debugging/assert_rank_in
+    - title: assert_same_float_dtype
+      path: /api_docs/python/tf/debugging/assert_same_float_dtype
+    - title: assert_scalar
+      path: /api_docs/python/tf/debugging/assert_scalar
+    - title: assert_shapes
+      path: /api_docs/python/tf/debugging/assert_shapes
+    - title: assert_type
+      path: /api_docs/python/tf/debugging/assert_type
+    - title: check_numerics
+      path: /api_docs/python/tf/debugging/check_numerics
+    - title: get_log_device_placement
+      path: /api_docs/python/tf/debugging/get_log_device_placement
+    - title: is_numeric_tensor
+      path: /api_docs/python/tf/debugging/is_numeric_tensor
+    - title: set_log_device_placement
+      path: /api_docs/python/tf/debugging/set_log_device_placement
+  - title: tf.distribute
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/distribute
+    - title: CrossDeviceOps
+      path: /api_docs/python/tf/distribute/CrossDeviceOps
+    - title: experimental_set_strategy
+      path: /api_docs/python/tf/distribute/experimental_set_strategy
+    - title: get_replica_context
+      path: /api_docs/python/tf/distribute/get_replica_context
+    - title: get_strategy
+      path: /api_docs/python/tf/distribute/get_strategy
+    - title: has_strategy
+      path: /api_docs/python/tf/distribute/has_strategy
+    - title: HierarchicalCopyAllReduce
+      path: /api_docs/python/tf/distribute/HierarchicalCopyAllReduce
+    - title: InputContext
+      path: /api_docs/python/tf/distribute/InputContext
+    - title: InputReplicationMode
+      path: /api_docs/python/tf/distribute/InputReplicationMode
+    - title: in_cross_replica_context
+      path: /api_docs/python/tf/distribute/in_cross_replica_context
+    - title: MirroredStrategy
+      path: /api_docs/python/tf/distribute/MirroredStrategy
+    - title: NcclAllReduce
+      path: /api_docs/python/tf/distribute/NcclAllReduce
+    - title: OneDeviceStrategy
+      path: /api_docs/python/tf/distribute/OneDeviceStrategy
+    - title: ReduceOp
+      path: /api_docs/python/tf/distribute/ReduceOp
+    - title: ReductionToOneDevice
+      path: /api_docs/python/tf/distribute/ReductionToOneDevice
+    - title: ReplicaContext
+      path: /api_docs/python/tf/distribute/ReplicaContext
+    - title: Server
+      path: /api_docs/python/tf/distribute/Server
+    - title: Strategy
+      path: /api_docs/python/tf/distribute/Strategy
+    - title: StrategyExtended
+      path: /api_docs/python/tf/distribute/StrategyExtended
+    - title: cluster_resolver
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/distribute/cluster_resolver
+      - title: ClusterResolver
+        path: /api_docs/python/tf/distribute/cluster_resolver/ClusterResolver
+      - title: GCEClusterResolver
+        path: /api_docs/python/tf/distribute/cluster_resolver/GCEClusterResolver
+      - title: KubernetesClusterResolver
+        path: /api_docs/python/tf/distribute/cluster_resolver/KubernetesClusterResolver
+      - title: SimpleClusterResolver
+        path: /api_docs/python/tf/distribute/cluster_resolver/SimpleClusterResolver
+      - title: SlurmClusterResolver
+        path: /api_docs/python/tf/distribute/cluster_resolver/SlurmClusterResolver
+      - title: TFConfigClusterResolver
+        path: /api_docs/python/tf/distribute/cluster_resolver/TFConfigClusterResolver
+      - title: TPUClusterResolver
+        path: /api_docs/python/tf/distribute/cluster_resolver/TPUClusterResolver
+      - title: UnionResolver
+        path: /api_docs/python/tf/distribute/cluster_resolver/UnionResolver
+    - title: experimental
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/distribute/experimental
+      - title: CentralStorageStrategy
+        path: /api_docs/python/tf/distribute/experimental/CentralStorageStrategy
+      - title: CollectiveCommunication
+        path: /api_docs/python/tf/distribute/experimental/CollectiveCommunication
+      - title: MultiWorkerMirroredStrategy
+        path: /api_docs/python/tf/distribute/experimental/MultiWorkerMirroredStrategy
+      - title: ParameterServerStrategy
+        path: /api_docs/python/tf/distribute/experimental/ParameterServerStrategy
+      - title: TPUStrategy
+        path: /api_docs/python/tf/distribute/experimental/TPUStrategy
+  - title: tf.dtypes
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/dtypes
+    - title: as_dtype
+      path: /api_docs/python/tf/dtypes/as_dtype
+    - title: cast
+      path: /api_docs/python/tf/dtypes/cast
+    - title: complex
+      path: /api_docs/python/tf/dtypes/complex
+    - title: DType
+      path: /api_docs/python/tf/dtypes/DType
+    - title: saturate_cast
+      path: /api_docs/python/tf/dtypes/saturate_cast
+  - title: tf.errors
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/errors
+    - title: AbortedError
+      path: /api_docs/python/tf/errors/AbortedError
+    - title: AlreadyExistsError
+      path: /api_docs/python/tf/errors/AlreadyExistsError
+    - title: CancelledError
+      path: /api_docs/python/tf/errors/CancelledError
+    - title: DataLossError
+      path: /api_docs/python/tf/errors/DataLossError
+    - title: DeadlineExceededError
+      path: /api_docs/python/tf/errors/DeadlineExceededError
+    - title: FailedPreconditionError
+      path: /api_docs/python/tf/errors/FailedPreconditionError
+    - title: InternalError
+      path: /api_docs/python/tf/errors/InternalError
+    - title: InvalidArgumentError
+      path: /api_docs/python/tf/errors/InvalidArgumentError
+    - title: NotFoundError
+      path: /api_docs/python/tf/errors/NotFoundError
+    - title: OpError
+      path: /api_docs/python/tf/errors/OpError
+    - title: OutOfRangeError
+      path: /api_docs/python/tf/errors/OutOfRangeError
+    - title: PermissionDeniedError
+      path: /api_docs/python/tf/errors/PermissionDeniedError
+    - title: ResourceExhaustedError
+      path: /api_docs/python/tf/errors/ResourceExhaustedError
+    - title: UnauthenticatedError
+      path: /api_docs/python/tf/errors/UnauthenticatedError
+    - title: UnavailableError
+      path: /api_docs/python/tf/errors/UnavailableError
+    - title: UnimplementedError
+      path: /api_docs/python/tf/errors/UnimplementedError
+    - title: UnknownError
+      path: /api_docs/python/tf/errors/UnknownError
+  - title: tf.estimator
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/estimator
+    - title: add_metrics
+      path: /api_docs/python/tf/estimator/add_metrics
+    - title: BaselineClassifier
+      path: /api_docs/python/tf/estimator/BaselineClassifier
+    - title: BaselineEstimator
+      path: /api_docs/python/tf/estimator/BaselineEstimator
+    - title: BaselineRegressor
+      path: /api_docs/python/tf/estimator/BaselineRegressor
+    - title: BestExporter
+      path: /api_docs/python/tf/estimator/BestExporter
+    - title: BinaryClassHead
+      path: /api_docs/python/tf/estimator/BinaryClassHead
+    - title: BoostedTreesClassifier
+      path: /api_docs/python/tf/estimator/BoostedTreesClassifier
+    - title: BoostedTreesEstimator
+      path: /api_docs/python/tf/estimator/BoostedTreesEstimator
+    - title: BoostedTreesRegressor
+      path: /api_docs/python/tf/estimator/BoostedTreesRegressor
+    - title: CheckpointSaverHook
+      path: /api_docs/python/tf/estimator/CheckpointSaverHook
+    - title: CheckpointSaverListener
+      path: /api_docs/python/tf/estimator/CheckpointSaverListener
+    - title: classifier_parse_example_spec
+      path: /api_docs/python/tf/estimator/classifier_parse_example_spec
+    - title: DNNClassifier
+      path: /api_docs/python/tf/estimator/DNNClassifier
+    - title: DNNEstimator
+      path: /api_docs/python/tf/estimator/DNNEstimator
+    - title: DNNLinearCombinedClassifier
+      path: /api_docs/python/tf/estimator/DNNLinearCombinedClassifier
+    - title: DNNLinearCombinedEstimator
+      path: /api_docs/python/tf/estimator/DNNLinearCombinedEstimator
+    - title: DNNLinearCombinedRegressor
+      path: /api_docs/python/tf/estimator/DNNLinearCombinedRegressor
+    - title: DNNRegressor
+      path: /api_docs/python/tf/estimator/DNNRegressor
+    - title: Estimator
+      path: /api_docs/python/tf/estimator/Estimator
+    - title: EstimatorSpec
+      path: /api_docs/python/tf/estimator/EstimatorSpec
+    - title: EvalSpec
+      path: /api_docs/python/tf/estimator/EvalSpec
+    - title: Exporter
+      path: /api_docs/python/tf/estimator/Exporter
+    - title: FeedFnHook
+      path: /api_docs/python/tf/estimator/FeedFnHook
+    - title: FinalExporter
+      path: /api_docs/python/tf/estimator/FinalExporter
+    - title: FinalOpsHook
+      path: /api_docs/python/tf/estimator/FinalOpsHook
+    - title: GlobalStepWaiterHook
+      path: /api_docs/python/tf/estimator/GlobalStepWaiterHook
+    - title: Head
+      path: /api_docs/python/tf/estimator/Head
+    - title: LatestExporter
+      path: /api_docs/python/tf/estimator/LatestExporter
+    - title: LinearClassifier
+      path: /api_docs/python/tf/estimator/LinearClassifier
+    - title: LinearEstimator
+      path: /api_docs/python/tf/estimator/LinearEstimator
+    - title: LinearRegressor
+      path: /api_docs/python/tf/estimator/LinearRegressor
+    - title: LoggingTensorHook
+      path: /api_docs/python/tf/estimator/LoggingTensorHook
+    - title: LogisticRegressionHead
+      path: /api_docs/python/tf/estimator/LogisticRegressionHead
+    - title: ModeKeys
+      path: /api_docs/python/tf/estimator/ModeKeys
+    - title: MultiClassHead
+      path: /api_docs/python/tf/estimator/MultiClassHead
+    - title: MultiHead
+      path: /api_docs/python/tf/estimator/MultiHead
+    - title: MultiLabelHead
+      path: /api_docs/python/tf/estimator/MultiLabelHead
+    - title: NanLossDuringTrainingError
+      path: /api_docs/python/tf/estimator/NanLossDuringTrainingError
+    - title: NanTensorHook
+      path: /api_docs/python/tf/estimator/NanTensorHook
+    - title: PoissonRegressionHead
+      path: /api_docs/python/tf/estimator/PoissonRegressionHead
+    - title: ProfilerHook
+      path: /api_docs/python/tf/estimator/ProfilerHook
+    - title: RegressionHead
+      path: /api_docs/python/tf/estimator/RegressionHead
+    - title: regressor_parse_example_spec
+      path: /api_docs/python/tf/estimator/regressor_parse_example_spec
+    - title: RunConfig
+      path: /api_docs/python/tf/estimator/RunConfig
+    - title: SecondOrStepTimer
+      path: /api_docs/python/tf/estimator/SecondOrStepTimer
+    - title: SessionRunArgs
+      path: /api_docs/python/tf/estimator/SessionRunArgs
+    - title: SessionRunContext
+      path: /api_docs/python/tf/estimator/SessionRunContext
+    - title: SessionRunHook
+      path: /api_docs/python/tf/estimator/SessionRunHook
+    - title: SessionRunValues
+      path: /api_docs/python/tf/estimator/SessionRunValues
+    - title: StepCounterHook
+      path: /api_docs/python/tf/estimator/StepCounterHook
+    - title: StopAtStepHook
+      path: /api_docs/python/tf/estimator/StopAtStepHook
+    - title: SummarySaverHook
+      path: /api_docs/python/tf/estimator/SummarySaverHook
+    - title: TrainSpec
+      path: /api_docs/python/tf/estimator/TrainSpec
+    - title: train_and_evaluate
+      path: /api_docs/python/tf/estimator/train_and_evaluate
+    - title: VocabInfo
+      path: /api_docs/python/tf/estimator/VocabInfo
+    - title: WarmStartSettings
+      path: /api_docs/python/tf/estimator/WarmStartSettings
+    - title: experimental
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/estimator/experimental
+      - title: build_raw_supervised_input_receiver_fn
+        path: /api_docs/python/tf/estimator/experimental/build_raw_supervised_input_receiver_fn
+      - title: call_logit_fn
+        path: /api_docs/python/tf/estimator/experimental/call_logit_fn
+      - title: InMemoryEvaluatorHook
+        path: /api_docs/python/tf/estimator/experimental/InMemoryEvaluatorHook
+      - title: LinearSDCA
+        path: /api_docs/python/tf/estimator/experimental/LinearSDCA
+      - title: make_early_stopping_hook
+        path: /api_docs/python/tf/estimator/experimental/make_early_stopping_hook
+      - title: make_stop_at_checkpoint_step_hook
+        path: /api_docs/python/tf/estimator/experimental/make_stop_at_checkpoint_step_hook
+      - title: RNNClassifier
+        path: /api_docs/python/tf/estimator/experimental/RNNClassifier
+      - title: RNNEstimator
+        path: /api_docs/python/tf/estimator/experimental/RNNEstimator
+      - title: stop_if_higher_hook
+        path: /api_docs/python/tf/estimator/experimental/stop_if_higher_hook
+      - title: stop_if_lower_hook
+        path: /api_docs/python/tf/estimator/experimental/stop_if_lower_hook
+      - title: stop_if_no_decrease_hook
+        path: /api_docs/python/tf/estimator/experimental/stop_if_no_decrease_hook
+      - title: stop_if_no_increase_hook
+        path: /api_docs/python/tf/estimator/experimental/stop_if_no_increase_hook
+    - title: export
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/estimator/export
+      - title: build_parsing_serving_input_receiver_fn
+        path: /api_docs/python/tf/estimator/export/build_parsing_serving_input_receiver_fn
+      - title: build_raw_serving_input_receiver_fn
+        path: /api_docs/python/tf/estimator/export/build_raw_serving_input_receiver_fn
+      - title: ClassificationOutput
+        path: /api_docs/python/tf/estimator/export/ClassificationOutput
+      - title: ExportOutput
+        path: /api_docs/python/tf/estimator/export/ExportOutput
+      - title: PredictOutput
+        path: /api_docs/python/tf/estimator/export/PredictOutput
+      - title: RegressionOutput
+        path: /api_docs/python/tf/estimator/export/RegressionOutput
+      - title: ServingInputReceiver
+        path: /api_docs/python/tf/estimator/export/ServingInputReceiver
+      - title: TensorServingInputReceiver
+        path: /api_docs/python/tf/estimator/export/TensorServingInputReceiver
+  - title: tf.experimental
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/experimental
+    - title: function_executor_type
+      path: /api_docs/python/tf/experimental/function_executor_type
+  - title: tf.feature_column
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/feature_column
+    - title: bucketized_column
+      path: /api_docs/python/tf/feature_column/bucketized_column
+    - title: categorical_column_with_hash_bucket
+      path: /api_docs/python/tf/feature_column/categorical_column_with_hash_bucket
+    - title: categorical_column_with_identity
+      path: /api_docs/python/tf/feature_column/categorical_column_with_identity
+    - title: categorical_column_with_vocabulary_file
+      path: /api_docs/python/tf/feature_column/categorical_column_with_vocabulary_file
+    - title: categorical_column_with_vocabulary_list
+      path: /api_docs/python/tf/feature_column/categorical_column_with_vocabulary_list
+    - title: crossed_column
+      path: /api_docs/python/tf/feature_column/crossed_column
+    - title: embedding_column
+      path: /api_docs/python/tf/feature_column/embedding_column
+    - title: indicator_column
+      path: /api_docs/python/tf/feature_column/indicator_column
+    - title: make_parse_example_spec
+      path: /api_docs/python/tf/feature_column/make_parse_example_spec
+    - title: numeric_column
+      path: /api_docs/python/tf/feature_column/numeric_column
+    - title: sequence_categorical_column_with_hash_bucket
+      path: /api_docs/python/tf/feature_column/sequence_categorical_column_with_hash_bucket
+    - title: sequence_categorical_column_with_identity
+      path: /api_docs/python/tf/feature_column/sequence_categorical_column_with_identity
+    - title: sequence_categorical_column_with_vocabulary_file
+      path: /api_docs/python/tf/feature_column/sequence_categorical_column_with_vocabulary_file
+    - title: sequence_categorical_column_with_vocabulary_list
+      path: /api_docs/python/tf/feature_column/sequence_categorical_column_with_vocabulary_list
+    - title: sequence_numeric_column
+      path: /api_docs/python/tf/feature_column/sequence_numeric_column
+    - title: shared_embeddings
+      path: /api_docs/python/tf/feature_column/shared_embeddings
+    - title: weighted_categorical_column
+      path: /api_docs/python/tf/feature_column/weighted_categorical_column
+  - title: tf.graph_util
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/graph_util
+    - title: import_graph_def
+      path: /api_docs/python/tf/graph_util/import_graph_def
+  - title: tf.image
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/image
+    - title: adjust_brightness
+      path: /api_docs/python/tf/image/adjust_brightness
+    - title: adjust_contrast
+      path: /api_docs/python/tf/image/adjust_contrast
+    - title: adjust_gamma
+      path: /api_docs/python/tf/image/adjust_gamma
+    - title: adjust_hue
+      path: /api_docs/python/tf/image/adjust_hue
+    - title: adjust_jpeg_quality
+      path: /api_docs/python/tf/image/adjust_jpeg_quality
+    - title: adjust_saturation
+      path: /api_docs/python/tf/image/adjust_saturation
+    - title: central_crop
+      path: /api_docs/python/tf/image/central_crop
+    - title: combined_non_max_suppression
+      path: /api_docs/python/tf/image/combined_non_max_suppression
+    - title: convert_image_dtype
+      path: /api_docs/python/tf/image/convert_image_dtype
+    - title: crop_and_resize
+      path: /api_docs/python/tf/image/crop_and_resize
+    - title: crop_to_bounding_box
+      path: /api_docs/python/tf/image/crop_to_bounding_box
+    - title: draw_bounding_boxes
+      path: /api_docs/python/tf/image/draw_bounding_boxes
+    - title: encode_png
+      path: /api_docs/python/tf/image/encode_png
+    - title: extract_glimpse
+      path: /api_docs/python/tf/image/extract_glimpse
+    - title: extract_patches
+      path: /api_docs/python/tf/image/extract_patches
+    - title: flip_left_right
+      path: /api_docs/python/tf/image/flip_left_right
+    - title: flip_up_down
+      path: /api_docs/python/tf/image/flip_up_down
+    - title: grayscale_to_rgb
+      path: /api_docs/python/tf/image/grayscale_to_rgb
+    - title: hsv_to_rgb
+      path: /api_docs/python/tf/image/hsv_to_rgb
+    - title: image_gradients
+      path: /api_docs/python/tf/image/image_gradients
+    - title: non_max_suppression
+      path: /api_docs/python/tf/image/non_max_suppression
+    - title: non_max_suppression_overlaps
+      path: /api_docs/python/tf/image/non_max_suppression_overlaps
+    - title: non_max_suppression_padded
+      path: /api_docs/python/tf/image/non_max_suppression_padded
+    - title: non_max_suppression_with_scores
+      path: /api_docs/python/tf/image/non_max_suppression_with_scores
+    - title: pad_to_bounding_box
+      path: /api_docs/python/tf/image/pad_to_bounding_box
+    - title: per_image_standardization
+      path: /api_docs/python/tf/image/per_image_standardization
+    - title: psnr
+      path: /api_docs/python/tf/image/psnr
+    - title: random_brightness
+      path: /api_docs/python/tf/image/random_brightness
+    - title: random_contrast
+      path: /api_docs/python/tf/image/random_contrast
+    - title: random_crop
+      path: /api_docs/python/tf/image/random_crop
+    - title: random_flip_left_right
+      path: /api_docs/python/tf/image/random_flip_left_right
+    - title: random_flip_up_down
+      path: /api_docs/python/tf/image/random_flip_up_down
+    - title: random_hue
+      path: /api_docs/python/tf/image/random_hue
+    - title: random_jpeg_quality
+      path: /api_docs/python/tf/image/random_jpeg_quality
+    - title: random_saturation
+      path: /api_docs/python/tf/image/random_saturation
+    - title: resize
+      path: /api_docs/python/tf/image/resize
+    - title: ResizeMethod
+      path: /api_docs/python/tf/image/ResizeMethod
+    - title: resize_with_crop_or_pad
+      path: /api_docs/python/tf/image/resize_with_crop_or_pad
+    - title: resize_with_pad
+      path: /api_docs/python/tf/image/resize_with_pad
+    - title: rgb_to_grayscale
+      path: /api_docs/python/tf/image/rgb_to_grayscale
+    - title: rgb_to_hsv
+      path: /api_docs/python/tf/image/rgb_to_hsv
+    - title: rgb_to_yiq
+      path: /api_docs/python/tf/image/rgb_to_yiq
+    - title: rgb_to_yuv
+      path: /api_docs/python/tf/image/rgb_to_yuv
+    - title: rot90
+      path: /api_docs/python/tf/image/rot90
+    - title: sample_distorted_bounding_box
+      path: /api_docs/python/tf/image/sample_distorted_bounding_box
+    - title: sobel_edges
+      path: /api_docs/python/tf/image/sobel_edges
+    - title: ssim
+      path: /api_docs/python/tf/image/ssim
+    - title: ssim_multiscale
+      path: /api_docs/python/tf/image/ssim_multiscale
+    - title: total_variation
+      path: /api_docs/python/tf/image/total_variation
+    - title: transpose
+      path: /api_docs/python/tf/image/transpose
+    - title: yiq_to_rgb
+      path: /api_docs/python/tf/image/yiq_to_rgb
+    - title: yuv_to_rgb
+      path: /api_docs/python/tf/image/yuv_to_rgb
+  - title: tf.initializers
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/initializers
+    - title: deserialize
+      path: /api_docs/python/tf/initializers/deserialize
+    - title: get
+      path: /api_docs/python/tf/initializers/get
+    - title: GlorotNormal
+      path: /api_docs/python/tf/initializers/GlorotNormal
+    - title: GlorotUniform
+      path: /api_docs/python/tf/initializers/GlorotUniform
+    - title: he_normal
+      path: /api_docs/python/tf/initializers/he_normal
+    - title: he_uniform
+      path: /api_docs/python/tf/initializers/he_uniform
+    - title: Identity
+      path: /api_docs/python/tf/initializers/Identity
+    - title: Initializer
+      path: /api_docs/python/tf/initializers/Initializer
+    - title: lecun_normal
+      path: /api_docs/python/tf/initializers/lecun_normal
+    - title: lecun_uniform
+      path: /api_docs/python/tf/initializers/lecun_uniform
+    - title: Orthogonal
+      path: /api_docs/python/tf/initializers/Orthogonal
+    - title: serialize
+      path: /api_docs/python/tf/initializers/serialize
+    - title: TruncatedNormal
+      path: /api_docs/python/tf/initializers/TruncatedNormal
+    - title: VarianceScaling
+      path: /api_docs/python/tf/initializers/VarianceScaling
+  - title: tf.io
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/io
+    - title: decode_and_crop_jpeg
+      path: /api_docs/python/tf/io/decode_and_crop_jpeg
+    - title: decode_base64
+      path: /api_docs/python/tf/io/decode_base64
+    - title: decode_bmp
+      path: /api_docs/python/tf/io/decode_bmp
+    - title: decode_compressed
+      path: /api_docs/python/tf/io/decode_compressed
+    - title: decode_csv
+      path: /api_docs/python/tf/io/decode_csv
+    - title: decode_gif
+      path: /api_docs/python/tf/io/decode_gif
+    - title: decode_image
+      path: /api_docs/python/tf/io/decode_image
+    - title: decode_jpeg
+      path: /api_docs/python/tf/io/decode_jpeg
+    - title: decode_json_example
+      path: /api_docs/python/tf/io/decode_json_example
+    - title: decode_png
+      path: /api_docs/python/tf/io/decode_png
+    - title: decode_proto
+      path: /api_docs/python/tf/io/decode_proto
+    - title: decode_raw
+      path: /api_docs/python/tf/io/decode_raw
+    - title: deserialize_many_sparse
+      path: /api_docs/python/tf/io/deserialize_many_sparse
+    - title: encode_base64
+      path: /api_docs/python/tf/io/encode_base64
+    - title: encode_jpeg
+      path: /api_docs/python/tf/io/encode_jpeg
+    - title: encode_proto
+      path: /api_docs/python/tf/io/encode_proto
+    - title: extract_jpeg_shape
+      path: /api_docs/python/tf/io/extract_jpeg_shape
+    - title: FixedLenFeature
+      path: /api_docs/python/tf/io/FixedLenFeature
+    - title: FixedLenSequenceFeature
+      path: /api_docs/python/tf/io/FixedLenSequenceFeature
+    - title: is_jpeg
+      path: /api_docs/python/tf/io/is_jpeg
+    - title: matching_files
+      path: /api_docs/python/tf/io/matching_files
+    - title: match_filenames_once
+      path: /api_docs/python/tf/io/match_filenames_once
+    - title: parse_example
+      path: /api_docs/python/tf/io/parse_example
+    - title: parse_sequence_example
+      path: /api_docs/python/tf/io/parse_sequence_example
+    - title: parse_single_example
+      path: /api_docs/python/tf/io/parse_single_example
+    - title: parse_single_sequence_example
+      path: /api_docs/python/tf/io/parse_single_sequence_example
+    - title: parse_tensor
+      path: /api_docs/python/tf/io/parse_tensor
+    - title: read_file
+      path: /api_docs/python/tf/io/read_file
+    - title: serialize_many_sparse
+      path: /api_docs/python/tf/io/serialize_many_sparse
+    - title: serialize_sparse
+      path: /api_docs/python/tf/io/serialize_sparse
+    - title: serialize_tensor
+      path: /api_docs/python/tf/io/serialize_tensor
+    - title: SparseFeature
+      path: /api_docs/python/tf/io/SparseFeature
+    - title: TFRecordOptions
+      path: /api_docs/python/tf/io/TFRecordOptions
+    - title: TFRecordWriter
+      path: /api_docs/python/tf/io/TFRecordWriter
+    - title: VarLenFeature
+      path: /api_docs/python/tf/io/VarLenFeature
+    - title: write_file
+      path: /api_docs/python/tf/io/write_file
+    - title: write_graph
+      path: /api_docs/python/tf/io/write_graph
+    - title: gfile
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/io/gfile
+      - title: copy
+        path: /api_docs/python/tf/io/gfile/copy
+      - title: exists
+        path: /api_docs/python/tf/io/gfile/exists
+      - title: GFile
+        path: /api_docs/python/tf/io/gfile/GFile
+      - title: glob
+        path: /api_docs/python/tf/io/gfile/glob
+      - title: isdir
+        path: /api_docs/python/tf/io/gfile/isdir
+      - title: listdir
+        path: /api_docs/python/tf/io/gfile/listdir
+      - title: makedirs
+        path: /api_docs/python/tf/io/gfile/makedirs
+      - title: mkdir
+        path: /api_docs/python/tf/io/gfile/mkdir
+      - title: remove
+        path: /api_docs/python/tf/io/gfile/remove
+      - title: rename
+        path: /api_docs/python/tf/io/gfile/rename
+      - title: rmtree
+        path: /api_docs/python/tf/io/gfile/rmtree
+      - title: stat
+        path: /api_docs/python/tf/io/gfile/stat
+      - title: walk
+        path: /api_docs/python/tf/io/gfile/walk
+  - title: tf.keras
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/keras
+    - title: Input
+      path: /api_docs/python/tf/keras/Input
+    - title: Model
+      path: /api_docs/python/tf/keras/Model
+    - title: Sequential
+      path: /api_docs/python/tf/keras/Sequential
+    - title: activations
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/keras/activations
+      - title: deserialize
+        path: /api_docs/python/tf/keras/activations/deserialize
+      - title: elu
+        path: /api_docs/python/tf/keras/activations/elu
+      - title: exponential
+        path: /api_docs/python/tf/keras/activations/exponential
+      - title: get
+        path: /api_docs/python/tf/keras/activations/get
+      - title: hard_sigmoid
+        path: /api_docs/python/tf/keras/activations/hard_sigmoid
+      - title: linear
+        path: /api_docs/python/tf/keras/activations/linear
+      - title: relu
+        path: /api_docs/python/tf/keras/activations/relu
+      - title: selu
+        path: /api_docs/python/tf/keras/activations/selu
+      - title: serialize
+        path: /api_docs/python/tf/keras/activations/serialize
+      - title: sigmoid
+        path: /api_docs/python/tf/keras/activations/sigmoid
+      - title: softmax
+        path: /api_docs/python/tf/keras/activations/softmax
+      - title: softplus
+        path: /api_docs/python/tf/keras/activations/softplus
+      - title: softsign
+        path: /api_docs/python/tf/keras/activations/softsign
+      - title: tanh
+        path: /api_docs/python/tf/keras/activations/tanh
+    - title: backend
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/keras/backend
+      - title: abs
+        path: /api_docs/python/tf/keras/backend/abs
+      - title: all
+        path: /api_docs/python/tf/keras/backend/all
+      - title: any
+        path: /api_docs/python/tf/keras/backend/any
+      - title: arange
+        path: /api_docs/python/tf/keras/backend/arange
+      - title: argmax
+        path: /api_docs/python/tf/keras/backend/argmax
+      - title: argmin
+        path: /api_docs/python/tf/keras/backend/argmin
+      - title: backend
+        path: /api_docs/python/tf/keras/backend/backend
+      - title: batch_dot
+        path: /api_docs/python/tf/keras/backend/batch_dot
+      - title: batch_flatten
+        path: /api_docs/python/tf/keras/backend/batch_flatten
+      - title: batch_get_value
+        path: /api_docs/python/tf/keras/backend/batch_get_value
+      - title: batch_normalization
+        path: /api_docs/python/tf/keras/backend/batch_normalization
+      - title: batch_set_value
+        path: /api_docs/python/tf/keras/backend/batch_set_value
+      - title: bias_add
+        path: /api_docs/python/tf/keras/backend/bias_add
+      - title: binary_crossentropy
+        path: /api_docs/python/tf/keras/backend/binary_crossentropy
+      - title: cast
+        path: /api_docs/python/tf/keras/backend/cast
+      - title: cast_to_floatx
+        path: /api_docs/python/tf/keras/backend/cast_to_floatx
+      - title: categorical_crossentropy
+        path: /api_docs/python/tf/keras/backend/categorical_crossentropy
+      - title: clear_session
+        path: /api_docs/python/tf/keras/backend/clear_session
+      - title: clip
+        path: /api_docs/python/tf/keras/backend/clip
+      - title: concatenate
+        path: /api_docs/python/tf/keras/backend/concatenate
+      - title: constant
+        path: /api_docs/python/tf/keras/backend/constant
+      - title: conv1d
+        path: /api_docs/python/tf/keras/backend/conv1d
+      - title: conv2d
+        path: /api_docs/python/tf/keras/backend/conv2d
+      - title: conv2d_transpose
+        path: /api_docs/python/tf/keras/backend/conv2d_transpose
+      - title: conv3d
+        path: /api_docs/python/tf/keras/backend/conv3d
+      - title: cos
+        path: /api_docs/python/tf/keras/backend/cos
+      - title: count_params
+        path: /api_docs/python/tf/keras/backend/count_params
+      - title: ctc_batch_cost
+        path: /api_docs/python/tf/keras/backend/ctc_batch_cost
+      - title: ctc_decode
+        path: /api_docs/python/tf/keras/backend/ctc_decode
+      - title: ctc_label_dense_to_sparse
+        path: /api_docs/python/tf/keras/backend/ctc_label_dense_to_sparse
+      - title: cumprod
+        path: /api_docs/python/tf/keras/backend/cumprod
+      - title: cumsum
+        path: /api_docs/python/tf/keras/backend/cumsum
+      - title: dot
+        path: /api_docs/python/tf/keras/backend/dot
+      - title: dropout
+        path: /api_docs/python/tf/keras/backend/dropout
+      - title: dtype
+        path: /api_docs/python/tf/keras/backend/dtype
+      - title: elu
+        path: /api_docs/python/tf/keras/backend/elu
+      - title: epsilon
+        path: /api_docs/python/tf/keras/backend/epsilon
+      - title: equal
+        path: /api_docs/python/tf/keras/backend/equal
+      - title: eval
+        path: /api_docs/python/tf/keras/backend/eval
+      - title: exp
+        path: /api_docs/python/tf/keras/backend/exp
+      - title: expand_dims
+        path: /api_docs/python/tf/keras/backend/expand_dims
+      - title: eye
+        path: /api_docs/python/tf/keras/backend/eye
+      - title: flatten
+        path: /api_docs/python/tf/keras/backend/flatten
+      - title: floatx
+        path: /api_docs/python/tf/keras/backend/floatx
+      - title: foldl
+        path: /api_docs/python/tf/keras/backend/foldl
+      - title: foldr
+        path: /api_docs/python/tf/keras/backend/foldr
+      - title: function
+        path: /api_docs/python/tf/keras/backend/function
+      - title: gather
+        path: /api_docs/python/tf/keras/backend/gather
+      - title: get_uid
+        path: /api_docs/python/tf/keras/backend/get_uid
+      - title: get_value
+        path: /api_docs/python/tf/keras/backend/get_value
+      - title: gradients
+        path: /api_docs/python/tf/keras/backend/gradients
+      - title: greater
+        path: /api_docs/python/tf/keras/backend/greater
+      - title: greater_equal
+        path: /api_docs/python/tf/keras/backend/greater_equal
+      - title: hard_sigmoid
+        path: /api_docs/python/tf/keras/backend/hard_sigmoid
+      - title: image_data_format
+        path: /api_docs/python/tf/keras/backend/image_data_format
+      - title: int_shape
+        path: /api_docs/python/tf/keras/backend/int_shape
+      - title: in_test_phase
+        path: /api_docs/python/tf/keras/backend/in_test_phase
+      - title: in_top_k
+        path: /api_docs/python/tf/keras/backend/in_top_k
+      - title: in_train_phase
+        path: /api_docs/python/tf/keras/backend/in_train_phase
+      - title: is_keras_tensor
+        path: /api_docs/python/tf/keras/backend/is_keras_tensor
+      - title: is_sparse
+        path: /api_docs/python/tf/keras/backend/is_sparse
+      - title: l2_normalize
+        path: /api_docs/python/tf/keras/backend/l2_normalize
+      - title: learning_phase
+        path: /api_docs/python/tf/keras/backend/learning_phase
+      - title: learning_phase_scope
+        path: /api_docs/python/tf/keras/backend/learning_phase_scope
+      - title: less
+        path: /api_docs/python/tf/keras/backend/less
+      - title: less_equal
+        path: /api_docs/python/tf/keras/backend/less_equal
+      - title: local_conv1d
+        path: /api_docs/python/tf/keras/backend/local_conv1d
+      - title: local_conv2d
+        path: /api_docs/python/tf/keras/backend/local_conv2d
+      - title: log
+        path: /api_docs/python/tf/keras/backend/log
+      - title: manual_variable_initialization
+        path: /api_docs/python/tf/keras/backend/manual_variable_initialization
+      - title: map_fn
+        path: /api_docs/python/tf/keras/backend/map_fn
+      - title: max
+        path: /api_docs/python/tf/keras/backend/max
+      - title: maximum
+        path: /api_docs/python/tf/keras/backend/maximum
+      - title: mean
+        path: /api_docs/python/tf/keras/backend/mean
+      - title: min
+        path: /api_docs/python/tf/keras/backend/min
+      - title: minimum
+        path: /api_docs/python/tf/keras/backend/minimum
+      - title: moving_average_update
+        path: /api_docs/python/tf/keras/backend/moving_average_update
+      - title: name_scope
+        path: /api_docs/python/tf/keras/backend/name_scope
+      - title: ndim
+        path: /api_docs/python/tf/keras/backend/ndim
+      - title: normalize_batch_in_training
+        path: /api_docs/python/tf/keras/backend/normalize_batch_in_training
+      - title: not_equal
+        path: /api_docs/python/tf/keras/backend/not_equal
+      - title: ones
+        path: /api_docs/python/tf/keras/backend/ones
+      - title: ones_like
+        path: /api_docs/python/tf/keras/backend/ones_like
+      - title: one_hot
+        path: /api_docs/python/tf/keras/backend/one_hot
+      - title: permute_dimensions
+        path: /api_docs/python/tf/keras/backend/permute_dimensions
+      - title: placeholder
+        path: /api_docs/python/tf/keras/backend/placeholder
+      - title: pool2d
+        path: /api_docs/python/tf/keras/backend/pool2d
+      - title: pool3d
+        path: /api_docs/python/tf/keras/backend/pool3d
+      - title: pow
+        path: /api_docs/python/tf/keras/backend/pow
+      - title: print_tensor
+        path: /api_docs/python/tf/keras/backend/print_tensor
+      - title: prod
+        path: /api_docs/python/tf/keras/backend/prod
+      - title: random_binomial
+        path: /api_docs/python/tf/keras/backend/random_binomial
+      - title: random_normal
+        path: /api_docs/python/tf/keras/backend/random_normal
+      - title: random_normal_variable
+        path: /api_docs/python/tf/keras/backend/random_normal_variable
+      - title: random_uniform
+        path: /api_docs/python/tf/keras/backend/random_uniform
+      - title: random_uniform_variable
+        path: /api_docs/python/tf/keras/backend/random_uniform_variable
+      - title: relu
+        path: /api_docs/python/tf/keras/backend/relu
+      - title: repeat
+        path: /api_docs/python/tf/keras/backend/repeat
+      - title: repeat_elements
+        path: /api_docs/python/tf/keras/backend/repeat_elements
+      - title: reset_uids
+        path: /api_docs/python/tf/keras/backend/reset_uids
+      - title: reshape
+        path: /api_docs/python/tf/keras/backend/reshape
+      - title: resize_images
+        path: /api_docs/python/tf/keras/backend/resize_images
+      - title: resize_volumes
+        path: /api_docs/python/tf/keras/backend/resize_volumes
+      - title: reverse
+        path: /api_docs/python/tf/keras/backend/reverse
+      - title: rnn
+        path: /api_docs/python/tf/keras/backend/rnn
+      - title: round
+        path: /api_docs/python/tf/keras/backend/round
+      - title: separable_conv2d
+        path: /api_docs/python/tf/keras/backend/separable_conv2d
+      - title: set_epsilon
+        path: /api_docs/python/tf/keras/backend/set_epsilon
+      - title: set_floatx
+        path: /api_docs/python/tf/keras/backend/set_floatx
+      - title: set_image_data_format
+        path: /api_docs/python/tf/keras/backend/set_image_data_format
+      - title: set_learning_phase
+        path: /api_docs/python/tf/keras/backend/set_learning_phase
+      - title: set_value
+        path: /api_docs/python/tf/keras/backend/set_value
+      - title: shape
+        path: /api_docs/python/tf/keras/backend/shape
+      - title: sigmoid
+        path: /api_docs/python/tf/keras/backend/sigmoid
+      - title: sign
+        path: /api_docs/python/tf/keras/backend/sign
+      - title: sin
+        path: /api_docs/python/tf/keras/backend/sin
+      - title: softmax
+        path: /api_docs/python/tf/keras/backend/softmax
+      - title: softplus
+        path: /api_docs/python/tf/keras/backend/softplus
+      - title: softsign
+        path: /api_docs/python/tf/keras/backend/softsign
+      - title: sparse_categorical_crossentropy
+        path: /api_docs/python/tf/keras/backend/sparse_categorical_crossentropy
+      - title: spatial_2d_padding
+        path: /api_docs/python/tf/keras/backend/spatial_2d_padding
+      - title: spatial_3d_padding
+        path: /api_docs/python/tf/keras/backend/spatial_3d_padding
+      - title: sqrt
+        path: /api_docs/python/tf/keras/backend/sqrt
+      - title: square
+        path: /api_docs/python/tf/keras/backend/square
+      - title: squeeze
+        path: /api_docs/python/tf/keras/backend/squeeze
+      - title: stack
+        path: /api_docs/python/tf/keras/backend/stack
+      - title: std
+        path: /api_docs/python/tf/keras/backend/std
+      - title: stop_gradient
+        path: /api_docs/python/tf/keras/backend/stop_gradient
+      - title: sum
+        path: /api_docs/python/tf/keras/backend/sum
+      - title: switch
+        path: /api_docs/python/tf/keras/backend/switch
+      - title: tanh
+        path: /api_docs/python/tf/keras/backend/tanh
+      - title: temporal_padding
+        path: /api_docs/python/tf/keras/backend/temporal_padding
+      - title: tile
+        path: /api_docs/python/tf/keras/backend/tile
+      - title: to_dense
+        path: /api_docs/python/tf/keras/backend/to_dense
+      - title: transpose
+        path: /api_docs/python/tf/keras/backend/transpose
+      - title: truncated_normal
+        path: /api_docs/python/tf/keras/backend/truncated_normal
+      - title: update
+        path: /api_docs/python/tf/keras/backend/update
+      - title: update_add
+        path: /api_docs/python/tf/keras/backend/update_add
+      - title: update_sub
+        path: /api_docs/python/tf/keras/backend/update_sub
+      - title: var
+        path: /api_docs/python/tf/keras/backend/var
+      - title: variable
+        path: /api_docs/python/tf/keras/backend/variable
+      - title: zeros
+        path: /api_docs/python/tf/keras/backend/zeros
+      - title: zeros_like
+        path: /api_docs/python/tf/keras/backend/zeros_like
+    - title: callbacks
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/keras/callbacks
+      - title: BaseLogger
+        path: /api_docs/python/tf/keras/callbacks/BaseLogger
+      - title: Callback
+        path: /api_docs/python/tf/keras/callbacks/Callback
+      - title: CSVLogger
+        path: /api_docs/python/tf/keras/callbacks/CSVLogger
+      - title: EarlyStopping
+        path: /api_docs/python/tf/keras/callbacks/EarlyStopping
+      - title: History
+        path: /api_docs/python/tf/keras/callbacks/History
+      - title: LambdaCallback
+        path: /api_docs/python/tf/keras/callbacks/LambdaCallback
+      - title: LearningRateScheduler
+        path: /api_docs/python/tf/keras/callbacks/LearningRateScheduler
+      - title: ModelCheckpoint
+        path: /api_docs/python/tf/keras/callbacks/ModelCheckpoint
+      - title: ProgbarLogger
+        path: /api_docs/python/tf/keras/callbacks/ProgbarLogger
+      - title: ReduceLROnPlateau
+        path: /api_docs/python/tf/keras/callbacks/ReduceLROnPlateau
+      - title: RemoteMonitor
+        path: /api_docs/python/tf/keras/callbacks/RemoteMonitor
+      - title: TensorBoard
+        path: /api_docs/python/tf/keras/callbacks/TensorBoard
+      - title: TerminateOnNaN
+        path: /api_docs/python/tf/keras/callbacks/TerminateOnNaN
+    - title: constraints
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/keras/constraints
+      - title: Constraint
+        path: /api_docs/python/tf/keras/constraints/Constraint
+      - title: deserialize
+        path: /api_docs/python/tf/keras/constraints/deserialize
+      - title: get
+        path: /api_docs/python/tf/keras/constraints/get
+      - title: MaxNorm
+        path: /api_docs/python/tf/keras/constraints/MaxNorm
+      - title: MinMaxNorm
+        path: /api_docs/python/tf/keras/constraints/MinMaxNorm
+      - title: NonNeg
+        path: /api_docs/python/tf/keras/constraints/NonNeg
+      - title: RadialConstraint
+        path: /api_docs/python/tf/keras/constraints/RadialConstraint
+      - title: serialize
+        path: /api_docs/python/tf/keras/constraints/serialize
+      - title: UnitNorm
+        path: /api_docs/python/tf/keras/constraints/UnitNorm
+    - title: datasets
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/keras/datasets
+      - title: boston_housing
+        section:
+        - title: Overview
+          path: /api_docs/python/tf/keras/datasets/boston_housing
+        - title: load_data
+          path: /api_docs/python/tf/keras/datasets/boston_housing/load_data
+      - title: cifar10
+        section:
+        - title: Overview
+          path: /api_docs/python/tf/keras/datasets/cifar10
+        - title: load_data
+          path: /api_docs/python/tf/keras/datasets/cifar10/load_data
+      - title: cifar100
+        section:
+        - title: Overview
+          path: /api_docs/python/tf/keras/datasets/cifar100
+        - title: load_data
+          path: /api_docs/python/tf/keras/datasets/cifar100/load_data
+      - title: fashion_mnist
+        section:
+        - title: Overview
+          path: /api_docs/python/tf/keras/datasets/fashion_mnist
+        - title: load_data
+          path: /api_docs/python/tf/keras/datasets/fashion_mnist/load_data
+      - title: imdb
+        section:
+        - title: Overview
+          path: /api_docs/python/tf/keras/datasets/imdb
+        - title: get_word_index
+          path: /api_docs/python/tf/keras/datasets/imdb/get_word_index
+        - title: load_data
+          path: /api_docs/python/tf/keras/datasets/imdb/load_data
+      - title: mnist
+        section:
+        - title: Overview
+          path: /api_docs/python/tf/keras/datasets/mnist
+        - title: load_data
+          path: /api_docs/python/tf/keras/datasets/mnist/load_data
+      - title: reuters
+        section:
+        - title: Overview
+          path: /api_docs/python/tf/keras/datasets/reuters
+        - title: get_word_index
+          path: /api_docs/python/tf/keras/datasets/reuters/get_word_index
+        - title: load_data
+          path: /api_docs/python/tf/keras/datasets/reuters/load_data
+    - title: estimator
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/keras/estimator
+      - title: model_to_estimator
+        path: /api_docs/python/tf/keras/estimator/model_to_estimator
+    - title: experimental
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/keras/experimental
+      - title: CosineDecay
+        path: /api_docs/python/tf/keras/experimental/CosineDecay
+      - title: CosineDecayRestarts
+        path: /api_docs/python/tf/keras/experimental/CosineDecayRestarts
+      - title: export_saved_model
+        path: /api_docs/python/tf/keras/experimental/export_saved_model
+      - title: LinearCosineDecay
+        path: /api_docs/python/tf/keras/experimental/LinearCosineDecay
+      - title: LinearModel
+        path: /api_docs/python/tf/keras/experimental/LinearModel
+      - title: load_from_saved_model
+        path: /api_docs/python/tf/keras/experimental/load_from_saved_model
+      - title: NoisyLinearCosineDecay
+        path: /api_docs/python/tf/keras/experimental/NoisyLinearCosineDecay
+      - title: PeepholeLSTMCell
+        path: /api_docs/python/tf/keras/experimental/PeepholeLSTMCell
+      - title: SequenceFeatures
+        path: /api_docs/python/tf/keras/experimental/SequenceFeatures
+      - title: terminate_keras_multiprocessing_pools
+        path: /api_docs/python/tf/keras/experimental/terminate_keras_multiprocessing_pools
+      - title: WideDeepModel
+        path: /api_docs/python/tf/keras/experimental/WideDeepModel
+    - title: layers
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/keras/layers
+      - title: AbstractRNNCell
+        path: /api_docs/python/tf/keras/layers/AbstractRNNCell
+      - title: Activation
+        path: /api_docs/python/tf/keras/layers/Activation
+      - title: ActivityRegularization
+        path: /api_docs/python/tf/keras/layers/ActivityRegularization
+      - title: Add
+        path: /api_docs/python/tf/keras/layers/Add
+      - title: add
+        path: /api_docs/python/tf/keras/layers/add
+      - title: AdditiveAttention
+        path: /api_docs/python/tf/keras/layers/AdditiveAttention
+      - title: AlphaDropout
+        path: /api_docs/python/tf/keras/layers/AlphaDropout
+      - title: Attention
+        path: /api_docs/python/tf/keras/layers/Attention
+      - title: Average
+        path: /api_docs/python/tf/keras/layers/Average
+      - title: average
+        path: /api_docs/python/tf/keras/layers/average
+      - title: AveragePooling1D
+        path: /api_docs/python/tf/keras/layers/AveragePooling1D
+      - title: AveragePooling2D
+        path: /api_docs/python/tf/keras/layers/AveragePooling2D
+      - title: AveragePooling3D
+        path: /api_docs/python/tf/keras/layers/AveragePooling3D
+      - title: BatchNormalization
+        path: /api_docs/python/tf/keras/layers/BatchNormalization
+      - title: Bidirectional
+        path: /api_docs/python/tf/keras/layers/Bidirectional
+      - title: Concatenate
+        path: /api_docs/python/tf/keras/layers/Concatenate
+      - title: concatenate
+        path: /api_docs/python/tf/keras/layers/concatenate
+      - title: Conv1D
+        path: /api_docs/python/tf/keras/layers/Conv1D
+      - title: Conv2D
+        path: /api_docs/python/tf/keras/layers/Conv2D
+      - title: Conv2DTranspose
+        path: /api_docs/python/tf/keras/layers/Conv2DTranspose
+      - title: Conv3D
+        path: /api_docs/python/tf/keras/layers/Conv3D
+      - title: Conv3DTranspose
+        path: /api_docs/python/tf/keras/layers/Conv3DTranspose
+      - title: ConvLSTM2D
+        path: /api_docs/python/tf/keras/layers/ConvLSTM2D
+      - title: Cropping1D
+        path: /api_docs/python/tf/keras/layers/Cropping1D
+      - title: Cropping2D
+        path: /api_docs/python/tf/keras/layers/Cropping2D
+      - title: Cropping3D
+        path: /api_docs/python/tf/keras/layers/Cropping3D
+      - title: Dense
+        path: /api_docs/python/tf/keras/layers/Dense
+      - title: DenseFeatures
+        path: /api_docs/python/tf/keras/layers/DenseFeatures
+      - title: DepthwiseConv2D
+        path: /api_docs/python/tf/keras/layers/DepthwiseConv2D
+      - title: deserialize
+        path: /api_docs/python/tf/keras/layers/deserialize
+      - title: Dot
+        path: /api_docs/python/tf/keras/layers/Dot
+      - title: dot
+        path: /api_docs/python/tf/keras/layers/dot
+      - title: Dropout
+        path: /api_docs/python/tf/keras/layers/Dropout
+      - title: ELU
+        path: /api_docs/python/tf/keras/layers/ELU
+      - title: Embedding
+        path: /api_docs/python/tf/keras/layers/Embedding
+      - title: Flatten
+        path: /api_docs/python/tf/keras/layers/Flatten
+      - title: GaussianDropout
+        path: /api_docs/python/tf/keras/layers/GaussianDropout
+      - title: GaussianNoise
+        path: /api_docs/python/tf/keras/layers/GaussianNoise
+      - title: GlobalAveragePooling1D
+        path: /api_docs/python/tf/keras/layers/GlobalAveragePooling1D
+      - title: GlobalAveragePooling2D
+        path: /api_docs/python/tf/keras/layers/GlobalAveragePooling2D
+      - title: GlobalAveragePooling3D
+        path: /api_docs/python/tf/keras/layers/GlobalAveragePooling3D
+      - title: GlobalMaxPool1D
+        path: /api_docs/python/tf/keras/layers/GlobalMaxPool1D
+      - title: GlobalMaxPool2D
+        path: /api_docs/python/tf/keras/layers/GlobalMaxPool2D
+      - title: GlobalMaxPool3D
+        path: /api_docs/python/tf/keras/layers/GlobalMaxPool3D
+      - title: GRU
+        path: /api_docs/python/tf/keras/layers/GRU
+      - title: GRUCell
+        path: /api_docs/python/tf/keras/layers/GRUCell
+      - title: InputLayer
+        path: /api_docs/python/tf/keras/layers/InputLayer
+      - title: InputSpec
+        path: /api_docs/python/tf/keras/layers/InputSpec
+      - title: Lambda
+        path: /api_docs/python/tf/keras/layers/Lambda
+      - title: Layer
+        path: /api_docs/python/tf/keras/layers/Layer
+      - title: LayerNormalization
+        path: /api_docs/python/tf/keras/layers/LayerNormalization
+      - title: LeakyReLU
+        path: /api_docs/python/tf/keras/layers/LeakyReLU
+      - title: LocallyConnected1D
+        path: /api_docs/python/tf/keras/layers/LocallyConnected1D
+      - title: LocallyConnected2D
+        path: /api_docs/python/tf/keras/layers/LocallyConnected2D
+      - title: LSTM
+        path: /api_docs/python/tf/keras/layers/LSTM
+      - title: LSTMCell
+        path: /api_docs/python/tf/keras/layers/LSTMCell
+      - title: Masking
+        path: /api_docs/python/tf/keras/layers/Masking
+      - title: Maximum
+        path: /api_docs/python/tf/keras/layers/Maximum
+      - title: maximum
+        path: /api_docs/python/tf/keras/layers/maximum
+      - title: MaxPool1D
+        path: /api_docs/python/tf/keras/layers/MaxPool1D
+      - title: MaxPool2D
+        path: /api_docs/python/tf/keras/layers/MaxPool2D
+      - title: MaxPool3D
+        path: /api_docs/python/tf/keras/layers/MaxPool3D
+      - title: Minimum
+        path: /api_docs/python/tf/keras/layers/Minimum
+      - title: minimum
+        path: /api_docs/python/tf/keras/layers/minimum
+      - title: Multiply
+        path: /api_docs/python/tf/keras/layers/Multiply
+      - title: multiply
+        path: /api_docs/python/tf/keras/layers/multiply
+      - title: Permute
+        path: /api_docs/python/tf/keras/layers/Permute
+      - title: PReLU
+        path: /api_docs/python/tf/keras/layers/PReLU
+      - title: ReLU
+        path: /api_docs/python/tf/keras/layers/ReLU
+      - title: RepeatVector
+        path: /api_docs/python/tf/keras/layers/RepeatVector
+      - title: Reshape
+        path: /api_docs/python/tf/keras/layers/Reshape
+      - title: RNN
+        path: /api_docs/python/tf/keras/layers/RNN
+      - title: SeparableConv1D
+        path: /api_docs/python/tf/keras/layers/SeparableConv1D
+      - title: SeparableConv2D
+        path: /api_docs/python/tf/keras/layers/SeparableConv2D
+      - title: serialize
+        path: /api_docs/python/tf/keras/layers/serialize
+      - title: SimpleRNN
+        path: /api_docs/python/tf/keras/layers/SimpleRNN
+      - title: SimpleRNNCell
+        path: /api_docs/python/tf/keras/layers/SimpleRNNCell
+      - title: Softmax
+        path: /api_docs/python/tf/keras/layers/Softmax
+      - title: SpatialDropout1D
+        path: /api_docs/python/tf/keras/layers/SpatialDropout1D
+      - title: SpatialDropout2D
+        path: /api_docs/python/tf/keras/layers/SpatialDropout2D
+      - title: SpatialDropout3D
+        path: /api_docs/python/tf/keras/layers/SpatialDropout3D
+      - title: StackedRNNCells
+        path: /api_docs/python/tf/keras/layers/StackedRNNCells
+      - title: Subtract
+        path: /api_docs/python/tf/keras/layers/Subtract
+      - title: subtract
+        path: /api_docs/python/tf/keras/layers/subtract
+      - title: ThresholdedReLU
+        path: /api_docs/python/tf/keras/layers/ThresholdedReLU
+      - title: TimeDistributed
+        path: /api_docs/python/tf/keras/layers/TimeDistributed
+      - title: UpSampling1D
+        path: /api_docs/python/tf/keras/layers/UpSampling1D
+      - title: UpSampling2D
+        path: /api_docs/python/tf/keras/layers/UpSampling2D
+      - title: UpSampling3D
+        path: /api_docs/python/tf/keras/layers/UpSampling3D
+      - title: Wrapper
+        path: /api_docs/python/tf/keras/layers/Wrapper
+      - title: ZeroPadding1D
+        path: /api_docs/python/tf/keras/layers/ZeroPadding1D
+      - title: ZeroPadding2D
+        path: /api_docs/python/tf/keras/layers/ZeroPadding2D
+      - title: ZeroPadding3D
+        path: /api_docs/python/tf/keras/layers/ZeroPadding3D
+    - title: mixed_precision
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/keras/mixed_precision
+      - title: experimental
+        section:
+        - title: Overview
+          path: /api_docs/python/tf/keras/mixed_precision/experimental
+        - title: global_policy
+          path: /api_docs/python/tf/keras/mixed_precision/experimental/global_policy
+        - title: LossScaleOptimizer
+          path: /api_docs/python/tf/keras/mixed_precision/experimental/LossScaleOptimizer
+        - title: Policy
+          path: /api_docs/python/tf/keras/mixed_precision/experimental/Policy
+        - title: set_policy
+          path: /api_docs/python/tf/keras/mixed_precision/experimental/set_policy
+    - title: models
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/keras/models
+      - title: clone_model
+        path: /api_docs/python/tf/keras/models/clone_model
+      - title: load_model
+        path: /api_docs/python/tf/keras/models/load_model
+      - title: model_from_config
+        path: /api_docs/python/tf/keras/models/model_from_config
+      - title: model_from_json
+        path: /api_docs/python/tf/keras/models/model_from_json
+      - title: model_from_yaml
+        path: /api_docs/python/tf/keras/models/model_from_yaml
+      - title: save_model
+        path: /api_docs/python/tf/keras/models/save_model
+    - title: regularizers
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/keras/regularizers
+      - title: deserialize
+        path: /api_docs/python/tf/keras/regularizers/deserialize
+      - title: get
+        path: /api_docs/python/tf/keras/regularizers/get
+      - title: l1
+        path: /api_docs/python/tf/keras/regularizers/l1
+      - title: L1L2
+        path: /api_docs/python/tf/keras/regularizers/L1L2
+      - title: l1_l2
+        path: /api_docs/python/tf/keras/regularizers/l1_l2
+      - title: l2
+        path: /api_docs/python/tf/keras/regularizers/l2
+      - title: Regularizer
+        path: /api_docs/python/tf/keras/regularizers/Regularizer
+      - title: serialize
+        path: /api_docs/python/tf/keras/regularizers/serialize
+    - title: utils
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/keras/utils
+      - title: convert_all_kernels_in_model
+        path: /api_docs/python/tf/keras/utils/convert_all_kernels_in_model
+      - title: CustomObjectScope
+        path: /api_docs/python/tf/keras/utils/CustomObjectScope
+      - title: custom_object_scope
+        path: /api_docs/python/tf/keras/utils/custom_object_scope
+      - title: deserialize_keras_object
+        path: /api_docs/python/tf/keras/utils/deserialize_keras_object
+      - title: GeneratorEnqueuer
+        path: /api_docs/python/tf/keras/utils/GeneratorEnqueuer
+      - title: get_custom_objects
+        path: /api_docs/python/tf/keras/utils/get_custom_objects
+      - title: get_file
+        path: /api_docs/python/tf/keras/utils/get_file
+      - title: get_source_inputs
+        path: /api_docs/python/tf/keras/utils/get_source_inputs
+      - title: HDF5Matrix
+        path: /api_docs/python/tf/keras/utils/HDF5Matrix
+      - title: model_to_dot
+        path: /api_docs/python/tf/keras/utils/model_to_dot
+      - title: multi_gpu_model
+        path: /api_docs/python/tf/keras/utils/multi_gpu_model
+      - title: normalize
+        path: /api_docs/python/tf/keras/utils/normalize
+      - title: OrderedEnqueuer
+        path: /api_docs/python/tf/keras/utils/OrderedEnqueuer
+      - title: plot_model
+        path: /api_docs/python/tf/keras/utils/plot_model
+      - title: Progbar
+        path: /api_docs/python/tf/keras/utils/Progbar
+      - title: Sequence
+        path: /api_docs/python/tf/keras/utils/Sequence
+      - title: SequenceEnqueuer
+        path: /api_docs/python/tf/keras/utils/SequenceEnqueuer
+      - title: serialize_keras_object
+        path: /api_docs/python/tf/keras/utils/serialize_keras_object
+      - title: to_categorical
+        path: /api_docs/python/tf/keras/utils/to_categorical
+    - title: wrappers
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/keras/wrappers
+      - title: scikit_learn
+        section:
+        - title: Overview
+          path: /api_docs/python/tf/keras/wrappers/scikit_learn
+        - title: KerasClassifier
+          path: /api_docs/python/tf/keras/wrappers/scikit_learn/KerasClassifier
+        - title: KerasRegressor
+          path: /api_docs/python/tf/keras/wrappers/scikit_learn/KerasRegressor
+  - title: tf.linalg
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/linalg
+    - title: adjoint
+      path: /api_docs/python/tf/linalg/adjoint
+    - title: band_part
+      path: /api_docs/python/tf/linalg/band_part
+    - title: cholesky
+      path: /api_docs/python/tf/linalg/cholesky
+    - title: cholesky_solve
+      path: /api_docs/python/tf/linalg/cholesky_solve
+    - title: cross
+      path: /api_docs/python/tf/linalg/cross
+    - title: det
+      path: /api_docs/python/tf/linalg/det
+    - title: diag
+      path: /api_docs/python/tf/linalg/diag
+    - title: diag_part
+      path: /api_docs/python/tf/linalg/diag_part
+    - title: eigh
+      path: /api_docs/python/tf/linalg/eigh
+    - title: eigvalsh
+      path: /api_docs/python/tf/linalg/eigvalsh
+    - title: expm
+      path: /api_docs/python/tf/linalg/expm
+    - title: global_norm
+      path: /api_docs/python/tf/linalg/global_norm
+    - title: inv
+      path: /api_docs/python/tf/linalg/inv
+    - title: LinearOperator
+      path: /api_docs/python/tf/linalg/LinearOperator
+    - title: LinearOperatorAdjoint
+      path: /api_docs/python/tf/linalg/LinearOperatorAdjoint
+    - title: LinearOperatorBlockDiag
+      path: /api_docs/python/tf/linalg/LinearOperatorBlockDiag
+    - title: LinearOperatorCirculant
+      path: /api_docs/python/tf/linalg/LinearOperatorCirculant
+    - title: LinearOperatorCirculant2D
+      path: /api_docs/python/tf/linalg/LinearOperatorCirculant2D
+    - title: LinearOperatorCirculant3D
+      path: /api_docs/python/tf/linalg/LinearOperatorCirculant3D
+    - title: LinearOperatorComposition
+      path: /api_docs/python/tf/linalg/LinearOperatorComposition
+    - title: LinearOperatorDiag
+      path: /api_docs/python/tf/linalg/LinearOperatorDiag
+    - title: LinearOperatorFullMatrix
+      path: /api_docs/python/tf/linalg/LinearOperatorFullMatrix
+    - title: LinearOperatorHouseholder
+      path: /api_docs/python/tf/linalg/LinearOperatorHouseholder
+    - title: LinearOperatorIdentity
+      path: /api_docs/python/tf/linalg/LinearOperatorIdentity
+    - title: LinearOperatorInversion
+      path: /api_docs/python/tf/linalg/LinearOperatorInversion
+    - title: LinearOperatorKronecker
+      path: /api_docs/python/tf/linalg/LinearOperatorKronecker
+    - title: LinearOperatorLowerTriangular
+      path: /api_docs/python/tf/linalg/LinearOperatorLowerTriangular
+    - title: LinearOperatorLowRankUpdate
+      path: /api_docs/python/tf/linalg/LinearOperatorLowRankUpdate
+    - title: LinearOperatorScaledIdentity
+      path: /api_docs/python/tf/linalg/LinearOperatorScaledIdentity
+    - title: LinearOperatorToeplitz
+      path: /api_docs/python/tf/linalg/LinearOperatorToeplitz
+    - title: LinearOperatorZeros
+      path: /api_docs/python/tf/linalg/LinearOperatorZeros
+    - title: logdet
+      path: /api_docs/python/tf/linalg/logdet
+    - title: logm
+      path: /api_docs/python/tf/linalg/logm
+    - title: lstsq
+      path: /api_docs/python/tf/linalg/lstsq
+    - title: lu
+      path: /api_docs/python/tf/linalg/lu
+    - title: matmul
+      path: /api_docs/python/tf/linalg/matmul
+    - title: matrix_transpose
+      path: /api_docs/python/tf/linalg/matrix_transpose
+    - title: matvec
+      path: /api_docs/python/tf/linalg/matvec
+    - title: normalize
+      path: /api_docs/python/tf/linalg/normalize
+    - title: qr
+      path: /api_docs/python/tf/linalg/qr
+    - title: set_diag
+      path: /api_docs/python/tf/linalg/set_diag
+    - title: slogdet
+      path: /api_docs/python/tf/linalg/slogdet
+    - title: solve
+      path: /api_docs/python/tf/linalg/solve
+    - title: sqrtm
+      path: /api_docs/python/tf/linalg/sqrtm
+    - title: svd
+      path: /api_docs/python/tf/linalg/svd
+    - title: tensor_diag
+      path: /api_docs/python/tf/linalg/tensor_diag
+    - title: tensor_diag_part
+      path: /api_docs/python/tf/linalg/tensor_diag_part
+    - title: trace
+      path: /api_docs/python/tf/linalg/trace
+    - title: triangular_solve
+      path: /api_docs/python/tf/linalg/triangular_solve
+    - title: tridiagonal_matmul
+      path: /api_docs/python/tf/linalg/tridiagonal_matmul
+    - title: tridiagonal_solve
+      path: /api_docs/python/tf/linalg/tridiagonal_solve
+  - title: tf.lite
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/lite
+    - title: Interpreter
+      path: /api_docs/python/tf/lite/Interpreter
+    - title: OpsSet
+      path: /api_docs/python/tf/lite/OpsSet
+    - title: Optimize
+      path: /api_docs/python/tf/lite/Optimize
+    - title: RepresentativeDataset
+      path: /api_docs/python/tf/lite/RepresentativeDataset
+    - title: TargetSpec
+      path: /api_docs/python/tf/lite/TargetSpec
+    - title: TFLiteConverter
+      path: /api_docs/python/tf/lite/TFLiteConverter
+    - title: experimental
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/lite/experimental
+      - title: load_delegate
+        path: /api_docs/python/tf/lite/experimental/load_delegate
+  - title: tf.lookup
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/lookup
+    - title: KeyValueTensorInitializer
+      path: /api_docs/python/tf/lookup/KeyValueTensorInitializer
+    - title: StaticHashTable
+      path: /api_docs/python/tf/lookup/StaticHashTable
+    - title: StaticVocabularyTable
+      path: /api_docs/python/tf/lookup/StaticVocabularyTable
+    - title: TextFileIndex
+      path: /api_docs/python/tf/lookup/TextFileIndex
+    - title: TextFileInitializer
+      path: /api_docs/python/tf/lookup/TextFileInitializer
+    - title: experimental
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/lookup/experimental
+      - title: DenseHashTable
+        path: /api_docs/python/tf/lookup/experimental/DenseHashTable
+  - title: tf.losses
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/losses
+    - title: BinaryCrossentropy
+      path: /api_docs/python/tf/losses/BinaryCrossentropy
+    - title: binary_crossentropy
+      path: /api_docs/python/tf/losses/binary_crossentropy
+    - title: CategoricalCrossentropy
+      path: /api_docs/python/tf/losses/CategoricalCrossentropy
+    - title: CategoricalHinge
+      path: /api_docs/python/tf/losses/CategoricalHinge
+    - title: categorical_crossentropy
+      path: /api_docs/python/tf/losses/categorical_crossentropy
+    - title: categorical_hinge
+      path: /api_docs/python/tf/losses/categorical_hinge
+    - title: CosineSimilarity
+      path: /api_docs/python/tf/losses/CosineSimilarity
+    - title: cosine_similarity
+      path: /api_docs/python/tf/losses/cosine_similarity
+    - title: deserialize
+      path: /api_docs/python/tf/losses/deserialize
+    - title: get
+      path: /api_docs/python/tf/losses/get
+    - title: Hinge
+      path: /api_docs/python/tf/losses/Hinge
+    - title: hinge
+      path: /api_docs/python/tf/losses/hinge
+    - title: Huber
+      path: /api_docs/python/tf/losses/Huber
+    - title: KLD
+      path: /api_docs/python/tf/losses/KLD
+    - title: KLDivergence
+      path: /api_docs/python/tf/losses/KLDivergence
+    - title: LogCosh
+      path: /api_docs/python/tf/losses/LogCosh
+    - title: logcosh
+      path: /api_docs/python/tf/losses/logcosh
+    - title: Loss
+      path: /api_docs/python/tf/losses/Loss
+    - title: MAE
+      path: /api_docs/python/tf/losses/MAE
+    - title: MAPE
+      path: /api_docs/python/tf/losses/MAPE
+    - title: MeanAbsoluteError
+      path: /api_docs/python/tf/losses/MeanAbsoluteError
+    - title: MeanAbsolutePercentageError
+      path: /api_docs/python/tf/losses/MeanAbsolutePercentageError
+    - title: MeanSquaredError
+      path: /api_docs/python/tf/losses/MeanSquaredError
+    - title: MeanSquaredLogarithmicError
+      path: /api_docs/python/tf/losses/MeanSquaredLogarithmicError
+    - title: MSE
+      path: /api_docs/python/tf/losses/MSE
+    - title: MSLE
+      path: /api_docs/python/tf/losses/MSLE
+    - title: Poisson
+      path: /api_docs/python/tf/losses/Poisson
+    - title: poisson
+      path: /api_docs/python/tf/losses/poisson
+    - title: Reduction
+      path: /api_docs/python/tf/losses/Reduction
+    - title: serialize
+      path: /api_docs/python/tf/losses/serialize
+    - title: SparseCategoricalCrossentropy
+      path: /api_docs/python/tf/losses/SparseCategoricalCrossentropy
+    - title: sparse_categorical_crossentropy
+      path: /api_docs/python/tf/losses/sparse_categorical_crossentropy
+    - title: SquaredHinge
+      path: /api_docs/python/tf/losses/SquaredHinge
+    - title: squared_hinge
+      path: /api_docs/python/tf/losses/squared_hinge
+  - title: tf.math
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/math
+    - title: abs
+      path: /api_docs/python/tf/math/abs
+    - title: accumulate_n
+      path: /api_docs/python/tf/math/accumulate_n
+    - title: acos
+      path: /api_docs/python/tf/math/acos
+    - title: acosh
+      path: /api_docs/python/tf/math/acosh
+    - title: add
+      path: /api_docs/python/tf/math/add
+    - title: add_n
+      path: /api_docs/python/tf/math/add_n
+    - title: angle
+      path: /api_docs/python/tf/math/angle
+    - title: argmax
+      path: /api_docs/python/tf/math/argmax
+    - title: argmin
+      path: /api_docs/python/tf/math/argmin
+    - title: asin
+      path: /api_docs/python/tf/math/asin
+    - title: asinh
+      path: /api_docs/python/tf/math/asinh
+    - title: atan
+      path: /api_docs/python/tf/math/atan
+    - title: atan2
+      path: /api_docs/python/tf/math/atan2
+    - title: atanh
+      path: /api_docs/python/tf/math/atanh
+    - title: bessel_i0
+      path: /api_docs/python/tf/math/bessel_i0
+    - title: bessel_i0e
+      path: /api_docs/python/tf/math/bessel_i0e
+    - title: bessel_i1
+      path: /api_docs/python/tf/math/bessel_i1
+    - title: bessel_i1e
+      path: /api_docs/python/tf/math/bessel_i1e
+    - title: betainc
+      path: /api_docs/python/tf/math/betainc
+    - title: bincount
+      path: /api_docs/python/tf/math/bincount
+    - title: ceil
+      path: /api_docs/python/tf/math/ceil
+    - title: confusion_matrix
+      path: /api_docs/python/tf/math/confusion_matrix
+    - title: conj
+      path: /api_docs/python/tf/math/conj
+    - title: cos
+      path: /api_docs/python/tf/math/cos
+    - title: cosh
+      path: /api_docs/python/tf/math/cosh
+    - title: count_nonzero
+      path: /api_docs/python/tf/math/count_nonzero
+    - title: cumprod
+      path: /api_docs/python/tf/math/cumprod
+    - title: cumsum
+      path: /api_docs/python/tf/math/cumsum
+    - title: cumulative_logsumexp
+      path: /api_docs/python/tf/math/cumulative_logsumexp
+    - title: digamma
+      path: /api_docs/python/tf/math/digamma
+    - title: divide
+      path: /api_docs/python/tf/math/divide
+    - title: divide_no_nan
+      path: /api_docs/python/tf/math/divide_no_nan
+    - title: equal
+      path: /api_docs/python/tf/math/equal
+    - title: erf
+      path: /api_docs/python/tf/math/erf
+    - title: erfc
+      path: /api_docs/python/tf/math/erfc
+    - title: exp
+      path: /api_docs/python/tf/math/exp
+    - title: expm1
+      path: /api_docs/python/tf/math/expm1
+    - title: floor
+      path: /api_docs/python/tf/math/floor
+    - title: floordiv
+      path: /api_docs/python/tf/math/floordiv
+    - title: floormod
+      path: /api_docs/python/tf/math/floormod
+    - title: greater
+      path: /api_docs/python/tf/math/greater
+    - title: greater_equal
+      path: /api_docs/python/tf/math/greater_equal
+    - title: igamma
+      path: /api_docs/python/tf/math/igamma
+    - title: igammac
+      path: /api_docs/python/tf/math/igammac
+    - title: imag
+      path: /api_docs/python/tf/math/imag
+    - title: invert_permutation
+      path: /api_docs/python/tf/math/invert_permutation
+    - title: in_top_k
+      path: /api_docs/python/tf/math/in_top_k
+    - title: is_finite
+      path: /api_docs/python/tf/math/is_finite
+    - title: is_inf
+      path: /api_docs/python/tf/math/is_inf
+    - title: is_nan
+      path: /api_docs/python/tf/math/is_nan
+    - title: is_non_decreasing
+      path: /api_docs/python/tf/math/is_non_decreasing
+    - title: is_strictly_increasing
+      path: /api_docs/python/tf/math/is_strictly_increasing
+    - title: l2_normalize
+      path: /api_docs/python/tf/math/l2_normalize
+    - title: lbeta
+      path: /api_docs/python/tf/math/lbeta
+    - title: less
+      path: /api_docs/python/tf/math/less
+    - title: less_equal
+      path: /api_docs/python/tf/math/less_equal
+    - title: lgamma
+      path: /api_docs/python/tf/math/lgamma
+    - title: log
+      path: /api_docs/python/tf/math/log
+    - title: log1p
+      path: /api_docs/python/tf/math/log1p
+    - title: logical_and
+      path: /api_docs/python/tf/math/logical_and
+    - title: logical_not
+      path: /api_docs/python/tf/math/logical_not
+    - title: logical_or
+      path: /api_docs/python/tf/math/logical_or
+    - title: logical_xor
+      path: /api_docs/python/tf/math/logical_xor
+    - title: log_sigmoid
+      path: /api_docs/python/tf/math/log_sigmoid
+    - title: maximum
+      path: /api_docs/python/tf/math/maximum
+    - title: minimum
+      path: /api_docs/python/tf/math/minimum
+    - title: multiply
+      path: /api_docs/python/tf/math/multiply
+    - title: multiply_no_nan
+      path: /api_docs/python/tf/math/multiply_no_nan
+    - title: negative
+      path: /api_docs/python/tf/math/negative
+    - title: nextafter
+      path: /api_docs/python/tf/math/nextafter
+    - title: not_equal
+      path: /api_docs/python/tf/math/not_equal
+    - title: polygamma
+      path: /api_docs/python/tf/math/polygamma
+    - title: polyval
+      path: /api_docs/python/tf/math/polyval
+    - title: pow
+      path: /api_docs/python/tf/math/pow
+    - title: real
+      path: /api_docs/python/tf/math/real
+    - title: reciprocal
+      path: /api_docs/python/tf/math/reciprocal
+    - title: reciprocal_no_nan
+      path: /api_docs/python/tf/math/reciprocal_no_nan
+    - title: reduce_any
+      path: /api_docs/python/tf/math/reduce_any
+    - title: reduce_euclidean_norm
+      path: /api_docs/python/tf/math/reduce_euclidean_norm
+    - title: reduce_logsumexp
+      path: /api_docs/python/tf/math/reduce_logsumexp
+    - title: reduce_max
+      path: /api_docs/python/tf/math/reduce_max
+    - title: reduce_mean
+      path: /api_docs/python/tf/math/reduce_mean
+    - title: reduce_min
+      path: /api_docs/python/tf/math/reduce_min
+    - title: reduce_prod
+      path: /api_docs/python/tf/math/reduce_prod
+    - title: reduce_std
+      path: /api_docs/python/tf/math/reduce_std
+    - title: reduce_sum
+      path: /api_docs/python/tf/math/reduce_sum
+    - title: reduce_variance
+      path: /api_docs/python/tf/math/reduce_variance
+    - title: rint
+      path: /api_docs/python/tf/math/rint
+    - title: round
+      path: /api_docs/python/tf/math/round
+    - title: rsqrt
+      path: /api_docs/python/tf/math/rsqrt
+    - title: scalar_mul
+      path: /api_docs/python/tf/math/scalar_mul
+    - title: segment_max
+      path: /api_docs/python/tf/math/segment_max
+    - title: segment_mean
+      path: /api_docs/python/tf/math/segment_mean
+    - title: segment_min
+      path: /api_docs/python/tf/math/segment_min
+    - title: segment_prod
+      path: /api_docs/python/tf/math/segment_prod
+    - title: segment_sum
+      path: /api_docs/python/tf/math/segment_sum
+    - title: sigmoid
+      path: /api_docs/python/tf/math/sigmoid
+    - title: sign
+      path: /api_docs/python/tf/math/sign
+    - title: sin
+      path: /api_docs/python/tf/math/sin
+    - title: sinh
+      path: /api_docs/python/tf/math/sinh
+    - title: softplus
+      path: /api_docs/python/tf/math/softplus
+    - title: sqrt
+      path: /api_docs/python/tf/math/sqrt
+    - title: square
+      path: /api_docs/python/tf/math/square
+    - title: squared_difference
+      path: /api_docs/python/tf/math/squared_difference
+    - title: subtract
+      path: /api_docs/python/tf/math/subtract
+    - title: tan
+      path: /api_docs/python/tf/math/tan
+    - title: tanh
+      path: /api_docs/python/tf/math/tanh
+    - title: top_k
+      path: /api_docs/python/tf/math/top_k
+    - title: truediv
+      path: /api_docs/python/tf/math/truediv
+    - title: unsorted_segment_max
+      path: /api_docs/python/tf/math/unsorted_segment_max
+    - title: unsorted_segment_mean
+      path: /api_docs/python/tf/math/unsorted_segment_mean
+    - title: unsorted_segment_min
+      path: /api_docs/python/tf/math/unsorted_segment_min
+    - title: unsorted_segment_prod
+      path: /api_docs/python/tf/math/unsorted_segment_prod
+    - title: unsorted_segment_sqrt_n
+      path: /api_docs/python/tf/math/unsorted_segment_sqrt_n
+    - title: unsorted_segment_sum
+      path: /api_docs/python/tf/math/unsorted_segment_sum
+    - title: xdivy
+      path: /api_docs/python/tf/math/xdivy
+    - title: xlogy
+      path: /api_docs/python/tf/math/xlogy
+    - title: zero_fraction
+      path: /api_docs/python/tf/math/zero_fraction
+    - title: zeta
+      path: /api_docs/python/tf/math/zeta
+  - title: tf.metrics
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/metrics
+    - title: Accuracy
+      path: /api_docs/python/tf/metrics/Accuracy
+    - title: AUC
+      path: /api_docs/python/tf/metrics/AUC
+    - title: BinaryAccuracy
+      path: /api_docs/python/tf/metrics/BinaryAccuracy
+    - title: BinaryCrossentropy
+      path: /api_docs/python/tf/metrics/BinaryCrossentropy
+    - title: binary_accuracy
+      path: /api_docs/python/tf/metrics/binary_accuracy
+    - title: CategoricalAccuracy
+      path: /api_docs/python/tf/metrics/CategoricalAccuracy
+    - title: CategoricalCrossentropy
+      path: /api_docs/python/tf/metrics/CategoricalCrossentropy
+    - title: CategoricalHinge
+      path: /api_docs/python/tf/metrics/CategoricalHinge
+    - title: categorical_accuracy
+      path: /api_docs/python/tf/metrics/categorical_accuracy
+    - title: CosineSimilarity
+      path: /api_docs/python/tf/metrics/CosineSimilarity
+    - title: deserialize
+      path: /api_docs/python/tf/metrics/deserialize
+    - title: FalseNegatives
+      path: /api_docs/python/tf/metrics/FalseNegatives
+    - title: FalsePositives
+      path: /api_docs/python/tf/metrics/FalsePositives
+    - title: get
+      path: /api_docs/python/tf/metrics/get
+    - title: Hinge
+      path: /api_docs/python/tf/metrics/Hinge
+    - title: KLDivergence
+      path: /api_docs/python/tf/metrics/KLDivergence
+    - title: LogCoshError
+      path: /api_docs/python/tf/metrics/LogCoshError
+    - title: Mean
+      path: /api_docs/python/tf/metrics/Mean
+    - title: MeanAbsoluteError
+      path: /api_docs/python/tf/metrics/MeanAbsoluteError
+    - title: MeanAbsolutePercentageError
+      path: /api_docs/python/tf/metrics/MeanAbsolutePercentageError
+    - title: MeanIoU
+      path: /api_docs/python/tf/metrics/MeanIoU
+    - title: MeanRelativeError
+      path: /api_docs/python/tf/metrics/MeanRelativeError
+    - title: MeanSquaredError
+      path: /api_docs/python/tf/metrics/MeanSquaredError
+    - title: MeanSquaredLogarithmicError
+      path: /api_docs/python/tf/metrics/MeanSquaredLogarithmicError
+    - title: MeanTensor
+      path: /api_docs/python/tf/metrics/MeanTensor
+    - title: Metric
+      path: /api_docs/python/tf/metrics/Metric
+    - title: Poisson
+      path: /api_docs/python/tf/metrics/Poisson
+    - title: Precision
+      path: /api_docs/python/tf/metrics/Precision
+    - title: Recall
+      path: /api_docs/python/tf/metrics/Recall
+    - title: RootMeanSquaredError
+      path: /api_docs/python/tf/metrics/RootMeanSquaredError
+    - title: SensitivityAtSpecificity
+      path: /api_docs/python/tf/metrics/SensitivityAtSpecificity
+    - title: serialize
+      path: /api_docs/python/tf/metrics/serialize
+    - title: SparseCategoricalAccuracy
+      path: /api_docs/python/tf/metrics/SparseCategoricalAccuracy
+    - title: SparseCategoricalCrossentropy
+      path: /api_docs/python/tf/metrics/SparseCategoricalCrossentropy
+    - title: SparseTopKCategoricalAccuracy
+      path: /api_docs/python/tf/metrics/SparseTopKCategoricalAccuracy
+    - title: sparse_categorical_accuracy
+      path: /api_docs/python/tf/metrics/sparse_categorical_accuracy
+    - title: sparse_top_k_categorical_accuracy
+      path: /api_docs/python/tf/metrics/sparse_top_k_categorical_accuracy
+    - title: SpecificityAtSensitivity
+      path: /api_docs/python/tf/metrics/SpecificityAtSensitivity
+    - title: SquaredHinge
+      path: /api_docs/python/tf/metrics/SquaredHinge
+    - title: Sum
+      path: /api_docs/python/tf/metrics/Sum
+    - title: TopKCategoricalAccuracy
+      path: /api_docs/python/tf/metrics/TopKCategoricalAccuracy
+    - title: top_k_categorical_accuracy
+      path: /api_docs/python/tf/metrics/top_k_categorical_accuracy
+    - title: TrueNegatives
+      path: /api_docs/python/tf/metrics/TrueNegatives
+    - title: TruePositives
+      path: /api_docs/python/tf/metrics/TruePositives
+  - title: tf.nest
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/nest
+    - title: assert_same_structure
+      path: /api_docs/python/tf/nest/assert_same_structure
+    - title: flatten
+      path: /api_docs/python/tf/nest/flatten
+    - title: is_nested
+      path: /api_docs/python/tf/nest/is_nested
+    - title: map_structure
+      path: /api_docs/python/tf/nest/map_structure
+    - title: pack_sequence_as
+      path: /api_docs/python/tf/nest/pack_sequence_as
+  - title: tf.nn
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/nn
+    - title: atrous_conv2d
+      path: /api_docs/python/tf/nn/atrous_conv2d
+    - title: atrous_conv2d_transpose
+      path: /api_docs/python/tf/nn/atrous_conv2d_transpose
+    - title: avg_pool
+      path: /api_docs/python/tf/nn/avg_pool
+    - title: avg_pool1d
+      path: /api_docs/python/tf/nn/avg_pool1d
+    - title: avg_pool2d
+      path: /api_docs/python/tf/nn/avg_pool2d
+    - title: avg_pool3d
+      path: /api_docs/python/tf/nn/avg_pool3d
+    - title: batch_normalization
+      path: /api_docs/python/tf/nn/batch_normalization
+    - title: batch_norm_with_global_normalization
+      path: /api_docs/python/tf/nn/batch_norm_with_global_normalization
+    - title: bias_add
+      path: /api_docs/python/tf/nn/bias_add
+    - title: collapse_repeated
+      path: /api_docs/python/tf/nn/collapse_repeated
+    - title: compute_accidental_hits
+      path: /api_docs/python/tf/nn/compute_accidental_hits
+    - title: compute_average_loss
+      path: /api_docs/python/tf/nn/compute_average_loss
+    - title: conv1d
+      path: /api_docs/python/tf/nn/conv1d
+    - title: conv1d_transpose
+      path: /api_docs/python/tf/nn/conv1d_transpose
+    - title: conv2d
+      path: /api_docs/python/tf/nn/conv2d
+    - title: conv2d_transpose
+      path: /api_docs/python/tf/nn/conv2d_transpose
+    - title: conv3d
+      path: /api_docs/python/tf/nn/conv3d
+    - title: conv3d_transpose
+      path: /api_docs/python/tf/nn/conv3d_transpose
+    - title: convolution
+      path: /api_docs/python/tf/nn/convolution
+    - title: conv_transpose
+      path: /api_docs/python/tf/nn/conv_transpose
+    - title: crelu
+      path: /api_docs/python/tf/nn/crelu
+    - title: ctc_beam_search_decoder
+      path: /api_docs/python/tf/nn/ctc_beam_search_decoder
+    - title: ctc_greedy_decoder
+      path: /api_docs/python/tf/nn/ctc_greedy_decoder
+    - title: ctc_loss
+      path: /api_docs/python/tf/nn/ctc_loss
+    - title: ctc_unique_labels
+      path: /api_docs/python/tf/nn/ctc_unique_labels
+    - title: depthwise_conv2d
+      path: /api_docs/python/tf/nn/depthwise_conv2d
+    - title: depthwise_conv2d_backprop_filter
+      path: /api_docs/python/tf/nn/depthwise_conv2d_backprop_filter
+    - title: depthwise_conv2d_backprop_input
+      path: /api_docs/python/tf/nn/depthwise_conv2d_backprop_input
+    - title: depth_to_space
+      path: /api_docs/python/tf/nn/depth_to_space
+    - title: dilation2d
+      path: /api_docs/python/tf/nn/dilation2d
+    - title: dropout
+      path: /api_docs/python/tf/nn/dropout
+    - title: elu
+      path: /api_docs/python/tf/nn/elu
+    - title: embedding_lookup
+      path: /api_docs/python/tf/nn/embedding_lookup
+    - title: embedding_lookup_sparse
+      path: /api_docs/python/tf/nn/embedding_lookup_sparse
+    - title: erosion2d
+      path: /api_docs/python/tf/nn/erosion2d
+    - title: fractional_avg_pool
+      path: /api_docs/python/tf/nn/fractional_avg_pool
+    - title: fractional_max_pool
+      path: /api_docs/python/tf/nn/fractional_max_pool
+    - title: l2_loss
+      path: /api_docs/python/tf/nn/l2_loss
+    - title: leaky_relu
+      path: /api_docs/python/tf/nn/leaky_relu
+    - title: local_response_normalization
+      path: /api_docs/python/tf/nn/local_response_normalization
+    - title: log_poisson_loss
+      path: /api_docs/python/tf/nn/log_poisson_loss
+    - title: log_softmax
+      path: /api_docs/python/tf/nn/log_softmax
+    - title: max_pool
+      path: /api_docs/python/tf/nn/max_pool
+    - title: max_pool1d
+      path: /api_docs/python/tf/nn/max_pool1d
+    - title: max_pool2d
+      path: /api_docs/python/tf/nn/max_pool2d
+    - title: max_pool3d
+      path: /api_docs/python/tf/nn/max_pool3d
+    - title: max_pool_with_argmax
+      path: /api_docs/python/tf/nn/max_pool_with_argmax
+    - title: moments
+      path: /api_docs/python/tf/nn/moments
+    - title: nce_loss
+      path: /api_docs/python/tf/nn/nce_loss
+    - title: normalize_moments
+      path: /api_docs/python/tf/nn/normalize_moments
+    - title: pool
+      path: /api_docs/python/tf/nn/pool
+    - title: relu
+      path: /api_docs/python/tf/nn/relu
+    - title: relu6
+      path: /api_docs/python/tf/nn/relu6
+    - title: RNNCellDeviceWrapper
+      path: /api_docs/python/tf/nn/RNNCellDeviceWrapper
+    - title: RNNCellDropoutWrapper
+      path: /api_docs/python/tf/nn/RNNCellDropoutWrapper
+    - title: RNNCellResidualWrapper
+      path: /api_docs/python/tf/nn/RNNCellResidualWrapper
+    - title: safe_embedding_lookup_sparse
+      path: /api_docs/python/tf/nn/safe_embedding_lookup_sparse
+    - title: sampled_softmax_loss
+      path: /api_docs/python/tf/nn/sampled_softmax_loss
+    - title: scale_regularization_loss
+      path: /api_docs/python/tf/nn/scale_regularization_loss
+    - title: selu
+      path: /api_docs/python/tf/nn/selu
+    - title: separable_conv2d
+      path: /api_docs/python/tf/nn/separable_conv2d
+    - title: sigmoid_cross_entropy_with_logits
+      path: /api_docs/python/tf/nn/sigmoid_cross_entropy_with_logits
+    - title: softmax
+      path: /api_docs/python/tf/nn/softmax
+    - title: softmax_cross_entropy_with_logits
+      path: /api_docs/python/tf/nn/softmax_cross_entropy_with_logits
+    - title: softsign
+      path: /api_docs/python/tf/nn/softsign
+    - title: space_to_depth
+      path: /api_docs/python/tf/nn/space_to_depth
+    - title: sparse_softmax_cross_entropy_with_logits
+      path: /api_docs/python/tf/nn/sparse_softmax_cross_entropy_with_logits
+    - title: sufficient_statistics
+      path: /api_docs/python/tf/nn/sufficient_statistics
+    - title: weighted_cross_entropy_with_logits
+      path: /api_docs/python/tf/nn/weighted_cross_entropy_with_logits
+    - title: weighted_moments
+      path: /api_docs/python/tf/nn/weighted_moments
+    - title: with_space_to_batch
+      path: /api_docs/python/tf/nn/with_space_to_batch
+  - title: tf.optimizers
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/optimizers
+    - title: Adadelta
+      path: /api_docs/python/tf/optimizers/Adadelta
+    - title: Adagrad
+      path: /api_docs/python/tf/optimizers/Adagrad
+    - title: Adam
+      path: /api_docs/python/tf/optimizers/Adam
+    - title: Adamax
+      path: /api_docs/python/tf/optimizers/Adamax
+    - title: deserialize
+      path: /api_docs/python/tf/optimizers/deserialize
+    - title: Ftrl
+      path: /api_docs/python/tf/optimizers/Ftrl
+    - title: get
+      path: /api_docs/python/tf/optimizers/get
+    - title: Nadam
+      path: /api_docs/python/tf/optimizers/Nadam
+    - title: Optimizer
+      path: /api_docs/python/tf/optimizers/Optimizer
+    - title: RMSprop
+      path: /api_docs/python/tf/optimizers/RMSprop
+    - title: serialize
+      path: /api_docs/python/tf/optimizers/serialize
+    - title: SGD
+      path: /api_docs/python/tf/optimizers/SGD
+    - title: schedules
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/optimizers/schedules
+      - title: deserialize
+        path: /api_docs/python/tf/optimizers/schedules/deserialize
+      - title: ExponentialDecay
+        path: /api_docs/python/tf/optimizers/schedules/ExponentialDecay
+      - title: InverseTimeDecay
+        path: /api_docs/python/tf/optimizers/schedules/InverseTimeDecay
+      - title: LearningRateSchedule
+        path: /api_docs/python/tf/optimizers/schedules/LearningRateSchedule
+      - title: PiecewiseConstantDecay
+        path: /api_docs/python/tf/optimizers/schedules/PiecewiseConstantDecay
+      - title: PolynomialDecay
+        path: /api_docs/python/tf/optimizers/schedules/PolynomialDecay
+      - title: serialize
+        path: /api_docs/python/tf/optimizers/schedules/serialize
+  - title: tf.quantization
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/quantization
+    - title: dequantize
+      path: /api_docs/python/tf/quantization/dequantize
+    - title: fake_quant_with_min_max_args
+      path: /api_docs/python/tf/quantization/fake_quant_with_min_max_args
+    - title: fake_quant_with_min_max_args_gradient
+      path: /api_docs/python/tf/quantization/fake_quant_with_min_max_args_gradient
+    - title: fake_quant_with_min_max_vars
+      path: /api_docs/python/tf/quantization/fake_quant_with_min_max_vars
+    - title: fake_quant_with_min_max_vars_gradient
+      path: /api_docs/python/tf/quantization/fake_quant_with_min_max_vars_gradient
+    - title: fake_quant_with_min_max_vars_per_channel
+      path: /api_docs/python/tf/quantization/fake_quant_with_min_max_vars_per_channel
+    - title: fake_quant_with_min_max_vars_per_channel_gradient
+      path: /api_docs/python/tf/quantization/fake_quant_with_min_max_vars_per_channel_gradient
+    - title: quantize
+      path: /api_docs/python/tf/quantization/quantize
+    - title: quantized_concat
+      path: /api_docs/python/tf/quantization/quantized_concat
+    - title: quantize_and_dequantize
+      path: /api_docs/python/tf/quantization/quantize_and_dequantize
+  - title: tf.queue
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/queue
+    - title: FIFOQueue
+      path: /api_docs/python/tf/queue/FIFOQueue
+    - title: PaddingFIFOQueue
+      path: /api_docs/python/tf/queue/PaddingFIFOQueue
+    - title: PriorityQueue
+      path: /api_docs/python/tf/queue/PriorityQueue
+    - title: QueueBase
+      path: /api_docs/python/tf/queue/QueueBase
+    - title: RandomShuffleQueue
+      path: /api_docs/python/tf/queue/RandomShuffleQueue
+  - title: tf.ragged
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/ragged
+    - title: boolean_mask
+      path: /api_docs/python/tf/ragged/boolean_mask
+    - title: constant
+      path: /api_docs/python/tf/ragged/constant
+    - title: map_flat_values
+      path: /api_docs/python/tf/ragged/map_flat_values
+    - title: range
+      path: /api_docs/python/tf/ragged/range
+    - title: row_splits_to_segment_ids
+      path: /api_docs/python/tf/ragged/row_splits_to_segment_ids
+    - title: segment_ids_to_row_splits
+      path: /api_docs/python/tf/ragged/segment_ids_to_row_splits
+    - title: stack
+      path: /api_docs/python/tf/ragged/stack
+    - title: stack_dynamic_partitions
+      path: /api_docs/python/tf/ragged/stack_dynamic_partitions
+  - title: tf.random
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/random
+    - title: all_candidate_sampler
+      path: /api_docs/python/tf/random/all_candidate_sampler
+    - title: categorical
+      path: /api_docs/python/tf/random/categorical
+    - title: fixed_unigram_candidate_sampler
+      path: /api_docs/python/tf/random/fixed_unigram_candidate_sampler
+    - title: gamma
+      path: /api_docs/python/tf/random/gamma
+    - title: learned_unigram_candidate_sampler
+      path: /api_docs/python/tf/random/learned_unigram_candidate_sampler
+    - title: log_uniform_candidate_sampler
+      path: /api_docs/python/tf/random/log_uniform_candidate_sampler
+    - title: normal
+      path: /api_docs/python/tf/random/normal
+    - title: poisson
+      path: /api_docs/python/tf/random/poisson
+    - title: set_seed
+      path: /api_docs/python/tf/random/set_seed
+    - title: shuffle
+      path: /api_docs/python/tf/random/shuffle
+    - title: stateless_categorical
+      path: /api_docs/python/tf/random/stateless_categorical
+    - title: stateless_normal
+      path: /api_docs/python/tf/random/stateless_normal
+    - title: stateless_truncated_normal
+      path: /api_docs/python/tf/random/stateless_truncated_normal
+    - title: stateless_uniform
+      path: /api_docs/python/tf/random/stateless_uniform
+    - title: truncated_normal
+      path: /api_docs/python/tf/random/truncated_normal
+    - title: uniform
+      path: /api_docs/python/tf/random/uniform
+    - title: uniform_candidate_sampler
+      path: /api_docs/python/tf/random/uniform_candidate_sampler
+    - title: experimental
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/random/experimental
+      - title: create_rng_state
+        path: /api_docs/python/tf/random/experimental/create_rng_state
+      - title: Generator
+        path: /api_docs/python/tf/random/experimental/Generator
+      - title: get_global_generator
+        path: /api_docs/python/tf/random/experimental/get_global_generator
+      - title: set_global_generator
+        path: /api_docs/python/tf/random/experimental/set_global_generator
+  - title: tf.raw_ops
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/raw_ops
+  - title: tf.saved_model
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/saved_model
+    - title: Asset
+      path: /api_docs/python/tf/saved_model/Asset
+    - title: contains_saved_model
+      path: /api_docs/python/tf/saved_model/contains_saved_model
+    - title: load
+      path: /api_docs/python/tf/saved_model/load
+    - title: save
+      path: /api_docs/python/tf/saved_model/save
+    - title: SaveOptions
+      path: /api_docs/python/tf/saved_model/SaveOptions
+  - title: tf.sets
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/sets
+    - title: difference
+      path: /api_docs/python/tf/sets/difference
+    - title: intersection
+      path: /api_docs/python/tf/sets/intersection
+    - title: size
+      path: /api_docs/python/tf/sets/size
+    - title: union
+      path: /api_docs/python/tf/sets/union
+  - title: tf.signal
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/signal
+    - title: dct
+      path: /api_docs/python/tf/signal/dct
+    - title: fft
+      path: /api_docs/python/tf/signal/fft
+    - title: fft2d
+      path: /api_docs/python/tf/signal/fft2d
+    - title: fft3d
+      path: /api_docs/python/tf/signal/fft3d
+    - title: fftshift
+      path: /api_docs/python/tf/signal/fftshift
+    - title: frame
+      path: /api_docs/python/tf/signal/frame
+    - title: hamming_window
+      path: /api_docs/python/tf/signal/hamming_window
+    - title: hann_window
+      path: /api_docs/python/tf/signal/hann_window
+    - title: idct
+      path: /api_docs/python/tf/signal/idct
+    - title: ifft
+      path: /api_docs/python/tf/signal/ifft
+    - title: ifft2d
+      path: /api_docs/python/tf/signal/ifft2d
+    - title: ifft3d
+      path: /api_docs/python/tf/signal/ifft3d
+    - title: ifftshift
+      path: /api_docs/python/tf/signal/ifftshift
+    - title: inverse_stft
+      path: /api_docs/python/tf/signal/inverse_stft
+    - title: inverse_stft_window_fn
+      path: /api_docs/python/tf/signal/inverse_stft_window_fn
+    - title: irfft
+      path: /api_docs/python/tf/signal/irfft
+    - title: irfft2d
+      path: /api_docs/python/tf/signal/irfft2d
+    - title: irfft3d
+      path: /api_docs/python/tf/signal/irfft3d
+    - title: linear_to_mel_weight_matrix
+      path: /api_docs/python/tf/signal/linear_to_mel_weight_matrix
+    - title: mfccs_from_log_mel_spectrograms
+      path: /api_docs/python/tf/signal/mfccs_from_log_mel_spectrograms
+    - title: overlap_and_add
+      path: /api_docs/python/tf/signal/overlap_and_add
+    - title: rfft
+      path: /api_docs/python/tf/signal/rfft
+    - title: rfft2d
+      path: /api_docs/python/tf/signal/rfft2d
+    - title: rfft3d
+      path: /api_docs/python/tf/signal/rfft3d
+    - title: stft
+      path: /api_docs/python/tf/signal/stft
+  - title: tf.sparse
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/sparse
+    - title: add
+      path: /api_docs/python/tf/sparse/add
+    - title: concat
+      path: /api_docs/python/tf/sparse/concat
+    - title: cross
+      path: /api_docs/python/tf/sparse/cross
+    - title: cross_hashed
+      path: /api_docs/python/tf/sparse/cross_hashed
+    - title: expand_dims
+      path: /api_docs/python/tf/sparse/expand_dims
+    - title: eye
+      path: /api_docs/python/tf/sparse/eye
+    - title: fill_empty_rows
+      path: /api_docs/python/tf/sparse/fill_empty_rows
+    - title: from_dense
+      path: /api_docs/python/tf/sparse/from_dense
+    - title: mask
+      path: /api_docs/python/tf/sparse/mask
+    - title: maximum
+      path: /api_docs/python/tf/sparse/maximum
+    - title: minimum
+      path: /api_docs/python/tf/sparse/minimum
+    - title: reduce_max
+      path: /api_docs/python/tf/sparse/reduce_max
+    - title: reduce_sum
+      path: /api_docs/python/tf/sparse/reduce_sum
+    - title: reorder
+      path: /api_docs/python/tf/sparse/reorder
+    - title: reset_shape
+      path: /api_docs/python/tf/sparse/reset_shape
+    - title: reshape
+      path: /api_docs/python/tf/sparse/reshape
+    - title: retain
+      path: /api_docs/python/tf/sparse/retain
+    - title: segment_mean
+      path: /api_docs/python/tf/sparse/segment_mean
+    - title: segment_sqrt_n
+      path: /api_docs/python/tf/sparse/segment_sqrt_n
+    - title: segment_sum
+      path: /api_docs/python/tf/sparse/segment_sum
+    - title: slice
+      path: /api_docs/python/tf/sparse/slice
+    - title: softmax
+      path: /api_docs/python/tf/sparse/softmax
+    - title: SparseTensor
+      path: /api_docs/python/tf/sparse/SparseTensor
+    - title: sparse_dense_matmul
+      path: /api_docs/python/tf/sparse/sparse_dense_matmul
+    - title: split
+      path: /api_docs/python/tf/sparse/split
+    - title: to_dense
+      path: /api_docs/python/tf/sparse/to_dense
+    - title: to_indicator
+      path: /api_docs/python/tf/sparse/to_indicator
+    - title: transpose
+      path: /api_docs/python/tf/sparse/transpose
+  - title: tf.strings
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/strings
+    - title: as_string
+      path: /api_docs/python/tf/strings/as_string
+    - title: bytes_split
+      path: /api_docs/python/tf/strings/bytes_split
+    - title: format
+      path: /api_docs/python/tf/strings/format
+    - title: join
+      path: /api_docs/python/tf/strings/join
+    - title: length
+      path: /api_docs/python/tf/strings/length
+    - title: lower
+      path: /api_docs/python/tf/strings/lower
+    - title: ngrams
+      path: /api_docs/python/tf/strings/ngrams
+    - title: reduce_join
+      path: /api_docs/python/tf/strings/reduce_join
+    - title: regex_full_match
+      path: /api_docs/python/tf/strings/regex_full_match
+    - title: regex_replace
+      path: /api_docs/python/tf/strings/regex_replace
+    - title: split
+      path: /api_docs/python/tf/strings/split
+    - title: strip
+      path: /api_docs/python/tf/strings/strip
+    - title: substr
+      path: /api_docs/python/tf/strings/substr
+    - title: to_hash_bucket
+      path: /api_docs/python/tf/strings/to_hash_bucket
+    - title: to_hash_bucket_fast
+      path: /api_docs/python/tf/strings/to_hash_bucket_fast
+    - title: to_hash_bucket_strong
+      path: /api_docs/python/tf/strings/to_hash_bucket_strong
+    - title: to_number
+      path: /api_docs/python/tf/strings/to_number
+    - title: unicode_decode
+      path: /api_docs/python/tf/strings/unicode_decode
+    - title: unicode_decode_with_offsets
+      path: /api_docs/python/tf/strings/unicode_decode_with_offsets
+    - title: unicode_encode
+      path: /api_docs/python/tf/strings/unicode_encode
+    - title: unicode_script
+      path: /api_docs/python/tf/strings/unicode_script
+    - title: unicode_split
+      path: /api_docs/python/tf/strings/unicode_split
+    - title: unicode_split_with_offsets
+      path: /api_docs/python/tf/strings/unicode_split_with_offsets
+    - title: unicode_transcode
+      path: /api_docs/python/tf/strings/unicode_transcode
+    - title: unsorted_segment_join
+      path: /api_docs/python/tf/strings/unsorted_segment_join
+    - title: upper
+      path: /api_docs/python/tf/strings/upper
+  - title: tf.summary
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/summary
+    - title: audio
+      path: /api_docs/python/tf/summary/audio
+    - title: create_file_writer
+      path: /api_docs/python/tf/summary/create_file_writer
+    - title: create_noop_writer
+      path: /api_docs/python/tf/summary/create_noop_writer
+    - title: flush
+      path: /api_docs/python/tf/summary/flush
+    - title: histogram
+      path: /api_docs/python/tf/summary/histogram
+    - title: image
+      path: /api_docs/python/tf/summary/image
+    - title: record_if
+      path: /api_docs/python/tf/summary/record_if
+    - title: scalar
+      path: /api_docs/python/tf/summary/scalar
+    - title: SummaryWriter
+      path: /api_docs/python/tf/summary/SummaryWriter
+    - title: text
+      path: /api_docs/python/tf/summary/text
+    - title: trace_export
+      path: /api_docs/python/tf/summary/trace_export
+    - title: trace_off
+      path: /api_docs/python/tf/summary/trace_off
+    - title: trace_on
+      path: /api_docs/python/tf/summary/trace_on
+    - title: write
+      path: /api_docs/python/tf/summary/write
+    - title: experimental
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/summary/experimental
+      - title: get_step
+        path: /api_docs/python/tf/summary/experimental/get_step
+      - title: set_step
+        path: /api_docs/python/tf/summary/experimental/set_step
+      - title: summary_scope
+        path: /api_docs/python/tf/summary/experimental/summary_scope
+      - title: write_raw_pb
+        path: /api_docs/python/tf/summary/experimental/write_raw_pb
+  - title: tf.sysconfig
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/sysconfig
+    - title: get_compile_flags
+      path: /api_docs/python/tf/sysconfig/get_compile_flags
+    - title: get_include
+      path: /api_docs/python/tf/sysconfig/get_include
+    - title: get_lib
+      path: /api_docs/python/tf/sysconfig/get_lib
+    - title: get_link_flags
+      path: /api_docs/python/tf/sysconfig/get_link_flags
+  - title: tf.test
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/test
+    - title: assert_equal_graph_def
+      path: /api_docs/python/tf/test/assert_equal_graph_def
+    - title: Benchmark
+      path: /api_docs/python/tf/test/Benchmark
+    - title: benchmark_config
+      path: /api_docs/python/tf/test/benchmark_config
+    - title: compute_gradient
+      path: /api_docs/python/tf/test/compute_gradient
+    - title: create_local_cluster
+      path: /api_docs/python/tf/test/create_local_cluster
+    - title: gpu_device_name
+      path: /api_docs/python/tf/test/gpu_device_name
+    - title: is_built_with_cuda
+      path: /api_docs/python/tf/test/is_built_with_cuda
+    - title: is_built_with_gpu_support
+      path: /api_docs/python/tf/test/is_built_with_gpu_support
+    - title: is_built_with_rocm
+      path: /api_docs/python/tf/test/is_built_with_rocm
+    - title: is_gpu_available
+      path: /api_docs/python/tf/test/is_gpu_available
+    - title: main
+      path: /api_docs/python/tf/test/main
+    - title: TestCase
+      path: /api_docs/python/tf/test/TestCase
+    - title: TestCase.failureException
+      path: /api_docs/python/tf/test/TestCase/failureException
+  - title: tf.tpu
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/tpu
+    - title: experimental
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/tpu/experimental
+      - title: DeviceAssignment
+        path: /api_docs/python/tf/tpu/experimental/DeviceAssignment
+      - title: initialize_tpu_system
+        path: /api_docs/python/tf/tpu/experimental/initialize_tpu_system
+  - title: tf.train
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/train
+    - title: BytesList
+      path: /api_docs/python/tf/train/BytesList
+    - title: Checkpoint
+      path: /api_docs/python/tf/train/Checkpoint
+    - title: CheckpointManager
+      path: /api_docs/python/tf/train/CheckpointManager
+    - title: checkpoints_iterator
+      path: /api_docs/python/tf/train/checkpoints_iterator
+    - title: ClusterDef
+      path: /api_docs/python/tf/train/ClusterDef
+    - title: ClusterSpec
+      path: /api_docs/python/tf/train/ClusterSpec
+    - title: Coordinator
+      path: /api_docs/python/tf/train/Coordinator
+    - title: Example
+      path: /api_docs/python/tf/train/Example
+    - title: ExponentialMovingAverage
+      path: /api_docs/python/tf/train/ExponentialMovingAverage
+    - title: Feature
+      path: /api_docs/python/tf/train/Feature
+    - title: FeatureList
+      path: /api_docs/python/tf/train/FeatureList
+    - title: FeatureLists
+      path: /api_docs/python/tf/train/FeatureLists
+    - title: FeatureLists.FeatureListEntry
+      path: /api_docs/python/tf/train/FeatureLists/FeatureListEntry
+    - title: Features
+      path: /api_docs/python/tf/train/Features
+    - title: Features.FeatureEntry
+      path: /api_docs/python/tf/train/Features/FeatureEntry
+    - title: FloatList
+      path: /api_docs/python/tf/train/FloatList
+    - title: get_checkpoint_state
+      path: /api_docs/python/tf/train/get_checkpoint_state
+    - title: Int64List
+      path: /api_docs/python/tf/train/Int64List
+    - title: JobDef
+      path: /api_docs/python/tf/train/JobDef
+    - title: JobDef.TasksEntry
+      path: /api_docs/python/tf/train/JobDef/TasksEntry
+    - title: latest_checkpoint
+      path: /api_docs/python/tf/train/latest_checkpoint
+    - title: list_variables
+      path: /api_docs/python/tf/train/list_variables
+    - title: load_checkpoint
+      path: /api_docs/python/tf/train/load_checkpoint
+    - title: load_variable
+      path: /api_docs/python/tf/train/load_variable
+    - title: SequenceExample
+      path: /api_docs/python/tf/train/SequenceExample
+    - title: ServerDef
+      path: /api_docs/python/tf/train/ServerDef
+    - title: experimental
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/train/experimental
+      - title: disable_mixed_precision_graph_rewrite
+        path: /api_docs/python/tf/train/experimental/disable_mixed_precision_graph_rewrite
+      - title: DynamicLossScale
+        path: /api_docs/python/tf/train/experimental/DynamicLossScale
+      - title: enable_mixed_precision_graph_rewrite
+        path: /api_docs/python/tf/train/experimental/enable_mixed_precision_graph_rewrite
+      - title: FixedLossScale
+        path: /api_docs/python/tf/train/experimental/FixedLossScale
+      - title: LossScale
+        path: /api_docs/python/tf/train/experimental/LossScale
+      - title: PythonState
+        path: /api_docs/python/tf/train/experimental/PythonState
+  - title: tf.version
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/version
+  - title: tf.xla
+    section:
+    - title: Overview
+      path: /api_docs/python/tf/xla
+    - title: experimental
+      section:
+      - title: Overview
+        path: /api_docs/python/tf/xla/experimental
+      - title: compile
+        path: /api_docs/python/tf/xla/experimental/compile
+      - title: jit_scope
+        path: /api_docs/python/tf/xla/experimental/jit_scope
+  - title: tfdbg
+    section:
+    - title: Overview
+      path: /api_docs/python/tfdbg
+    - title: add_debug_tensor_watch
+      path: /api_docs/python/tfdbg/add_debug_tensor_watch
+    - title: DebugDumpDir
+      path: /api_docs/python/tfdbg/DebugDumpDir
+    - title: DebugTensorDatum
+      path: /api_docs/python/tfdbg/DebugTensorDatum
+    - title: DumpingDebugHook
+      path: /api_docs/python/tfdbg/DumpingDebugHook
+    - title: DumpingDebugWrapperSession
+      path: /api_docs/python/tfdbg/DumpingDebugWrapperSession
+    - title: GradientsDebugger
+      path: /api_docs/python/tfdbg/GradientsDebugger
+    - title: GrpcDebugHook
+      path: /api_docs/python/tfdbg/GrpcDebugHook
+    - title: GrpcDebugWrapperSession
+      path: /api_docs/python/tfdbg/GrpcDebugWrapperSession
+    - title: has_inf_or_nan
+      path: /api_docs/python/tfdbg/has_inf_or_nan
+    - title: load_tensor_from_event
+      path: /api_docs/python/tfdbg/load_tensor_from_event
+    - title: load_tensor_from_event_file
+      path: /api_docs/python/tfdbg/load_tensor_from_event_file
+    - title: LocalCLIDebugHook
+      path: /api_docs/python/tfdbg/LocalCLIDebugHook
+    - title: LocalCLIDebugWrapperSession
+      path: /api_docs/python/tfdbg/LocalCLIDebugWrapperSession
+    - title: reconstruct_non_debug_graph_def
+      path: /api_docs/python/tfdbg/reconstruct_non_debug_graph_def
+    - title: TensorBoardDebugHook
+      path: /api_docs/python/tfdbg/TensorBoardDebugHook
+    - title: TensorBoardDebugWrapperSession
+      path: /api_docs/python/tfdbg/TensorBoardDebugWrapperSession
+    - title: WatchOptions
+      path: /api_docs/python/tfdbg/WatchOptions
+    - title: watch_graph
+      path: /api_docs/python/tfdbg/watch_graph
+    - title: watch_graph_with_blacklists
+      path: /api_docs/python/tfdbg/watch_graph_with_blacklists
