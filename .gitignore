@@ -1,9 +1,11 @@
 # Ignore everything
-pytorch/_site/*
+# pytorch/_site/*
+# !pytorch/_site/docs/
+# pytorch/_site/docs/*.html
+
 *.tar.gz
 *.zip
-# except these files
-
-!pytorch/Tutorials/1.2.0.zip
-!pytorch/_site/docs/
-pytorch/_site/docs/*.html
+# except these zip files
+!pytorch/Tutorials/*.zip
+!pytorch/_site/docs/*.zip
+tf2.1/
